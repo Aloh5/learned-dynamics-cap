@@ -1,0 +1,16 @@
+{
+  "independent_closure_l2": 2.9170663374361514e-11,
+  "independent_closure_linf": 2.040130564484599e-11,
+  "independent_relative_closure": 2.2310205942956586e-11,
+  "validation_spatial_modes": 72,
+  "validation_steps_per_period": 40000,
+  "period": 72.70550498125212,
+  "true_oversampled_residual_rms": 2.4209225089539955e-13,
+  "true_oversampled_residual_max": 1.8281851726920095e-12,
+  "surrogate_retained_residual_rms": 2.418215680307533e-13,
+  "true_system_optimizer_calls": 0,
+  "newton_corrections": 0,
+  "symmetry_projection_max_change": 6.46703572297725e-14,
+  "candidate_origin": "data_fitted_surrogate_only",
+  "proof_status": "not_evaluated_by_candidate_generator"
+}

@@ -1,0 +1,9 @@
+temporal_modes,spatial_modes,period,surrogate_residual_rms,surrogate_residual_max,surrogate_optimizer_nfev,true_system_optimizer_calls,optimizer_message
+16,16,73.36969485595785,8.649995911995142e-17,6.661338147750939e-16,178,0,`xtol` termination condition is satisfied.
+24,20,72.70716149641164,9.148821071267855e-17,6.661338147750939e-16,8,0,`xtol` termination condition is satisfied.
+40,28,72.70549994395357,9.240804345400181e-17,8.604228440844963e-16,6,0,`xtol` termination condition is satisfied.
+64,36,72.70550498102338,8.667799067795626e-17,1.304512053934559e-15,5,0,`xtol` termination condition is satisfied.
+80,40,72.70550497843843,8.36980700974656e-12,6.159373011627167e-11,2,0,`gtol` termination condition is satisfied. preconditioned_linf=4.079e-11
+96,44,72.70550497716869,4.667518090751154e-12,4.261613284484156e-11,2,0,`gtol` termination condition is satisfied. preconditioned_linf=8.047e-12
+128,52,72.70550497741142,4.101099901745464e-12,4.585076762708695e-11,2,0,`gtol` termination condition is satisfied. preconditioned_linf=8.525e-12
+160,60,72.70550498125212,3.683747481783446e-15,3.963496197911809e-14,12,0,`xtol` termination condition is satisfied. preconditioned_linf=7.068e-15

@@ -1,0 +1,10 @@
+{
+  "spatial_modes": 60,
+  "training_snapshots": 7324,
+  "quadratic_library_rank": 1831,
+  "heldout_snapshots": 512,
+  "heldout_rhs_relative_l2": 5.971095870807198e-16,
+  "heldout_rhs_max_abs": 6.394884621840902e-14,
+  "derivative_labels": "exact spectral RHS on independent random spatial snapshots",
+  "training_periodic_orbits": 0
+}

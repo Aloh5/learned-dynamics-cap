@@ -1,0 +1,10 @@
+{
+  "temporal_modes": 160,
+  "spatial_modes": 60,
+  "period": 72.70550498125212,
+  "surrogate_residual_rms": 3.683747481783446e-15,
+  "surrogate_residual_max": 3.963496197911809e-14,
+  "surrogate_optimizer_nfev": 12,
+  "true_system_optimizer_calls": 0,
+  "optimizer_message": "`xtol` termination condition is satisfied. preconditioned_linf=7.068e-15"
+}

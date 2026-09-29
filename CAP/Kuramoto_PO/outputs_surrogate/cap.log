@@ -1,0 +1,10 @@
+Neumann KS ordinary orbit: T = 72.70550498125212, omega = 0.08641966394153747
+Symmetry-reduced finite block: dimension = 6421, (M,K)=(160,40)
+CAP transfer Newton corrections: 0
+PDE radii data: Y <= 4.1194047149336359e-07, alpha <= 8.9080934417853908e-01, Z2 <= 1.6508508332556542e+02
+Discriminant >= 1.1650578410474118e-02, radius in [3.7944394190138748e-06, 6.5762604522965327e-04]
+Chosen radius = 1.0000000000000001e-05, radii polynomial <= -6.6345757838868874e-07
+True period enclosure = [72.70533342439506, 72.70567653891881]
+finite_galerkin_proof_success=1
+tail_bound_complete=1
+pde_proof_success=1
