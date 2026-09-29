@@ -1,0 +1,12 @@
+# Local caches and environments
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.cache/
+*.aux
+*.tmp
+# Regenerated KS inverse exceeds GitHub's normal per-file limit.
+CAP/Kuramoto_PO/outputs_surrogate/ks_neumann_fourier_proof_data.mat
