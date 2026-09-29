@@ -1,0 +1,17 @@
+{
+  "source_sha256": "87d5e3db5ae0c5b084c73808153e9c991f284014e598936200d334685355842b",
+  "true_system_newton_steps": 0,
+  "order": 80,
+  "source_order": 200,
+  "history": [
+    {
+      "step": 0,
+      "residual_l1": 0.0004713396703761787,
+      "omega": 1.3445430776082365,
+      "physical_period": 46.73100781833289
+    }
+  ],
+  "source_truncation_weighted_l1": 0.0,
+  "frequency_change": 0.0,
+  "state_change_weighted_l1": 0.0
+}
