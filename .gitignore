@@ -10,3 +10,11 @@ venv/
 *.tmp
 # Regenerated KS inverse exceeds GitHub's normal per-file limit.
 CAP/Kuramoto_PO/outputs_surrogate/ks_neumann_fourier_proof_data.mat
+
+# Private working material and regenerable diagnostics
+archive/
+paper/
+overleaf_ready/
+tmp/
+*.log
+results/figures/trajectories.npz

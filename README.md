@@ -1,62 +1,65 @@
-# Learned dynamics: forecasts and certified periodic orbits
+# Validation of learned polynomial dynamics
 
-Research by Aaron Loh and Dr. Jason D. Mireles-James (Florida Atlantic University).
+> **Upload status:** The legacy DDSR benchmark has been removed and current equilibrium analysis moved to `analysis/`. The complete local `github_paper_export/` still needs to be uploaded: `notebooks/` and `results/` are not yet present on GitHub. The reproduction instructions below describe that complete export.
 
-A release-ready selection of code and small evidence files for the Mackey–Glass (MG) and Kuramoto–Sivashinsky (KS) study. This folder is a **standalone repository root**. The manuscript, personal working files, temporary builds, and large historical archive are outside it.
+Code and numerical evidence for **Validation of Learned Polynomial Dynamics: Forecasts, Attractor Diagnostics, and Certified Periodic Orbits**, by Aaron Loh and J. D. Mireles James.
 
-## What is here
+## Repository contents
 
-| Path | Purpose |
+| Path | Role in the paper |
 | --- | --- |
-| `notebooks/` | MG and periodic-KS forecasting notebooks, Neumann-KS and fixed-parameter MG proof notebooks, numerical tables and figures |
-| `benchmark/` | Predictor comparison and equilibrium benchmark code plus comparison notebook |
-| `results/` | Saved exploratory predictor comparison and equilibrium outputs |
-| `CAP/Mackey-Glass_PO/` | Fixed-parameter MG candidate, certificate, driver, tests and proof audit |
-| `CAP/Kuramoto_PO/` | Neumann-KS surrogate candidate, certificate, driver, tests and proof audit |
+| `notebooks/mackey_glass/` | Cubic forecasts, long-run diagnostics, degree-five surrogate orbit construction, and the fixed-parameter proof walkthrough |
+| `notebooks/kuramoto_sivashinsky/` | Periodic-domain forecasts and relative-orbit pilot; separate Neumann proof walkthrough |
+| `analysis/` | Current-model equilibrium searches and figure generation |
+| `results/equilibria/` | Frozen fitted coefficients, equilibrium results, and source provenance for Sections 2.1–2.2 |
+| `results/figures/` | Attractor comparisons and frozen candidate plots |
+| `CAP/Mackey-Glass_PO/` | Fixed-parameter candidate, MATLAB/INTLAB proof, certificate, audit, and tests |
+| `CAP/Kuramoto_PO/` | Neumann candidate construction, finite/tail scan, MATLAB/INTLAB proof, certificate, audit, and tests |
 
-The periodic-domain KS forecast and Neumann-KS proof concern different boundary-value problems. The certificates are local existence statements for selected candidates; numerical forecasts and attractor diagnostics are separate results.
+The periodic-domain KS numerical results and the Neumann KS theorem concern different boundary-value problems. Numerical diagnostics are not rigorous certificates of chaos or global model fidelity.
 
-## Python setup
+The manuscript, personal files, `archive/`, `paper/`, `overleaf_ready/`, scratch builds, abandoned DDSR predictor comparisons, pruning-sweep outputs, and logs are excluded. The source notebooks retain optional experiments for context; these are not additional claims of completed experiments in the paper.
 
-Use Python 3.13 and create a local environment:
+## Environment and checks
+
+Use Python 3.13. The core numerical versions are pinned to the recorded equilibrium run; the remaining packages use compatible ranges.
 
 ```sh
 python3 -m venv .venv
 . .venv/bin/activate
 python -m pip install -r requirements.txt
-```
-
-The recorded equilibrium run used NumPy 2.4.4, SciPy 1.17.1, PySINDy 2.1.0, and scikit-learn 1.8.0; see `results/equilibria/metadata.json`. Other versions in `requirements.txt` are compatible ranges, not a byte-for-byte lockfile. The optional `ddeint` package is used only by a notebook comparison cell. Jupyter notebooks can be opened in JupyterLab from this repository root.
-
-## Reproduce numerical checks
-
-```sh
-PYTHONPATH=benchmark/code python -m unittest ddsr_benchmark.test_paper_comparison ddsr_benchmark.test_equilibria -v
+python -m unittest discover -s analysis -p 'test_*.py' -v
 python -m unittest discover -s CAP/Mackey-Glass_PO -p 'test_fixed_parameter.py' -v
 python -m unittest discover -s CAP/Kuramoto_PO -p 'test_*.py' -v
 ```
 
-To inspect saved comparison results, open `benchmark/MG_KS_Predictor_Comparison.ipynb` with `RUN=False` (its default). To rerun the paper profile:
+These 19 tests check numerical derivatives, Fourier conversions, source identity and certificate inequalities. They do not replace interval validation.
+
+## Reproduce the numerical results
+
+Start JupyterLab from this repository root. The selected cubic MG forecast and long-run checks are in `Mackey_Glass_Current.ipynb`; surrogate orbit discovery and degree-five refinement are in `Mackey_Glass_CAP_Zero_Correction.ipynb`. `Kuramoto.ipynb` supplies the periodic KS forecast and relative-orbit pilot. Review the notebooks' run flags before executing expensive searches. Saved tables and small evidence files are included. Notebook execution output is cleared.
 
 ```sh
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=benchmark/code python -m ddsr_benchmark.paper_comparison --profile paper --output results/predictor_comparison/paper
+python analysis/run_equilibria.py
+python analysis/generate_attractors.py
+python analysis/generate_candidates.py
 ```
 
-Run `python benchmark/run_equilibria.py` to rebuild the equilibrium results from the forecasting notebooks. The notebooks themselves regenerate the MG and periodic-KS figures and tables under their respective `outputs/` folders. Existing saved figures and tables are included for inspection. Their embedded execution outputs were cleared from the exported notebooks; the original working copies remain untouched.
+The equilibrium script refits the selected forecasting models and reruns the finite searches. The attractor script uses the saved models under `results/equilibria/`, with the paper's integration and projection protocols, and creates Figures 2 and 5. The candidate script plots the frozen approximations for Figure 6. Forecast Figures 1 and 4 and the long-run Figure 3 come from the forecasting notebooks; relevant saved images are in their output directories. Plot formatting may differ from the manuscript.
 
-## Reproduce proof data and certificates
+Original equilibrium metadata hashes are preserved as historical provenance. `export_sources_sha256` records the relocated export sources; relocation is not a scientific rerun. The historical package name in that provenance does not imply a DDSR dependency.
 
-The two proof drivers require MATLAB R2024b and INTLAB 13, in addition to the Python packages above. Set `INTLAB_DIR` to the INTLAB installation and optionally `MATLAB_BINARY` and `PYTHON_BINARY`:
+## Reproduce the interval certificates
+
+MATLAB R2024b and INTLAB 13 were used for the saved certificates. Set the external installation paths:
 
 ```sh
 INTLAB_DIR=/path/to/Intlab_V13 bash CAP/Mackey-Glass_PO/run_fixed_parameter_proof.sh
 INTLAB_DIR=/path/to/Intlab_V13 bash CAP/Kuramoto_PO/run_surrogate_pde_proof.sh
 ```
 
-The MG source waveform `notebooks/mackey_glass/outputs_zero_correction/MG_zero_correction_candidate.mat` is included because the fixed-parameter builder reads it. The KS driver regenerates `CAP/Kuramoto_PO/outputs_surrogate/ks_neumann_fourier_proof_data.mat`, a roughly 307 MB numerical inverse and scan file. It is intentionally excluded from Git because it exceeds GitHub's normal 100 MB per-file limit. The small frozen candidates and JSON certificates are included. See the proof-specific Markdown files for mathematical assumptions and interpretation.
+`MATLAB_BINARY` and `PYTHON_BINARY` can override the executables. Drivers regenerate proof inputs and certificates; use a separate working copy if you want to preserve the frozen release evidence. Read each proof's Markdown audit for arithmetic assumptions and theorem scope.
 
-The original metadata under `results/` retains hashes from the prior run. Each metadata file also has `export_source_sha256`, identifying the relocated source copies in this export. Relocation and notebook output clearing were not scientific reruns.
+The MG driver requires the included `notebooks/mackey_glass/outputs_zero_correction/MG_zero_correction_candidate.mat`. The KS driver regenerates `ks_neumann_fourier_proof_data.mat` (about 307 MB); this large inverse is deliberately excluded. Final fitted coefficients, continuation checkpoint, source trajectory and compact certificate evidence are included to support provenance and resume behavior.
 
-## Release scope
-
-This export omits the manuscript, `overleaf_ready`, `paper`, the full `archive`, scratch data, Python bytecode, and the regenerable large inverse. It contains no license file; choose a license before a public release if reuse permission is intended.
+No license is granted by this repository yet. Select a license if reuse permission is intended. Add the public repository URL and a release commit/tag to the manuscript when the release is public.
