@@ -1,0 +1,2943 @@
+{
+  "system": "periodic_ks",
+  "model": "14-node quadratic forecast model",
+  "seed": 42,
+  "n_random": 128,
+  "target_mean": 0.0013748954098521948,
+  "random_bounds": [
+    -2.4455546687826777,
+    2.6903175635515404
+  ],
+  "residual_tolerance": 1e-08,
+  "stability_tolerance": 1e-05,
+  "match_tolerance": 0.001,
+  "roots": [
+    {
+      "state": [
+        0.0013749104212186281,
+        0.0013747839897574909,
+        0.0013747068720602212,
+        0.001374798021200113,
+        0.001374900511976219,
+        0.0013749211215596294,
+        0.001374892774850299,
+        0.001374910409143053,
+        0.0013750738091166783,
+        0.001375125971740765,
+        0.0013749803980675718,
+        0.0013748737418019465,
+        0.0013747999807129942,
+        0.0013748577147251184
+      ],
+      "residual": 5.706736621647134e-09,
+      "eigenvalues": [
+        [
+          0.21981716607628374,
+          0.0007853532712631707
+        ],
+        [
+          0.21981716607628374,
+          -0.0007853532712631707
+        ],
+        [
+          0.19519585427924796,
+          0.0011780201874480398
+        ],
+        [
+          0.19519585427924796,
+          -0.0011780201874480398
+        ],
+        [
+          0.07491378333204078,
+          0.0003926704452060966
+        ],
+        [
+          0.07491378333204078,
+          -0.0003926704452060966
+        ],
+        [
+          -3.4838436710555237e-11,
+          0.0
+        ],
+        [
+          -0.39814036933069213,
+          0.0015706467532340426
+        ],
+        [
+          -0.39814036933069213,
+          -0.0015706467532340426
+        ],
+        [
+          -2.1190579435424493,
+          0.0019634108142464954
+        ],
+        [
+          -2.1190579435424493,
+          -0.0019634108142464954
+        ],
+        [
+          -5.686099860103456,
+          0.0023561040184956424
+        ],
+        [
+          -5.686099860103456,
+          -0.0023561040184956424
+        ],
+        [
+          -11.977485113125885,
+          0.0
+        ]
+      ],
+      "stability": {
+        "stable": 7,
+        "unstable": 6,
+        "neutral": 1
+      },
+      "jacobian_fd_error": 1.3608003612830544e-12,
+      "min_distance_to_training": 3.4723559499491867,
+      "attractor_distance_rank": 3
+    },
+    {
+      "state": [
+        -0.02286776109403959,
+        0.8205292339349448,
+        2.104824307264823,
+        0.10996933361888767,
+        -1.9071997033983223,
+        -0.07044673733476789,
+        1.862745707775657,
+        0.07408465508669505,
+        -1.8640872475330241,
+        -0.039474612379112387,
+        1.906390685983244,
+        0.042225243169201364,
+        -2.10123267214557,
+        -0.8962118972106862
+      ],
+      "residual": 2.106380877106564e-09,
+      "eigenvalues": [
+        [
+          0.4213199735412445,
+          0.0
+        ],
+        [
+          0.26672881192182224,
+          0.0
+        ],
+        [
+          -3.003071154339923e-08,
+          0.0
+        ],
+        [
+          -0.036424713519950275,
+          0.0
+        ],
+        [
+          -0.20131882957522548,
+          0.3873914680076213
+        ],
+        [
+          -0.20131882957522548,
+          -0.3873914680076213
+        ],
+        [
+          -0.3565622083874398,
+          0.38988282705719896
+        ],
+        [
+          -0.3565622083874398,
+          -0.38988282705719896
+        ],
+        [
+          -0.6214528946678296,
+          0.0
+        ],
+        [
+          -1.7112993675439057,
+          0.0
+        ],
+        [
+          -1.8727349376460374,
+          0.0
+        ],
+        [
+          -5.463023750530577,
+          0.0
+        ],
+        [
+          -5.469922671375926,
+          0.0
+        ],
+        [
+          -11.80165700736179,
+          0.0
+        ]
+      ],
+      "stability": {
+        "stable": 11,
+        "unstable": 2,
+        "neutral": 1
+      },
+      "jacobian_fd_error": 1.3891544026201075e-09,
+      "min_distance_to_training": 2.4965666648235967,
+      "attractor_distance_rank": 1
+    },
+    {
+      "state": [
+        -2.597239694827029,
+        -0.8135378304776408,
+        0.9594477015977112,
+        2.6155754838093537,
+        -0.41898730482891394,
+        -2.425300600250166,
+        -0.16925967029309688,
+        2.283792169068471,
+        0.9707109417944959,
+        -2.4847564951814465,
+        -1.2013795287795184,
+        0.8330887959682678,
+        2.5677793460655947,
+        -0.10068477792815224
+      ],
+      "residual": 2.765783109010042e-09,
+      "eigenvalues": [
+        [
+          0.16671229642176225,
+          0.0
+        ],
+        [
+          -4.1344465239541924e-07,
+          0.0
+        ],
+        [
+          -0.0347159390075299,
+          0.0
+        ],
+        [
+          -0.06890439588032807,
+          0.0
+        ],
+        [
+          -0.37906712207059506,
+          0.0
+        ],
+        [
+          -0.38704941583351954,
+          0.0
+        ],
+        [
+          -0.4036190122016269,
+          0.5033555637607458
+        ],
+        [
+          -0.4036190122016269,
+          -0.5033555637607458
+        ],
+        [
+          -1.0964617133268844,
+          0.324863911968875
+        ],
+        [
+          -1.0964617133268844,
+          -0.324863911968875
+        ],
+        [
+          -1.4315985691481172,
+          0.0
+        ],
+        [
+          -5.284321670843093,
+          0.0
+        ],
+        [
+          -5.304614841815252,
+          0.0
+        ],
+        [
+          -11.680507534642178,
+          0.0
+        ]
+      ],
+      "stability": {
+        "stable": 12,
+        "unstable": 1,
+        "neutral": 1
+      },
+      "jacobian_fd_error": 1.3912262453175117e-09,
+      "min_distance_to_training": 2.6817518764168637,
+      "attractor_distance_rank": 2
+    }
+  ],
+  "references": [
+    {
+      "state": [
+        0.0013748954098521948,
+        0.0013748954098521948,
+        0.0013748954098521948,
+        0.0013748954098521948,
+        0.0013748954098521948,
+        0.0013748954098521948,
+        0.0013748954098521948,
+        0.0013748954098521948,
+        0.0013748954098521948,
+        0.0013748954098521948,
+        0.0013748954098521948,
+        0.0013748954098521948,
+        0.0013748954098521948,
+        0.0013748954098521948
+      ],
+      "residual": 1.755965554517919e-19,
+      "eigenvalues": [
+        [
+          0.21981716232383094,
+          0.0007853384216449749
+        ],
+        [
+          0.21981716232383094,
+          -0.0007853384216449749
+        ],
+        [
+          0.19519587589864873,
+          0.0011780076324672227
+        ],
+        [
+          0.19519587589864873,
+          -0.0011780076324672227
+        ],
+        [
+          0.07491380653628896,
+          0.00039266921082233984
+        ],
+        [
+          0.07491380653628896,
+          -0.00039266921082233984
+        ],
+        [
+          -1.7049546460268405e-16,
+          0.0
+        ],
+        [
+          -0.3981403718458868,
+          0.001570676843289424
+        ],
+        [
+          -0.3981403718458868,
+          -0.001570676843289424
+        ],
+        [
+          -2.1190580276590545,
+          0.0019633460541119427
+        ],
+        [
+          -2.1190580276590545,
+          -0.0019633460541119427
+        ],
+        [
+          -5.686099665932785,
+          0.0023560152649344914
+        ],
+        [
+          -5.686099665932785,
+          -0.0023560152649344914
+        ],
+        [
+          -11.977483988701668,
+          0.0
+        ]
+      ],
+      "stability": {
+        "stable": 7,
+        "unstable": 6,
+        "neutral": 1
+      },
+      "jacobian_fd_error": 1.0531575611594235e-12,
+      "min_distance_to_training": 3.4723559512318163,
+      "attractor_distance_rank": 2
+    },
+    {
+      "state": [
+        -0.022867481734098836,
+        0.8205295597662313,
+        2.1048243596107237,
+        0.10996884703159727,
+        -1.907199789911672,
+        -0.0704463199204299,
+        1.8627458080142694,
+        0.07408391901057355,
+        -1.864087373222793,
+        -0.03947418993641921,
+        1.906390668380085,
+        0.0422247132479407,
+        -2.1012326522643887,
+        -0.8962115323336891
+      ],
+      "residual": 2.1640984511866098e-15,
+      "eigenvalues": [
+        [
+          0.42131996834744706,
+          0.0
+        ],
+        [
+          0.26672884758491877,
+          0.0
+        ],
+        [
+          2.2807194957449626e-15,
+          0.0
+        ],
+        [
+          -0.0364247820028733,
+          0.0
+        ],
+        [
+          -0.20131884127934813,
+          0.3873914610356323
+        ],
+        [
+          -0.20131884127934813,
+          -0.3873914610356323
+        ],
+        [
+          -0.35656216914067274,
+          0.38988286035320985
+        ],
+        [
+          -0.35656216914067274,
+          -0.38988286035320985
+        ],
+        [
+          -0.6214529278337971,
+          0.0
+        ],
+        [
+          -1.7112993253150721,
+          0.0
+        ],
+        [
+          -1.872734908560812,
+          0.0
+        ],
+        [
+          -5.463023646082548,
+          0.0
+        ],
+        [
+          -5.46992239015153,
+          0.0
+        ],
+        [
+          -11.801655245205255,
+          0.0
+        ]
+      ],
+      "stability": {
+        "stable": 11,
+        "unstable": 2,
+        "neutral": 1
+      },
+      "jacobian_fd_error": 6.973585597869203e-10,
+      "min_distance_to_training": 2.496565993862474,
+      "attractor_distance_rank": 1
+    },
+    {
+      "state": [
+        0.9594478795089963,
+        2.6155755692899847,
+        -0.41898783197965944,
+        -2.4253007376630316,
+        -0.16925961489496916,
+        2.283792191724789,
+        0.9707116305896286,
+        -2.484756520997503,
+        -1.2013799302706702,
+        0.8330883519047732,
+        2.5677794422178546,
+        -0.10068378108389,
+        -2.5972398944453783,
+        -0.8135382181629948
+      ],
+      "residual": 5.951767375343018e-15,
+      "eigenvalues": [
+        [
+          0.16671184839403927,
+          0.0
+        ],
+        [
+          1.5878716122773122e-14,
+          0.0
+        ],
+        [
+          -0.03471679450407157,
+          0.0
+        ],
+        [
+          -0.06890322849290383,
+          0.0
+        ],
+        [
+          -0.37907343807296023,
+          0.0
+        ],
+        [
+          -0.3870442915544095,
+          0.0
+        ],
+        [
+          -0.4036189155209596,
+          0.50335540441086
+        ],
+        [
+          -0.4036189155209596,
+          -0.50335540441086
+        ],
+        [
+          -1.0964616104592864,
+          0.3248634693780991
+        ],
+        [
+          -1.0964616104592864,
+          -0.3248634693780991
+        ],
+        [
+          -1.4315981991139137,
+          0.0
+        ],
+        [
+          -5.284320975506963,
+          0.0
+        ],
+        [
+          -5.30461478819708,
+          0.0
+        ],
+        [
+          -11.680505511050846,
+          0.0
+        ]
+      ],
+      "stability": {
+        "stable": 12,
+        "unstable": 1,
+        "neutral": 1
+      },
+      "jacobian_fd_error": 9.556990754333583e-10,
+      "min_distance_to_training": 3.9534528748369784,
+      "attractor_distance_rank": 3
+    }
+  ],
+  "matches": [
+    {
+      "learned_index": 0,
+      "true_index": 0,
+      "position_error": 4.0223761523541964e-07,
+      "true_residual_at_learned_root": 1.4698379447353558e-07,
+      "max_matched_eigenvalue_error": 1.124424217735509e-06,
+      "stability_matches": true
+    },
+    {
+      "learned_index": 1,
+      "true_index": 1,
+      "position_error": 1.328985725483882e-06,
+      "true_residual_at_learned_root": 2.6466878990507556e-07,
+      "max_matched_eigenvalue_error": 1.7621565344683177e-06,
+      "stability_matches": true
+    },
+    {
+      "learned_index": 2,
+      "true_index": 2,
+      "position_error": 1.5381468474418775e-06,
+      "true_residual_at_learned_root": 4.280854567237186e-07,
+      "max_matched_eigenvalue_error": 6.316002365169826e-06,
+      "stability_matches": true
+    }
+  ],
+  "learned_attempts": [
+    {
+      "start": 0,
+      "solver_success": true,
+      "residual": 5.706736621647134e-09,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 2
+    },
+    {
+      "start": 1,
+      "solver_success": false,
+      "residual": 0.0004316085019171344,
+      "mean_error": 9.348551856525056e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 2,
+      "solver_success": true,
+      "residual": 2.106380877106564e-09,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 22
+    },
+    {
+      "start": 3,
+      "solver_success": true,
+      "residual": 4.4105083195474445e-08,
+      "mean_error": 6.186457596202288e-16,
+      "accepted": false,
+      "nfev": 59
+    },
+    {
+      "start": 4,
+      "solver_success": true,
+      "residual": 4.410508387792994e-08,
+      "mean_error": 6.344751113385172e-16,
+      "accepted": false,
+      "nfev": 62
+    },
+    {
+      "start": 5,
+      "solver_success": false,
+      "residual": 0.006747095317494137,
+      "mean_error": 0.00013542225145932564,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 6,
+      "solver_success": false,
+      "residual": 0.0067471011980493765,
+      "mean_error": 0.00013542238484012424,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 7,
+      "solver_success": false,
+      "residual": 0.0004315977861283023,
+      "mean_error": 9.348323588484735e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 8,
+      "solver_success": false,
+      "residual": 0.00043157064801137307,
+      "mean_error": 9.347734650697308e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 9,
+      "solver_success": false,
+      "residual": 0.000431570642846858,
+      "mean_error": 9.34773455965902e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 10,
+      "solver_success": false,
+      "residual": 0.0004315672681597984,
+      "mean_error": 9.3476611907309e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 11,
+      "solver_success": false,
+      "residual": 0.00043156315711334186,
+      "mean_error": 9.347572433315854e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 12,
+      "solver_success": false,
+      "residual": 0.00043156907728488176,
+      "mean_error": 9.347700639808585e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 13,
+      "solver_success": true,
+      "residual": 2.765783109010042e-09,
+      "mean_error": 3.2742905609062234e-17,
+      "accepted": true,
+      "nfev": 40
+    },
+    {
+      "start": 14,
+      "solver_success": true,
+      "residual": 2.7657831535181175e-09,
+      "mean_error": 2.190088388420719e-17,
+      "accepted": true,
+      "nfev": 31
+    },
+    {
+      "start": 15,
+      "solver_success": true,
+      "residual": 2.765784726135753e-09,
+      "mean_error": 8.716985466783456e-17,
+      "accepted": true,
+      "nfev": 36
+    },
+    {
+      "start": 16,
+      "solver_success": false,
+      "residual": 0.00043162068125216754,
+      "mean_error": 9.348814205953262e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 17,
+      "solver_success": false,
+      "residual": 0.00043159123919294187,
+      "mean_error": 9.348180990170936e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 18,
+      "solver_success": false,
+      "residual": 0.00043157063905869495,
+      "mean_error": 9.347734425163741e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 19,
+      "solver_success": false,
+      "residual": 0.0004315567231873346,
+      "mean_error": 9.347434176767717e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 20,
+      "solver_success": false,
+      "residual": 0.0004315611251727634,
+      "mean_error": 9.347528734143969e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 21,
+      "solver_success": false,
+      "residual": 0.0004315958104720512,
+      "mean_error": 9.348258055350261e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 22,
+      "solver_success": true,
+      "residual": 5.706736627406534e-09,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 13
+    },
+    {
+      "start": 23,
+      "solver_success": true,
+      "residual": 0.00013723996048430298,
+      "mean_error": 3.143874013661514e-07,
+      "accepted": false,
+      "nfev": 70
+    },
+    {
+      "start": 24,
+      "solver_success": true,
+      "residual": 5.706736622164861e-09,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 16
+    },
+    {
+      "start": 25,
+      "solver_success": false,
+      "residual": 0.00043177729489257997,
+      "mean_error": 9.352207469559559e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 26,
+      "solver_success": true,
+      "residual": 0.00013720797047947676,
+      "mean_error": 3.14314191158507e-07,
+      "accepted": false,
+      "nfev": 98
+    },
+    {
+      "start": 27,
+      "solver_success": true,
+      "residual": 5.706736623208016e-09,
+      "mean_error": 2.168404344971009e-19,
+      "accepted": true,
+      "nfev": 18
+    },
+    {
+      "start": 28,
+      "solver_success": true,
+      "residual": 4.8570618716797386e-08,
+      "mean_error": 3.5496779127175415e-16,
+      "accepted": false,
+      "nfev": 8
+    },
+    {
+      "start": 29,
+      "solver_success": true,
+      "residual": 0.00013718034665842645,
+      "mean_error": 3.142503993414092e-07,
+      "accepted": false,
+      "nfev": 93
+    },
+    {
+      "start": 30,
+      "solver_success": true,
+      "residual": 1.5970490777140345e-08,
+      "mean_error": 1.0299920638612292e-16,
+      "accepted": false,
+      "nfev": 11
+    },
+    {
+      "start": 31,
+      "solver_success": true,
+      "residual": 0.0001371967891703802,
+      "mean_error": 3.1428834795788063e-07,
+      "accepted": false,
+      "nfev": 48
+    },
+    {
+      "start": 32,
+      "solver_success": true,
+      "residual": 2.7657835577551154e-09,
+      "mean_error": 3.2742905609062234e-17,
+      "accepted": true,
+      "nfev": 66
+    },
+    {
+      "start": 33,
+      "solver_success": true,
+      "residual": 1.5970491370606747e-08,
+      "mean_error": 1.1904539853890839e-16,
+      "accepted": false,
+      "nfev": 17
+    },
+    {
+      "start": 34,
+      "solver_success": true,
+      "residual": 0.000137314996944532,
+      "mean_error": 3.145587532474032e-07,
+      "accepted": false,
+      "nfev": 74
+    },
+    {
+      "start": 35,
+      "solver_success": true,
+      "residual": 5.70673662216486e-09,
+      "mean_error": 2.168404344971009e-19,
+      "accepted": true,
+      "nfev": 14
+    },
+    {
+      "start": 36,
+      "solver_success": true,
+      "residual": 2.5464494906837575e-09,
+      "mean_error": 2.3852447794681098e-17,
+      "accepted": true,
+      "nfev": 8
+    },
+    {
+      "start": 37,
+      "solver_success": true,
+      "residual": 2.292686552445537e-08,
+      "mean_error": 1.0993810029003015e-16,
+      "accepted": false,
+      "nfev": 19
+    },
+    {
+      "start": 38,
+      "solver_success": true,
+      "residual": 4.857061806401522e-08,
+      "mean_error": 4.132978681514743e-16,
+      "accepted": false,
+      "nfev": 9
+    },
+    {
+      "start": 39,
+      "solver_success": true,
+      "residual": 0.00013724360558618528,
+      "mean_error": 3.143956237375029e-07,
+      "accepted": false,
+      "nfev": 81
+    },
+    {
+      "start": 40,
+      "solver_success": true,
+      "residual": 0.00013720797047907943,
+      "mean_error": 3.143141941799616e-07,
+      "accepted": false,
+      "nfev": 124
+    },
+    {
+      "start": 41,
+      "solver_success": true,
+      "residual": 5.7067366213535184e-09,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 17
+    },
+    {
+      "start": 42,
+      "solver_success": true,
+      "residual": 0.00013734150878076106,
+      "mean_error": 3.14619933012867e-07,
+      "accepted": false,
+      "nfev": 72
+    },
+    {
+      "start": 43,
+      "solver_success": true,
+      "residual": 0.00013720797047968427,
+      "mean_error": 3.143141914835508e-07,
+      "accepted": false,
+      "nfev": 78
+    },
+    {
+      "start": 44,
+      "solver_success": false,
+      "residual": 0.0004315701658488448,
+      "mean_error": 9.3477241029454e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 45,
+      "solver_success": false,
+      "residual": 0.00043164341926021357,
+      "mean_error": 9.349286763421678e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 46,
+      "solver_success": false,
+      "residual": 0.00043159184463651914,
+      "mean_error": 9.348184661719678e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 47,
+      "solver_success": true,
+      "residual": 5.965957511073387e-08,
+      "mean_error": 2.458970527197124e-16,
+      "accepted": false,
+      "nfev": 12
+    },
+    {
+      "start": 48,
+      "solver_success": true,
+      "residual": 0.0001371206135524981,
+      "mean_error": 3.141139949497211e-07,
+      "accepted": false,
+      "nfev": 56
+    },
+    {
+      "start": 49,
+      "solver_success": true,
+      "residual": 2.5464497280610844e-09,
+      "mean_error": 8.023096076392733e-18,
+      "accepted": true,
+      "nfev": 18
+    },
+    {
+      "start": 50,
+      "solver_success": true,
+      "residual": 0.00013719529747085354,
+      "mean_error": 3.142851034659659e-07,
+      "accepted": false,
+      "nfev": 73
+    },
+    {
+      "start": 51,
+      "solver_success": true,
+      "residual": 0.00013719529747090902,
+      "mean_error": 3.142851027998321e-07,
+      "accepted": false,
+      "nfev": 63
+    },
+    {
+      "start": 52,
+      "solver_success": true,
+      "residual": 0.0001371206135563098,
+      "mean_error": 3.141139781534779e-07,
+      "accepted": false,
+      "nfev": 79
+    },
+    {
+      "start": 53,
+      "solver_success": true,
+      "residual": 0.00013724360558569758,
+      "mean_error": 3.143956229789951e-07,
+      "accepted": false,
+      "nfev": 87
+    },
+    {
+      "start": 54,
+      "solver_success": true,
+      "residual": 0.0001371803466619163,
+      "mean_error": 3.1425038548335386e-07,
+      "accepted": false,
+      "nfev": 84
+    },
+    {
+      "start": 55,
+      "solver_success": true,
+      "residual": 5.403365486147175e-08,
+      "mean_error": 1.5829351718288365e-17,
+      "accepted": false,
+      "nfev": 10
+    },
+    {
+      "start": 56,
+      "solver_success": true,
+      "residual": 5.706736621121705e-09,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 19
+    },
+    {
+      "start": 57,
+      "solver_success": true,
+      "residual": 6.746364384816304e-08,
+      "mean_error": 3.0531133177191805e-15,
+      "accepted": false,
+      "nfev": 40
+    },
+    {
+      "start": 58,
+      "solver_success": false,
+      "residual": 0.00043158411056150265,
+      "mean_error": 9.348026235708653e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 59,
+      "solver_success": true,
+      "residual": 5.7067366213535184e-09,
+      "mean_error": 2.168404344971009e-19,
+      "accepted": true,
+      "nfev": 16
+    },
+    {
+      "start": 60,
+      "solver_success": true,
+      "residual": 5.706736621817143e-09,
+      "mean_error": 2.168404344971009e-19,
+      "accepted": true,
+      "nfev": 17
+    },
+    {
+      "start": 61,
+      "solver_success": true,
+      "residual": 1.5954156527195717e-08,
+      "mean_error": 1.1904539853890839e-16,
+      "accepted": false,
+      "nfev": 53
+    },
+    {
+      "start": 62,
+      "solver_success": false,
+      "residual": 0.00043155750804746564,
+      "mean_error": 9.347451371583167e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 63,
+      "solver_success": true,
+      "residual": 5.706736621933049e-09,
+      "mean_error": 2.168404344971009e-19,
+      "accepted": true,
+      "nfev": 19
+    },
+    {
+      "start": 64,
+      "solver_success": false,
+      "residual": 0.00043162371114976913,
+      "mean_error": 9.348881158666167e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 65,
+      "solver_success": true,
+      "residual": 0.00013718034666215852,
+      "mean_error": 3.142503856776429e-07,
+      "accepted": false,
+      "nfev": 59
+    },
+    {
+      "start": 66,
+      "solver_success": true,
+      "residual": 2.2926867304772815e-08,
+      "mean_error": 1.0798653637955624e-16,
+      "accepted": false,
+      "nfev": 21
+    },
+    {
+      "start": 67,
+      "solver_success": true,
+      "residual": 5.706736621469426e-09,
+      "mean_error": 2.168404344971009e-19,
+      "accepted": true,
+      "nfev": 13
+    },
+    {
+      "start": 68,
+      "solver_success": false,
+      "residual": 0.0067469815409074985,
+      "mean_error": 0.00013541979150273804,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 69,
+      "solver_success": true,
+      "residual": 0.00013724360558562253,
+      "mean_error": 3.1439562414581346e-07,
+      "accepted": false,
+      "nfev": 47
+    },
+    {
+      "start": 70,
+      "solver_success": true,
+      "residual": 0.00013725055846073304,
+      "mean_error": 3.144118326009644e-07,
+      "accepted": false,
+      "nfev": 111
+    },
+    {
+      "start": 71,
+      "solver_success": true,
+      "residual": 0.00013723750741144008,
+      "mean_error": 3.143818561907215e-07,
+      "accepted": false,
+      "nfev": 112
+    },
+    {
+      "start": 72,
+      "solver_success": true,
+      "residual": 5.526046885468431e-08,
+      "mean_error": 5.702903427273753e-17,
+      "accepted": false,
+      "nfev": 20
+    },
+    {
+      "start": 73,
+      "solver_success": true,
+      "residual": 0.0001372849111735687,
+      "mean_error": 3.1449061268671794e-07,
+      "accepted": false,
+      "nfev": 45
+    },
+    {
+      "start": 74,
+      "solver_success": true,
+      "residual": 3.8912419392215654e-10,
+      "mean_error": 3.968179951296946e-17,
+      "accepted": true,
+      "nfev": 22
+    },
+    {
+      "start": 75,
+      "solver_success": true,
+      "residual": 4.720917275571583e-08,
+      "mean_error": 9.356664748549903e-16,
+      "accepted": false,
+      "nfev": 53
+    },
+    {
+      "start": 76,
+      "solver_success": true,
+      "residual": 0.000137207970479729,
+      "mean_error": 3.1431419240360477e-07,
+      "accepted": false,
+      "nfev": 112
+    },
+    {
+      "start": 77,
+      "solver_success": true,
+      "residual": 0.0001373415087812869,
+      "mean_error": 3.146199308143218e-07,
+      "accepted": false,
+      "nfev": 118
+    },
+    {
+      "start": 78,
+      "solver_success": true,
+      "residual": 1.5970491622766642e-08,
+      "mean_error": 1.0299920638612292e-16,
+      "accepted": false,
+      "nfev": 17
+    },
+    {
+      "start": 79,
+      "solver_success": true,
+      "residual": 0.00013725055846173703,
+      "mean_error": 3.1441182927029535e-07,
+      "accepted": false,
+      "nfev": 86
+    },
+    {
+      "start": 80,
+      "solver_success": true,
+      "residual": 5.70673662216486e-09,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 15
+    },
+    {
+      "start": 81,
+      "solver_success": false,
+      "residual": 0.000431586757149303,
+      "mean_error": 9.348065110642741e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 82,
+      "solver_success": true,
+      "residual": 3.810286930400694e-08,
+      "mean_error": 3.2504381131115423e-16,
+      "accepted": false,
+      "nfev": 21
+    },
+    {
+      "start": 83,
+      "solver_success": true,
+      "residual": 0.0001371206135573317,
+      "mean_error": 3.14113974156675e-07,
+      "accepted": false,
+      "nfev": 110
+    },
+    {
+      "start": 84,
+      "solver_success": false,
+      "residual": 0.00043178450880172926,
+      "mean_error": 9.35235765058386e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 85,
+      "solver_success": false,
+      "residual": 0.0004316241220530542,
+      "mean_error": 9.348891098334613e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 86,
+      "solver_success": true,
+      "residual": 0.00013719678916967174,
+      "mean_error": 3.1428834989274783e-07,
+      "accepted": false,
+      "nfev": 95
+    },
+    {
+      "start": 87,
+      "solver_success": false,
+      "residual": 0.0004315608829963971,
+      "mean_error": 9.347524822036785e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 88,
+      "solver_success": false,
+      "residual": 0.0004315694468260236,
+      "mean_error": 9.34770835459009e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 89,
+      "solver_success": false,
+      "residual": 0.006746874026102787,
+      "mean_error": 0.0001354184317592297,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 90,
+      "solver_success": false,
+      "residual": 0.000431644566399847,
+      "mean_error": 9.34931742864898e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 91,
+      "solver_success": true,
+      "residual": 5.706736622280766e-09,
+      "mean_error": 4.336808689942018e-19,
+      "accepted": true,
+      "nfev": 11
+    },
+    {
+      "start": 92,
+      "solver_success": true,
+      "residual": 6.494187424560925e-08,
+      "mean_error": 4.996003610813204e-16,
+      "accepted": false,
+      "nfev": 27
+    },
+    {
+      "start": 93,
+      "solver_success": false,
+      "residual": 0.00043175880831432245,
+      "mean_error": 9.351797016614056e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 94,
+      "solver_success": true,
+      "residual": 0.00013719529746818182,
+      "mean_error": 3.142851142826173e-07,
+      "accepted": false,
+      "nfev": 95
+    },
+    {
+      "start": 95,
+      "solver_success": false,
+      "residual": 0.00043173649316997524,
+      "mean_error": 9.351323645514793e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 96,
+      "solver_success": true,
+      "residual": 2.5492214554257723e-08,
+      "mean_error": 8.010085650322907e-16,
+      "accepted": false,
+      "nfev": 46
+    },
+    {
+      "start": 97,
+      "solver_success": true,
+      "residual": 0.00013725055845794485,
+      "mean_error": 3.144118432035943e-07,
+      "accepted": false,
+      "nfev": 47
+    },
+    {
+      "start": 98,
+      "solver_success": true,
+      "residual": 0.0001371206135566499,
+      "mean_error": 3.141139770274255e-07,
+      "accepted": false,
+      "nfev": 95
+    },
+    {
+      "start": 99,
+      "solver_success": true,
+      "residual": 0.00013728491117540818,
+      "mean_error": 3.1449060723079576e-07,
+      "accepted": false,
+      "nfev": 87
+    },
+    {
+      "start": 100,
+      "solver_success": false,
+      "residual": 0.006747087400377069,
+      "mean_error": 0.00013542240873043064,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 101,
+      "solver_success": true,
+      "residual": 5.965957499206331e-08,
+      "mean_error": 2.7755575615628914e-16,
+      "accepted": false,
+      "nfev": 32
+    },
+    {
+      "start": 102,
+      "solver_success": true,
+      "residual": 0.00013714169204564913,
+      "mean_error": 3.141623871447032e-07,
+      "accepted": false,
+      "nfev": 80
+    },
+    {
+      "start": 103,
+      "solver_success": true,
+      "residual": 0.00013719529747053898,
+      "mean_error": 3.1428510267298045e-07,
+      "accepted": false,
+      "nfev": 70
+    },
+    {
+      "start": 104,
+      "solver_success": true,
+      "residual": 0.00013715824675817018,
+      "mean_error": 3.142000024563933e-07,
+      "accepted": false,
+      "nfev": 112
+    },
+    {
+      "start": 105,
+      "solver_success": true,
+      "residual": 1.4025702273066354e-09,
+      "mean_error": 5.551115123125783e-17,
+      "accepted": true,
+      "nfev": 42
+    },
+    {
+      "start": 106,
+      "solver_success": true,
+      "residual": 4.3111421767451336e-08,
+      "mean_error": 2.432949675057472e-16,
+      "accepted": false,
+      "nfev": 16
+    },
+    {
+      "start": 107,
+      "solver_success": true,
+      "residual": 5.706736621701236e-09,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 23
+    },
+    {
+      "start": 108,
+      "solver_success": true,
+      "residual": 0.00013718034666097362,
+      "mean_error": 3.1425038942876557e-07,
+      "accepted": false,
+      "nfev": 85
+    },
+    {
+      "start": 109,
+      "solver_success": false,
+      "residual": 0.0004317167555823189,
+      "mean_error": 9.350882100008038e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 110,
+      "solver_success": true,
+      "residual": 5.70673662251258e-09,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 21
+    },
+    {
+      "start": 111,
+      "solver_success": false,
+      "residual": 0.000431572505721079,
+      "mean_error": 9.347775400958547e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 112,
+      "solver_success": false,
+      "residual": 0.00043159667248103317,
+      "mean_error": 9.348282767171392e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 113,
+      "solver_success": true,
+      "residual": 0.00013715824675841502,
+      "mean_error": 3.1420000215888824e-07,
+      "accepted": false,
+      "nfev": 115
+    },
+    {
+      "start": 114,
+      "solver_success": false,
+      "residual": 0.00043161722604142107,
+      "mean_error": 9.348738440606574e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 115,
+      "solver_success": false,
+      "residual": 0.00043157193258948795,
+      "mean_error": 9.347763081448985e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 116,
+      "solver_success": true,
+      "residual": 5.706736621469425e-09,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 15
+    },
+    {
+      "start": 117,
+      "solver_success": true,
+      "residual": 2.106381233170838e-09,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 13
+    },
+    {
+      "start": 118,
+      "solver_success": true,
+      "residual": 0.00013719678917037317,
+      "mean_error": 3.1428834646710264e-07,
+      "accepted": false,
+      "nfev": 40
+    },
+    {
+      "start": 119,
+      "solver_success": true,
+      "residual": 0.00013720797047862954,
+      "mean_error": 3.143141951949917e-07,
+      "accepted": false,
+      "nfev": 80
+    },
+    {
+      "start": 120,
+      "solver_success": true,
+      "residual": 0.00013724360558399723,
+      "mean_error": 3.1439563174693805e-07,
+      "accepted": false,
+      "nfev": 107
+    },
+    {
+      "start": 121,
+      "solver_success": true,
+      "residual": 5.706736622976203e-09,
+      "mean_error": 2.168404344971009e-19,
+      "accepted": true,
+      "nfev": 18
+    },
+    {
+      "start": 122,
+      "solver_success": true,
+      "residual": 0.00013734150878051937,
+      "mean_error": 3.1461993495575727e-07,
+      "accepted": false,
+      "nfev": 77
+    },
+    {
+      "start": 123,
+      "solver_success": false,
+      "residual": 0.00043162181930723954,
+      "mean_error": 9.348839193584584e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 124,
+      "solver_success": true,
+      "residual": 3.891269143013103e-10,
+      "mean_error": 1.0299920638612292e-16,
+      "accepted": true,
+      "nfev": 16
+    },
+    {
+      "start": 125,
+      "solver_success": true,
+      "residual": 5.706736622313434e-09,
+      "mean_error": 2.168404344971009e-19,
+      "accepted": true,
+      "nfev": 10
+    },
+    {
+      "start": 126,
+      "solver_success": true,
+      "residual": 2.1456627528041886e-08,
+      "mean_error": 5.551115123125783e-17,
+      "accepted": false,
+      "nfev": 25
+    },
+    {
+      "start": 127,
+      "solver_success": true,
+      "residual": 4.3111421553840433e-08,
+      "mean_error": 2.0773313624822265e-16,
+      "accepted": false,
+      "nfev": 29
+    },
+    {
+      "start": 128,
+      "solver_success": false,
+      "residual": 0.006747188818219945,
+      "mean_error": 0.000135424317051874,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 129,
+      "solver_success": true,
+      "residual": 0.00013731499694371512,
+      "mean_error": 3.145587573552284e-07,
+      "accepted": false,
+      "nfev": 98
+    },
+    {
+      "start": 130,
+      "solver_success": true,
+      "residual": 0.00013719529747034244,
+      "mean_error": 3.142851054721736e-07,
+      "accepted": false,
+      "nfev": 105
+    },
+    {
+      "start": 131,
+      "solver_success": false,
+      "residual": 0.00043162477165080356,
+      "mean_error": 9.348902359365783e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 132,
+      "solver_success": true,
+      "residual": 6.494187361141403e-08,
+      "mean_error": 1.4352668359363108e-15,
+      "accepted": false,
+      "nfev": 19
+    },
+    {
+      "start": 133,
+      "solver_success": true,
+      "residual": 1.5970491049966088e-08,
+      "mean_error": 3.2593285709259234e-15,
+      "accepted": false,
+      "nfev": 21
+    },
+    {
+      "start": 134,
+      "solver_success": true,
+      "residual": 5.40336554849154e-08,
+      "mean_error": 2.0816681711721685e-17,
+      "accepted": false,
+      "nfev": 20
+    },
+    {
+      "start": 135,
+      "solver_success": true,
+      "residual": 0.00013723996048518782,
+      "mean_error": 3.1438739958198833e-07,
+      "accepted": false,
+      "nfev": 57
+    },
+    {
+      "start": 136,
+      "solver_success": true,
+      "residual": 5.526046802015682e-08,
+      "mean_error": 1.207801220148852e-16,
+      "accepted": false,
+      "nfev": 19
+    },
+    {
+      "start": 137,
+      "solver_success": true,
+      "residual": 0.00013714169204548328,
+      "mean_error": 3.141623888655489e-07,
+      "accepted": false,
+      "nfev": 80
+    },
+    {
+      "start": 138,
+      "solver_success": true,
+      "residual": 0.00013731499694426042,
+      "mean_error": 3.145587547501074e-07,
+      "accepted": false,
+      "nfev": 89
+    },
+    {
+      "start": 139,
+      "solver_success": false,
+      "residual": 0.00043168068373400446,
+      "mean_error": 9.350094247581511e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 140,
+      "solver_success": true,
+      "residual": 0.00013731499694344453,
+      "mean_error": 3.14558759409141e-07,
+      "accepted": false,
+      "nfev": 80
+    },
+    {
+      "start": 141,
+      "solver_success": false,
+      "residual": 0.00043159196810288366,
+      "mean_error": 9.348187354405162e-07,
+      "accepted": false,
+      "nfev": 500
+    },
+    {
+      "start": 142,
+      "solver_success": true,
+      "residual": 0.0001372849111744175,
+      "mean_error": 3.1449060976826253e-07,
+      "accepted": false,
+      "nfev": 87
+    },
+    {
+      "start": 143,
+      "solver_success": true,
+      "residual": 0.00013715824676223732,
+      "mean_error": 3.1419998466506935e-07,
+      "accepted": false,
+      "nfev": 71
+    },
+    {
+      "start": 144,
+      "solver_success": true,
+      "residual": 0.00013719529747101882,
+      "mean_error": 3.142851020623578e-07,
+      "accepted": false,
+      "nfev": 60
+    },
+    {
+      "start": 145,
+      "solver_success": true,
+      "residual": 2.1456627105216006e-08,
+      "mean_error": 1.0299920638612292e-16,
+      "accepted": false,
+      "nfev": 10
+    },
+    {
+      "start": 146,
+      "solver_success": true,
+      "residual": 2.7657854085891184e-09,
+      "mean_error": 4.9873299934333204e-18,
+      "accepted": true,
+      "nfev": 41
+    },
+    {
+      "start": 147,
+      "solver_success": true,
+      "residual": 0.00013723750741123503,
+      "mean_error": 3.143818573803081e-07,
+      "accepted": false,
+      "nfev": 71
+    },
+    {
+      "start": 148,
+      "solver_success": true,
+      "residual": 0.00013723750741196833,
+      "mean_error": 3.1438185508049846e-07,
+      "accepted": false,
+      "nfev": 34
+    }
+  ],
+  "true_attempts": [
+    {
+      "start": 0,
+      "solver_success": true,
+      "residual": 1.755965554517919e-19,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 1
+    },
+    {
+      "start": 1,
+      "solver_success": true,
+      "residual": 0.0004313496443402543,
+      "mean_error": 1.3546619784809977e-06,
+      "accepted": false,
+      "nfev": 42
+    },
+    {
+      "start": 2,
+      "solver_success": true,
+      "residual": 2.1640984511866098e-15,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 22
+    },
+    {
+      "start": 3,
+      "solver_success": true,
+      "residual": 5.951767375343018e-15,
+      "mean_error": 4.7488055154865094e-17,
+      "accepted": true,
+      "nfev": 45
+    },
+    {
+      "start": 4,
+      "solver_success": true,
+      "residual": 4.144429948139852e-15,
+      "mean_error": 1.5829351718288365e-17,
+      "accepted": true,
+      "nfev": 61
+    },
+    {
+      "start": 5,
+      "solver_success": true,
+      "residual": 0.005567856536550759,
+      "mean_error": 0.00028424169852505786,
+      "accepted": false,
+      "nfev": 32
+    },
+    {
+      "start": 6,
+      "solver_success": true,
+      "residual": 0.00556785653645133,
+      "mean_error": 0.0002842416985445659,
+      "accepted": false,
+      "nfev": 38
+    },
+    {
+      "start": 7,
+      "solver_success": true,
+      "residual": 0.0004313496443402393,
+      "mean_error": 1.35466197859202e-06,
+      "accepted": false,
+      "nfev": 32
+    },
+    {
+      "start": 8,
+      "solver_success": true,
+      "residual": 0.00043134964434239794,
+      "mean_error": 1.3546619717324897e-06,
+      "accepted": false,
+      "nfev": 43
+    },
+    {
+      "start": 9,
+      "solver_success": true,
+      "residual": 0.000431349644340224,
+      "mean_error": 1.3546619786475311e-06,
+      "accepted": false,
+      "nfev": 33
+    },
+    {
+      "start": 10,
+      "solver_success": true,
+      "residual": 0.00043134964434027155,
+      "mean_error": 1.3546619787268947e-06,
+      "accepted": false,
+      "nfev": 33
+    },
+    {
+      "start": 11,
+      "solver_success": true,
+      "residual": 0.000431349644340353,
+      "mean_error": 1.3546619783938278e-06,
+      "accepted": false,
+      "nfev": 31
+    },
+    {
+      "start": 12,
+      "solver_success": true,
+      "residual": 0.0004313496443401399,
+      "mean_error": 1.354661979123279e-06,
+      "accepted": false,
+      "nfev": 34
+    },
+    {
+      "start": 13,
+      "solver_success": true,
+      "residual": 2.7028108103335966e-13,
+      "mean_error": 3.5778671692021646e-17,
+      "accepted": true,
+      "nfev": 38
+    },
+    {
+      "start": 14,
+      "solver_success": true,
+      "residual": 1.8398986603177256e-15,
+      "mean_error": 1.3877787807814457e-17,
+      "accepted": true,
+      "nfev": 31
+    },
+    {
+      "start": 15,
+      "solver_success": true,
+      "residual": 5.952821189587274e-15,
+      "mean_error": 1.2793585635328952e-17,
+      "accepted": true,
+      "nfev": 32
+    },
+    {
+      "start": 16,
+      "solver_success": true,
+      "residual": 0.0004313496443402707,
+      "mean_error": 1.3546619787268947e-06,
+      "accepted": false,
+      "nfev": 35
+    },
+    {
+      "start": 17,
+      "solver_success": true,
+      "residual": 0.00043134964433989435,
+      "mean_error": 1.3546619798846058e-06,
+      "accepted": false,
+      "nfev": 32
+    },
+    {
+      "start": 18,
+      "solver_success": true,
+      "residual": 0.0004313496443397537,
+      "mean_error": 1.354661980281207e-06,
+      "accepted": false,
+      "nfev": 31
+    },
+    {
+      "start": 19,
+      "solver_success": true,
+      "residual": 0.0004313496443404095,
+      "mean_error": 1.3546619783144642e-06,
+      "accepted": false,
+      "nfev": 33
+    },
+    {
+      "start": 20,
+      "solver_success": true,
+      "residual": 0.00043134964433984193,
+      "mean_error": 1.3546619799323107e-06,
+      "accepted": false,
+      "nfev": 33
+    },
+    {
+      "start": 21,
+      "solver_success": true,
+      "residual": 1.3992358025425847e-15,
+      "mean_error": 6.548581121812447e-17,
+      "accepted": true,
+      "nfev": 28
+    },
+    {
+      "start": 22,
+      "solver_success": true,
+      "residual": 0.00013697028337056167,
+      "mean_error": 6.401735358327245e-07,
+      "accepted": false,
+      "nfev": 84
+    },
+    {
+      "start": 23,
+      "solver_success": true,
+      "residual": 0.0001369702833773605,
+      "mean_error": 6.401735212966091e-07,
+      "accepted": false,
+      "nfev": 77
+    },
+    {
+      "start": 24,
+      "solver_success": true,
+      "residual": 0.00043134964434012453,
+      "mean_error": 1.354661979075791e-06,
+      "accepted": false,
+      "nfev": 37
+    },
+    {
+      "start": 25,
+      "solver_success": true,
+      "residual": 0.00043134964434031334,
+      "mean_error": 1.3546619782921297e-06,
+      "accepted": false,
+      "nfev": 38
+    },
+    {
+      "start": 26,
+      "solver_success": true,
+      "residual": 2.6087998476727318e-18,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 17
+    },
+    {
+      "start": 27,
+      "solver_success": true,
+      "residual": 0.00013697028336998894,
+      "mean_error": 6.401735370936516e-07,
+      "accepted": false,
+      "nfev": 80
+    },
+    {
+      "start": 28,
+      "solver_success": true,
+      "residual": 3.4803521897629195e-15,
+      "mean_error": 3.968179951296946e-17,
+      "accepted": true,
+      "nfev": 26
+    },
+    {
+      "start": 29,
+      "solver_success": true,
+      "residual": 0.0001369702833730444,
+      "mean_error": 6.401735305591651e-07,
+      "accepted": false,
+      "nfev": 120
+    },
+    {
+      "start": 30,
+      "solver_success": true,
+      "residual": 0.00013697028336768596,
+      "mean_error": 6.401735421609957e-07,
+      "accepted": false,
+      "nfev": 54
+    },
+    {
+      "start": 31,
+      "solver_success": true,
+      "residual": 0.00043134964433978176,
+      "mean_error": 1.3546619799323107e-06,
+      "accepted": false,
+      "nfev": 40
+    },
+    {
+      "start": 32,
+      "solver_success": true,
+      "residual": 1.723598492648767e-13,
+      "mean_error": 2.3852447794681098e-17,
+      "accepted": true,
+      "nfev": 10
+    },
+    {
+      "start": 33,
+      "solver_success": true,
+      "residual": 0.00013697028336913129,
+      "mean_error": 6.401735389652014e-07,
+      "accepted": false,
+      "nfev": 43
+    },
+    {
+      "start": 34,
+      "solver_success": true,
+      "residual": 1.6826598000932406e-15,
+      "mean_error": 2.667137344314341e-17,
+      "accepted": true,
+      "nfev": 14
+    },
+    {
+      "start": 35,
+      "solver_success": true,
+      "residual": 2.090438959600265e-15,
+      "mean_error": 2.3852447794681098e-17,
+      "accepted": true,
+      "nfev": 25
+    },
+    {
+      "start": 36,
+      "solver_success": true,
+      "residual": 3.2659252529505554e-15,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 9
+    },
+    {
+      "start": 37,
+      "solver_success": true,
+      "residual": 0.00013697028337110331,
+      "mean_error": 6.401735347344277e-07,
+      "accepted": false,
+      "nfev": 86
+    },
+    {
+      "start": 38,
+      "solver_success": true,
+      "residual": 2.0726943512744294e-15,
+      "mean_error": 8.023096076392733e-18,
+      "accepted": true,
+      "nfev": 8
+    },
+    {
+      "start": 39,
+      "solver_success": true,
+      "residual": 0.0001369702833696043,
+      "mean_error": 6.401735378231029e-07,
+      "accepted": false,
+      "nfev": 51
+    },
+    {
+      "start": 40,
+      "solver_success": true,
+      "residual": 0.00013697028336964726,
+      "mean_error": 6.401735379182958e-07,
+      "accepted": false,
+      "nfev": 78
+    },
+    {
+      "start": 41,
+      "solver_success": true,
+      "residual": 0.00013697028337121092,
+      "mean_error": 6.401735345082631e-07,
+      "accepted": false,
+      "nfev": 105
+    },
+    {
+      "start": 42,
+      "solver_success": true,
+      "residual": 2.8863635163829177e-13,
+      "mean_error": 4.336808689942018e-19,
+      "accepted": true,
+      "nfev": 16
+    },
+    {
+      "start": 43,
+      "solver_success": true,
+      "residual": 1.8599068294921608e-17,
+      "mean_error": 2.168404344971009e-19,
+      "accepted": true,
+      "nfev": 17
+    },
+    {
+      "start": 44,
+      "solver_success": true,
+      "residual": 0.00043134964433983955,
+      "mean_error": 1.3546619800591624e-06,
+      "accepted": false,
+      "nfev": 41
+    },
+    {
+      "start": 45,
+      "solver_success": true,
+      "residual": 5.632221244620541e-18,
+      "mean_error": 2.168404344971009e-19,
+      "accepted": true,
+      "nfev": 22
+    },
+    {
+      "start": 46,
+      "solver_success": true,
+      "residual": 0.0004313496443397968,
+      "mean_error": 1.3546619798410209e-06,
+      "accepted": false,
+      "nfev": 44
+    },
+    {
+      "start": 47,
+      "solver_success": true,
+      "residual": 1.4154572453523435e-14,
+      "mean_error": 2.3852447794681098e-17,
+      "accepted": true,
+      "nfev": 30
+    },
+    {
+      "start": 48,
+      "solver_success": true,
+      "residual": 0.00013697028336922762,
+      "mean_error": 6.401735387509631e-07,
+      "accepted": false,
+      "nfev": 105
+    },
+    {
+      "start": 49,
+      "solver_success": true,
+      "residual": 4.681595589648068e-15,
+      "mean_error": 3.968179951296946e-17,
+      "accepted": true,
+      "nfev": 42
+    },
+    {
+      "start": 50,
+      "solver_success": true,
+      "residual": 0.00013697028337305827,
+      "mean_error": 6.401735305275064e-07,
+      "accepted": false,
+      "nfev": 92
+    },
+    {
+      "start": 51,
+      "solver_success": true,
+      "residual": 1.836357659858147e-16,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 15
+    },
+    {
+      "start": 52,
+      "solver_success": true,
+      "residual": 5.599419750647703e-18,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 17
+    },
+    {
+      "start": 53,
+      "solver_success": true,
+      "residual": 0.0004313496443401906,
+      "mean_error": 1.3546619787743828e-06,
+      "accepted": false,
+      "nfev": 41
+    },
+    {
+      "start": 54,
+      "solver_success": true,
+      "residual": 0.00013697028336934542,
+      "mean_error": 6.401735385605772e-07,
+      "accepted": false,
+      "nfev": 117
+    },
+    {
+      "start": 55,
+      "solver_success": true,
+      "residual": 0.0001369702833698009,
+      "mean_error": 6.401735375377408e-07,
+      "accepted": false,
+      "nfev": 48
+    },
+    {
+      "start": 56,
+      "solver_success": true,
+      "residual": 1.3076726732757528e-19,
+      "mean_error": 2.168404344971009e-19,
+      "accepted": true,
+      "nfev": 16
+    },
+    {
+      "start": 57,
+      "solver_success": true,
+      "residual": 1.9629708487624804e-14,
+      "mean_error": 2.168404344971009e-19,
+      "accepted": true,
+      "nfev": 13
+    },
+    {
+      "start": 58,
+      "solver_success": true,
+      "residual": 0.00013697028336837126,
+      "mean_error": 6.401735406860471e-07,
+      "accepted": false,
+      "nfev": 106
+    },
+    {
+      "start": 59,
+      "solver_success": true,
+      "residual": 0.00043134964434029437,
+      "mean_error": 1.3546619785206795e-06,
+      "accepted": false,
+      "nfev": 37
+    },
+    {
+      "start": 60,
+      "solver_success": true,
+      "residual": 6.73908163520713e-18,
+      "mean_error": 2.168404344971009e-19,
+      "accepted": true,
+      "nfev": 13
+    },
+    {
+      "start": 61,
+      "solver_success": true,
+      "residual": 1.3660308047893533e-15,
+      "mean_error": 4.336808689942018e-19,
+      "accepted": true,
+      "nfev": 15
+    },
+    {
+      "start": 62,
+      "solver_success": true,
+      "residual": 0.00043134964434021934,
+      "mean_error": 1.3546619786317018e-06,
+      "accepted": false,
+      "nfev": 35
+    },
+    {
+      "start": 63,
+      "solver_success": true,
+      "residual": 1.1685977625292085e-17,
+      "mean_error": 2.168404344971009e-19,
+      "accepted": true,
+      "nfev": 18
+    },
+    {
+      "start": 64,
+      "solver_success": true,
+      "residual": 9.841282176826668e-15,
+      "mean_error": 8.023096076392733e-18,
+      "accepted": true,
+      "nfev": 10
+    },
+    {
+      "start": 65,
+      "solver_success": true,
+      "residual": 1.3173590391095543e-15,
+      "mean_error": 7.589415207398531e-18,
+      "accepted": true,
+      "nfev": 16
+    },
+    {
+      "start": 66,
+      "solver_success": true,
+      "residual": 0.0001369702833713319,
+      "mean_error": 6.401735341990487e-07,
+      "accepted": false,
+      "nfev": 71
+    },
+    {
+      "start": 67,
+      "solver_success": true,
+      "residual": 0.0004313496443397594,
+      "mean_error": 1.3546619799004352e-06,
+      "accepted": false,
+      "nfev": 38
+    },
+    {
+      "start": 68,
+      "solver_success": true,
+      "residual": 0.005567856538570214,
+      "mean_error": 0.0002842416981295964,
+      "accepted": false,
+      "nfev": 33
+    },
+    {
+      "start": 69,
+      "solver_success": true,
+      "residual": 0.00013697028337140358,
+      "mean_error": 6.401735340960495e-07,
+      "accepted": false,
+      "nfev": 84
+    },
+    {
+      "start": 70,
+      "solver_success": true,
+      "residual": 5.612735080570246e-18,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 17
+    },
+    {
+      "start": 71,
+      "solver_success": true,
+      "residual": 0.0004313496443390785,
+      "mean_error": 1.3546619823270965e-06,
+      "accepted": false,
+      "nfev": 44
+    },
+    {
+      "start": 72,
+      "solver_success": true,
+      "residual": 3.470795808977271e-15,
+      "mean_error": 7.39425881635114e-17,
+      "accepted": true,
+      "nfev": 28
+    },
+    {
+      "start": 73,
+      "solver_success": true,
+      "residual": 2.9179395477676447e-15,
+      "mean_error": 2.3852447794681098e-17,
+      "accepted": true,
+      "nfev": 18
+    },
+    {
+      "start": 74,
+      "solver_success": true,
+      "residual": 3.0011842036195423e-15,
+      "mean_error": 8.023096076392733e-18,
+      "accepted": true,
+      "nfev": 10
+    },
+    {
+      "start": 75,
+      "solver_success": true,
+      "residual": 2.2648933573482707e-15,
+      "mean_error": 6.353424730765056e-17,
+      "accepted": true,
+      "nfev": 28
+    },
+    {
+      "start": 76,
+      "solver_success": true,
+      "residual": 0.00013697028336905263,
+      "mean_error": 6.401735391078824e-07,
+      "accepted": false,
+      "nfev": 104
+    },
+    {
+      "start": 77,
+      "solver_success": true,
+      "residual": 0.00043134964433973465,
+      "mean_error": 1.3546619799490074e-06,
+      "accepted": false,
+      "nfev": 38
+    },
+    {
+      "start": 78,
+      "solver_success": true,
+      "residual": 2.3712865900609345e-15,
+      "mean_error": 2.3852447794681098e-17,
+      "accepted": true,
+      "nfev": 18
+    },
+    {
+      "start": 79,
+      "solver_success": true,
+      "residual": 3.3625387696878417e-15,
+      "mean_error": 8.023096076392733e-18,
+      "accepted": true,
+      "nfev": 11
+    },
+    {
+      "start": 80,
+      "solver_success": true,
+      "residual": 5.424920784995144e-18,
+      "mean_error": 2.168404344971009e-19,
+      "accepted": true,
+      "nfev": 13
+    },
+    {
+      "start": 81,
+      "solver_success": true,
+      "residual": 0.00043134964433980615,
+      "mean_error": 1.354661980090821e-06,
+      "accepted": false,
+      "nfev": 39
+    },
+    {
+      "start": 82,
+      "solver_success": true,
+      "residual": 0.005567856536567852,
+      "mean_error": 0.0002842416985219889,
+      "accepted": false,
+      "nfev": 40
+    },
+    {
+      "start": 83,
+      "solver_success": true,
+      "residual": 0.00013697028336804126,
+      "mean_error": 6.401735413144507e-07,
+      "accepted": false,
+      "nfev": 72
+    },
+    {
+      "start": 84,
+      "solver_success": true,
+      "residual": 0.0004313496443401501,
+      "mean_error": 1.3546619787314484e-06,
+      "accepted": false,
+      "nfev": 40
+    },
+    {
+      "start": 85,
+      "solver_success": true,
+      "residual": 0.00043134964434025187,
+      "mean_error": 1.3546619786555542e-06,
+      "accepted": false,
+      "nfev": 38
+    },
+    {
+      "start": 86,
+      "solver_success": true,
+      "residual": 0.00013697028336850803,
+      "mean_error": 6.401735402378379e-07,
+      "accepted": false,
+      "nfev": 107
+    },
+    {
+      "start": 87,
+      "solver_success": true,
+      "residual": 0.00043134964434039563,
+      "mean_error": 1.354661978203442e-06,
+      "accepted": false,
+      "nfev": 34
+    },
+    {
+      "start": 88,
+      "solver_success": true,
+      "residual": 0.0004313496443402254,
+      "mean_error": 1.3546619785365088e-06,
+      "accepted": false,
+      "nfev": 37
+    },
+    {
+      "start": 89,
+      "solver_success": true,
+      "residual": 3.52162745960591e-15,
+      "mean_error": 2.47198095326695e-17,
+      "accepted": true,
+      "nfev": 63
+    },
+    {
+      "start": 90,
+      "solver_success": true,
+      "residual": 0.0001369702833706283,
+      "mean_error": 6.401735358247014e-07,
+      "accepted": false,
+      "nfev": 82
+    },
+    {
+      "start": 91,
+      "solver_success": true,
+      "residual": 0.00013697028337220703,
+      "mean_error": 6.40173532335522e-07,
+      "accepted": false,
+      "nfev": 78
+    },
+    {
+      "start": 92,
+      "solver_success": true,
+      "residual": 0.00043134964434008425,
+      "mean_error": 1.3546619786713836e-06,
+      "accepted": false,
+      "nfev": 37
+    },
+    {
+      "start": 93,
+      "solver_success": true,
+      "residual": 3.803598175774747e-13,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 11
+    },
+    {
+      "start": 94,
+      "solver_success": true,
+      "residual": 0.00013697028337240688,
+      "mean_error": 6.401735320560147e-07,
+      "accepted": false,
+      "nfev": 41
+    },
+    {
+      "start": 95,
+      "solver_success": true,
+      "residual": 0.0004313496443397733,
+      "mean_error": 1.3546619798548987e-06,
+      "accepted": false,
+      "nfev": 40
+    },
+    {
+      "start": 96,
+      "solver_success": true,
+      "residual": 2.1267325755307327e-15,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 35
+    },
+    {
+      "start": 97,
+      "solver_success": true,
+      "residual": 7.277951368869741e-16,
+      "mean_error": 3.968179951296946e-17,
+      "accepted": true,
+      "nfev": 24
+    },
+    {
+      "start": 98,
+      "solver_success": true,
+      "residual": 0.00013697028337013328,
+      "mean_error": 6.401735369112888e-07,
+      "accepted": false,
+      "nfev": 46
+    },
+    {
+      "start": 99,
+      "solver_success": true,
+      "residual": 0.00013697028336841213,
+      "mean_error": 6.401735405828311e-07,
+      "accepted": false,
+      "nfev": 83
+    },
+    {
+      "start": 100,
+      "solver_success": true,
+      "residual": 0.005567856537652695,
+      "mean_error": 0.0002842416983093732,
+      "accepted": false,
+      "nfev": 35
+    },
+    {
+      "start": 101,
+      "solver_success": true,
+      "residual": 0.00013697028337120566,
+      "mean_error": 6.401735345520649e-07,
+      "accepted": false,
+      "nfev": 92
+    },
+    {
+      "start": 102,
+      "solver_success": true,
+      "residual": 3.106788649134401e-16,
+      "mean_error": 2.168404344971009e-19,
+      "accepted": true,
+      "nfev": 25
+    },
+    {
+      "start": 103,
+      "solver_success": true,
+      "residual": 2.7513292459907795e-15,
+      "mean_error": 3.8163916471489756e-17,
+      "accepted": true,
+      "nfev": 16
+    },
+    {
+      "start": 104,
+      "solver_success": true,
+      "residual": 0.00013697028336872048,
+      "mean_error": 6.401735399644021e-07,
+      "accepted": false,
+      "nfev": 74
+    },
+    {
+      "start": 105,
+      "solver_success": true,
+      "residual": 0.00013697028337167423,
+      "mean_error": 6.401735335725967e-07,
+      "accepted": false,
+      "nfev": 83
+    },
+    {
+      "start": 106,
+      "solver_success": true,
+      "residual": 0.00013697028336969306,
+      "mean_error": 6.401735376723987e-07,
+      "accepted": false,
+      "nfev": 54
+    },
+    {
+      "start": 107,
+      "solver_success": true,
+      "residual": 9.168114842022634e-19,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 17
+    },
+    {
+      "start": 108,
+      "solver_success": true,
+      "residual": 0.0001369702833715753,
+      "mean_error": 6.401735337788119e-07,
+      "accepted": false,
+      "nfev": 99
+    },
+    {
+      "start": 109,
+      "solver_success": true,
+      "residual": 0.00043134964434021983,
+      "mean_error": 1.3546619787188716e-06,
+      "accepted": false,
+      "nfev": 36
+    },
+    {
+      "start": 110,
+      "solver_success": true,
+      "residual": 0.0001369702833702545,
+      "mean_error": 6.401735364591765e-07,
+      "accepted": false,
+      "nfev": 93
+    },
+    {
+      "start": 111,
+      "solver_success": true,
+      "residual": 0.0004313496443399642,
+      "mean_error": 1.3546619791787902e-06,
+      "accepted": false,
+      "nfev": 40
+    },
+    {
+      "start": 112,
+      "solver_success": true,
+      "residual": 0.00043134964434003476,
+      "mean_error": 1.3546619791313021e-06,
+      "accepted": false,
+      "nfev": 40
+    },
+    {
+      "start": 113,
+      "solver_success": true,
+      "residual": 6.143621774526925e-18,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 20
+    },
+    {
+      "start": 114,
+      "solver_success": true,
+      "residual": 0.00043134964433977043,
+      "mean_error": 1.3546619800194806e-06,
+      "accepted": false,
+      "nfev": 38
+    },
+    {
+      "start": 115,
+      "solver_success": true,
+      "residual": 0.00043134964433968846,
+      "mean_error": 1.354661980233502e-06,
+      "accepted": false,
+      "nfev": 37
+    },
+    {
+      "start": 116,
+      "solver_success": true,
+      "residual": 0.00013697028337247442,
+      "mean_error": 6.401735317487518e-07,
+      "accepted": false,
+      "nfev": 65
+    },
+    {
+      "start": 117,
+      "solver_success": true,
+      "residual": 2.2765278652867838e-14,
+      "mean_error": 8.023096076392733e-18,
+      "accepted": true,
+      "nfev": 10
+    },
+    {
+      "start": 118,
+      "solver_success": true,
+      "residual": 0.00013697028337207885,
+      "mean_error": 6.401735325733959e-07,
+      "accepted": false,
+      "nfev": 46
+    },
+    {
+      "start": 119,
+      "solver_success": true,
+      "residual": 0.00013697028336924388,
+      "mean_error": 6.401735387112813e-07,
+      "accepted": false,
+      "nfev": 76
+    },
+    {
+      "start": 120,
+      "solver_success": true,
+      "residual": 9.742870318195536e-19,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 15
+    },
+    {
+      "start": 121,
+      "solver_success": true,
+      "residual": 0.0004313496443398394,
+      "mean_error": 1.3546619802176727e-06,
+      "accepted": false,
+      "nfev": 39
+    },
+    {
+      "start": 122,
+      "solver_success": true,
+      "residual": 0.0001369702833690276,
+      "mean_error": 6.401735391475642e-07,
+      "accepted": false,
+      "nfev": 97
+    },
+    {
+      "start": 123,
+      "solver_success": true,
+      "residual": 0.0004313496443400748,
+      "mean_error": 1.354661979028086e-06,
+      "accepted": false,
+      "nfev": 41
+    },
+    {
+      "start": 124,
+      "solver_success": true,
+      "residual": 0.00013697028337196116,
+      "mean_error": 6.401735328034636e-07,
+      "accepted": false,
+      "nfev": 76
+    },
+    {
+      "start": 125,
+      "solver_success": true,
+      "residual": 1.0307750038737102e-15,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 10
+    },
+    {
+      "start": 126,
+      "solver_success": true,
+      "residual": 0.00043134964433962845,
+      "mean_error": 1.354661980328695e-06,
+      "accepted": false,
+      "nfev": 41
+    },
+    {
+      "start": 127,
+      "solver_success": true,
+      "residual": 1.845664257678728e-15,
+      "mean_error": 7.134050294954619e-17,
+      "accepted": true,
+      "nfev": 47
+    },
+    {
+      "start": 128,
+      "solver_success": true,
+      "residual": 0.0055678565388620075,
+      "mean_error": 0.0002842416980725086,
+      "accepted": false,
+      "nfev": 35
+    },
+    {
+      "start": 129,
+      "solver_success": true,
+      "residual": 0.005567856536476896,
+      "mean_error": 0.0002842416985394589,
+      "accepted": false,
+      "nfev": 38
+    },
+    {
+      "start": 130,
+      "solver_success": true,
+      "residual": 0.0001369702833704947,
+      "mean_error": 6.401735360786216e-07,
+      "accepted": false,
+      "nfev": 54
+    },
+    {
+      "start": 131,
+      "solver_success": true,
+      "residual": 0.0004313496443401855,
+      "mean_error": 1.3546619785881168e-06,
+      "accepted": false,
+      "nfev": 33
+    },
+    {
+      "start": 132,
+      "solver_success": true,
+      "residual": 0.00013697028337324375,
+      "mean_error": 6.401735301389284e-07,
+      "accepted": false,
+      "nfev": 51
+    },
+    {
+      "start": 133,
+      "solver_success": true,
+      "residual": 0.0001369702833694261,
+      "mean_error": 6.401735383268232e-07,
+      "accepted": false,
+      "nfev": 66
+    },
+    {
+      "start": 134,
+      "solver_success": true,
+      "residual": 0.00013697028336888889,
+      "mean_error": 6.401735394964605e-07,
+      "accepted": false,
+      "nfev": 90
+    },
+    {
+      "start": 135,
+      "solver_success": true,
+      "residual": 0.0001369702833688305,
+      "mean_error": 6.401735396074828e-07,
+      "accepted": false,
+      "nfev": 81
+    },
+    {
+      "start": 136,
+      "solver_success": true,
+      "residual": 1.9453641652566363e-19,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 11
+    },
+    {
+      "start": 137,
+      "solver_success": true,
+      "residual": 0.0004313496443397373,
+      "mean_error": 1.354661979816301e-06,
+      "accepted": false,
+      "nfev": 43
+    },
+    {
+      "start": 138,
+      "solver_success": true,
+      "residual": 0.00013697028337122485,
+      "mean_error": 6.40173534413287e-07,
+      "accepted": false,
+      "nfev": 72
+    },
+    {
+      "start": 139,
+      "solver_success": true,
+      "residual": 0.0004313496443397587,
+      "mean_error": 1.3546619800598129e-06,
+      "accepted": false,
+      "nfev": 37
+    },
+    {
+      "start": 140,
+      "solver_success": true,
+      "residual": 0.0001369702833686873,
+      "mean_error": 6.401735399524759e-07,
+      "accepted": false,
+      "nfev": 80
+    },
+    {
+      "start": 141,
+      "solver_success": true,
+      "residual": 2.404366073515321e-15,
+      "mean_error": 0.0,
+      "accepted": true,
+      "nfev": 16
+    },
+    {
+      "start": 142,
+      "solver_success": true,
+      "residual": 1.682645163970509e-13,
+      "mean_error": 4.336808689942018e-19,
+      "accepted": true,
+      "nfev": 13
+    },
+    {
+      "start": 143,
+      "solver_success": true,
+      "residual": 1.6720384584237014e-16,
+      "mean_error": 2.168404344971009e-19,
+      "accepted": true,
+      "nfev": 15
+    },
+    {
+      "start": 144,
+      "solver_success": true,
+      "residual": 0.00013697028337002068,
+      "mean_error": 6.401735369826293e-07,
+      "accepted": false,
+      "nfev": 39
+    },
+    {
+      "start": 145,
+      "solver_success": true,
+      "residual": 2.0506481854354858e-15,
+      "mean_error": 8.023096076392733e-18,
+      "accepted": true,
+      "nfev": 11
+    },
+    {
+      "start": 146,
+      "solver_success": true,
+      "residual": 0.00013697028336960847,
+      "mean_error": 6.401735379341252e-07,
+      "accepted": false,
+      "nfev": 91
+    },
+    {
+      "start": 147,
+      "solver_success": true,
+      "residual": 0.00013697028336977815,
+      "mean_error": 6.401735375693995e-07,
+      "accepted": false,
+      "nfev": 41
+    },
+    {
+      "start": 148,
+      "solver_success": true,
+      "residual": 0.00013697028337097887,
+      "mean_error": 6.401735350158866e-07,
+      "accepted": false,
+      "nfev": 38
+    }
+  ],
+  "exhaustive": false
+}
