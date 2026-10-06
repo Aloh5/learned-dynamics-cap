@@ -1,0 +1,5 @@
+test,initial_condition_count,requested_horizon,completed_time,solver_success,escaped,escape_event_time,escape_event_max_abs,escape_threshold,trajectory_min,trajectory_max,maximum_absolute_state,escaping_ic,rhs_evaluations,message
+on_attractor,12,5000.0,57.0,True,True,57.908898436338774,4.999999999998329,5.0,0.2549543766292259,1.3186436097343612,1.3186436097343612,6,3731,A termination event occurred.
+near_attractor,12,2000.0,2.0,True,True,2.8066595365331604,5.000000000000317,5.0,-0.002084885905057579,1.3670182488169627,1.3670182488169627,7,842,A termination event occurred.
+physical_box_random,24,500.0,0.0,True,True,0.0778244794730892,5.000000000000002,5.0,0.1583890557259259,1.6374214715497275,1.6374214715497275,18,260,A termination event occurred.
+broad_box_random,24,100.0,0.0,True,True,0.01113118188414891,9.999999999999998,10.0,-0.9892324254692162,2.4687913035933167,2.4687913035933167,22,548,A termination event occurred.

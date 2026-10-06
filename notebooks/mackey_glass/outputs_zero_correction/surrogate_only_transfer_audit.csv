@@ -1,0 +1,2 @@
+polynomial_degree,ridge_alpha,euler_internal_dt,observation_dt,baseline_cubic_period,degree5_free_period,degree5_free_closure,exported_period,surrogate_fourier_nfev,surrogate_collocation_rms,true_dde_pre_cap_calls
+5,1e-07,0.001,0.1,46.84316106905855,46.671392764128626,2.866653339383477e-12,46.731007818332884,6,0.003843685776095611,0
