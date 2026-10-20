@@ -17,7 +17,7 @@ From the repository root:
 PYTHON_BINARY=/opt/miniconda3/bin/python bash CAP/Mackey-Glass_PO/run_fixed_parameter_proof.sh
 ```
 
-Python requires NumPy and SciPy. MATLAB and INTLAB 13 are required for the proof. `MATLAB_BINARY`, `INTLAB_DIR`, and `PYTHON_BINARY` override machine-specific defaults. The focused notebook is `notebooks/mackey_glass/Mackey_Glass_Fixed_Parameter_CAP.ipynb`. Its default mode checks and displays the executed certificate; set `MG_RUN_FIXED_PARAMETER_PROOF=1` to regenerate it.
+Python requires NumPy and SciPy. MATLAB and INTLAB 13 are required for the proof. `MATLAB_BINARY`, `INTLAB_DIR`, and `PYTHON_BINARY` override machine-specific defaults. The focused notebook is `notebooks/mackey_glass/mg_periodic_orbit_certification.ipynb`. Its default mode checks and displays the executed certificate; set `MG_RUN_FIXED_PARAMETER_PROOF=1` to regenerate it.
 
 The candidate builder performs only floating-point preparation. Its Fourier approximations and numerical inverse are interpreted as exact dyadic input data by the interval proof; their quality is verified, never assumed. An optional Newton setting is for numerical investigation. The reproduction script explicitly selects zero, and the notebook/tests verify equality with the source coefficients.
 
