@@ -3,8 +3,8 @@
 This directory contains the numerical and computer-assisted proof workflow for
 an ordinary periodic orbit of the true Kuramoto--Sivashinsky PDE with fixed
 endpoint conditions. It is separate from the periodic-domain, relative-orbit
-experiment in `notebooks/kuramoto_sivashinsky/Kuramoto.ipynb`; that notebook is
-unchanged. `Kuramoto_Neumann_CAP.ipynb` explains and exercises this formulation.
+experiment in `notebooks/kuramoto_sivashinsky/ks_periodic_forecasting.ipynb`.
+`ks_neumann_orbit_certification.ipynb` explains and exercises this formulation.
 
 ## Formulation and symmetry
 
@@ -86,10 +86,12 @@ true-system Newton steps    0
 
 Outputs are in `outputs_surrogate/`, including the final 60-mode fitted model,
 surrogate trajectory, recurrence table, final continuation checkpoint, metrics,
-and proof certificate. Earlier model and continuation checkpoints remain in the private source archive; they are not part of this export. The notebook `Kuramoto_Neumann_CAP.ipynb` uses the
+and proof certificate. Earlier model and continuation checkpoints are under
+`archive/CAP/Kuramoto_PO/`. The notebook `ks_neumann_orbit_certification.ipynb` uses the
 active outputs by default.
 
-The **legacy true-Galerkin candidate** workflow is retained outside this export. Its zero count applies only after export; it does not establish
+The **legacy true-Galerkin candidate** workflow is preserved under
+`archive/CAP/Kuramoto_PO/`. Its zero count applies only after export; it does not establish
 surrogate-only transfer. Do not use that legacy certificate as evidence for
 the new zero-true-correction claim.
 
@@ -199,7 +201,7 @@ remain recoverable from the dated cleanup archive.
   direct-column tests.
 
 Legacy true-Galerkin, CAPD, and intermediate continuation files are preserved
-outside this export.
+under `archive/CAP/Kuramoto_PO/`.
 
 Primary mathematical reference: J.-L. Figueras and R. de la Llave,
 “Numerical Computations and Computer Assisted Proofs of Periodic Orbits of the

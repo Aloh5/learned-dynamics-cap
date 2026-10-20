@@ -9,10 +9,11 @@ import matplotlib.pyplot as plt
 from scipy.integrate import solve_ivp
 root=Path(__file__).resolve().parents[1]; out=root/'results/figures'
 out.mkdir(parents=True, exist_ok=True)
-def funcs(path,names):
- nb=json.loads((root/path).read_text()); source='\n'.join(''.join(c['source']) for c in nb['cells'] if c['cell_type']=='code'); tree=ast.parse(source); tree.body=[n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name in names]
- ns={'np':np};exec(compile(tree,str(path),'exec'),ns);return ns
-ks=funcs('notebooks/kuramoto_sivashinsky/Kuramoto.ipynb',{'rfft_wavenumbers','dealiased_nonlinear_rfft','simulate_ks_etdrk4','ks_rhs_spectral_state'})
+import sys
+sys.path.insert(0, str(root))
+from dpsr.systems import simulate_ks_etdrk4
+from dpsr.polynomial import fit_polynomial_vector_field
+ks = {'simulate_ks_etdrk4': simulate_ks_etdrk4}
 def field(data):
  p=data['powers']; coeff=data['coefficients']; dim=p.shape[1]
  indices=np.full((len(p),int(p.sum(1).max())),dim,dtype=int)
@@ -35,8 +36,9 @@ def draw(a,b,name,title,labels):
 
 mg=np.load(root/'results/equilibria/mackey_glass_model.npz'); f=field(mg)
 # Verify stored coefficients match the manuscript's normalized degree-weighted fit.
-x=mg['training'];p=mg['powers'];theta=np.prod(x[:,None,:]**p[None,:,:],2);sc=np.sqrt(np.mean(theta**2,0));sc[sc<1e-14]=1;tn=theta/sc;w=np.maximum(p.sum(1),1);w[0]=0
-refit=np.linalg.solve(tn.T@tn+1e-4*np.diag(w),tn.T@np.gradient(x,.1,axis=0,edge_order=2)).T/sc
+x=mg['training']
+refit=fit_polynomial_vector_field(x,np.gradient(x,.1,axis=0,edge_order=2),
+    degree=3,regularization=1e-4,normalize=True).coefficients()
 print('MG relative coefficient check',np.linalg.norm(refit-mg['coefficients'])/np.linalg.norm(mg['coefficients']),flush=True)
 assert np.allclose(refit,mg['coefficients'],rtol=1e-6,atol=1e-7)
 v=np.full(50000+171,1.2)

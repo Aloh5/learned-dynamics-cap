@@ -1,57 +1,73 @@
-# Validation of learned polynomial dynamics
+# Learned dynamics and computer-assisted proofs
 
-Code and numerical evidence for **Validation of Learned Polynomial Dynamics: Forecasts, Attractor Diagnostics, and Certified Periodic Orbits**, by Aaron Loh and J. D. Mireles James.
+Dense polynomial surrogate reconstruction for Mackey–Glass (MG) and
+Kuramoto–Sivashinsky (KS), followed by forecasting, numerical dynamics, and
+computer-assisted validation of selected periodic orbits.
 
-## Repository contents
+## Start here
 
-| Path | Role in the paper |
+Install from the repository root with Python 3.10 or newer:
+
+```sh
+python -m pip install -e ".[notebooks]"
+jupyter lab
+```
+
+No PySINDy dependency is required. Open notebooks from the repository root or
+their own directory. Each forecasting notebook fits and evaluates its baseline
+by default; sweeps, pruning, long diagnostics, equilibrium searches and orbit
+construction are explicitly enabled in its configuration cell.
+
+| Notebook | Purpose | Manuscript connection |
+| --- | --- | --- |
+| [MG forecasting](notebooks/mackey_glass/mg_delay_forecasting.ipynb) | Delay-coordinate ridge fitting and held-out forecasts | Polynomial regression; MG prediction and local dynamics |
+| [MG orbit construction](notebooks/mackey_glass/mg_surrogate_orbit_construction.ipynb) | Optional surrogate-only discovery and higher-degree refinement | MG periodic-candidate construction |
+| [MG certification](notebooks/mackey_glass/mg_periodic_orbit_certification.ipynb) | Inspect the frozen fixed-parameter candidate and certificate | Fixed-parameter MG proof |
+| [Periodic KS forecasting](notebooks/kuramoto_sivashinsky/ks_periodic_forecasting.ipynb) | Dense quadratic nodal fitting and held-out forecasts | Spatial regression; periodic KS assessment |
+| [Neumann KS certification](notebooks/kuramoto_sivashinsky/ks_neumann_orbit_certification.ipynb) | Surrogate-only candidate construction and PDE validation | Neumann KS construction and certificate |
+
+## Method and structure
+
+The baseline method fits a complete polynomial library without iterative
+sparsity thresholding. MG uses finite-difference derivative labels and
+RMS-normalized degree-weighted ridge. Periodic KS uses exact spectral labels
+on trajectory snapshots and unscaled, unregularized least squares. Neumann KS
+uses exact Galerkin labels on paired independent random states, a parity-split
+quadratic fit, and reflection symmetrization. These sampling and boundary-value
+problems support distinct scientific claims.
+
+| Path | Contents |
 | --- | --- |
-| `notebooks/mackey_glass/` | Cubic forecasts, long-run diagnostics, degree-five surrogate orbit construction, and the fixed-parameter proof walkthrough |
-| `notebooks/kuramoto_sivashinsky/` | Periodic-domain forecasts and relative-orbit pilot; separate Neumann proof walkthrough |
-| `analysis/` | Equilibrium searches and figure generation |
-| `results/equilibria/` | Frozen fitted coefficients, equilibrium results, and source provenance for Sections 2.1–2.2 |
-| `results/figures/` | Attractor comparisons and frozen candidate plots |
-| `CAP/Mackey-Glass_PO/` | Fixed-parameter candidate, MATLAB/INTLAB proof, certificate, audit, and tests |
-| `CAP/Kuramoto_PO/` | Neumann candidate construction, finite/tail scan, MATLAB/INTLAB proof, certificate, audit, and tests |
+| `dpsr/` | Shared regression, reference solvers, polynomial models, orbit helpers, metrics, and equilibrium benchmarks |
+| `notebooks/` | Five purpose-named experiment and certification entry points |
+| `CAP/` | Proof drivers, frozen candidates, certificates, and audits |
+| `docs/` | Regression methodology and numerical conventions |
+| `analysis/` | Equilibrium reproduction and stored-model figure generation |
+| `results/` | Stored numerical evidence and figures |
+| `tests/` | Shared regression and equilibrium checks |
+| `outputs/` | Ignored, regenerable experiment outputs |
 
-The periodic-domain KS numerical results and the Neumann KS theorem concern different boundary-value problems. Numerical diagnostics are not rigorous certificates of chaos or global model fidelity.
+See [methodology](docs/methodology.md) for data regimes and regression
+conventions. To regenerate numerical equilibrium results, run
+`python analysis/run_equilibria.py`. Figure scripts in `analysis/` use the
+stored models in `results/equilibria/`.
 
-## Environment and checks
+## Verification and proofs
 
-Use Python 3.13. The core numerical versions are pinned to the recorded equilibrium run; the remaining packages use compatible ranges.
-
-```sh
-python3 -m venv .venv
-. .venv/bin/activate
-python -m pip install -r requirements.txt
-python -m unittest discover -s analysis -p 'test_*.py' -v
-python -m unittest discover -s CAP/Mackey-Glass_PO -p 'test_fixed_parameter.py' -v
-python -m unittest discover -s CAP/Kuramoto_PO -p 'test_*.py' -v
-```
-
-These 19 tests check numerical derivatives, Fourier conversions, source identity and certificate inequalities. They do not replace interval validation.
-
-## Reproduce the numerical results
-
-Start JupyterLab from this repository root. The selected cubic MG forecast and long-run checks are in `Mackey_Glass_Current.ipynb`; surrogate orbit discovery and degree-five refinement are in `Mackey_Glass_CAP_Zero_Correction.ipynb`. `Kuramoto.ipynb` supplies the periodic KS forecast and relative-orbit pilot. Review the notebooks' run flags before executing expensive searches. Saved tables and figures accompany the numerical experiments.
+For the tested scientific package versions, see `requirements.txt`.
 
 ```sh
-python analysis/run_equilibria.py
-python analysis/generate_attractors.py
-python analysis/generate_candidates.py
+python -m unittest discover -s tests -v
+python scripts/verify_notebooks.py
+(cd CAP/Kuramoto_PO && python -m unittest test_ks_neumann test_surrogate_neumann -v)
+(cd CAP/Mackey-Glass_PO && python -m unittest test_fixed_parameter -v)
 ```
 
-The equilibrium script refits the selected forecasting models and reruns the finite searches. The attractor script uses the saved models under `results/equilibria/`, with the paper's integration and projection protocols, and creates Figures 2 and 5. The candidate script plots the frozen approximations for Figure 6. Forecast Figures 1 and 4 and the long-run Figure 3 come from the forecasting notebooks; relevant saved images are in their output directories. Plot formatting may differ from the manuscript.
-
-## Reproduce the interval certificates
-
-MATLAB R2024b and INTLAB 13 were used for the saved certificates. Set the external installation paths:
-
-```sh
-INTLAB_DIR=/path/to/Intlab_V13 bash CAP/Mackey-Glass_PO/run_fixed_parameter_proof.sh
-INTLAB_DIR=/path/to/Intlab_V13 bash CAP/Kuramoto_PO/run_surrogate_pde_proof.sh
-```
-
-`MATLAB_BINARY` and `PYTHON_BINARY` can override the executables. Drivers regenerate proof inputs and certificates; use a separate working copy if you want to preserve the frozen release evidence. Read each proof's Markdown audit for arithmetic assumptions and theorem scope.
-
-The MG driver requires the included `notebooks/mackey_glass/outputs_zero_correction/MG_zero_correction_candidate.mat`. The KS driver regenerates `ks_neumann_fourier_proof_data.mat` (about 307 MB); this large inverse is deliberately excluded. Final fitted coefficients, continuation checkpoint, source trajectory and compact certificate evidence are included to support provenance and resume behavior.
+Numerical checks do not replace interval validation. Reproducing the rigorous
+proof requires MATLAB and INTLAB; see the
+[MG proof documentation](CAP/Mackey-Glass_PO/FIXED_PARAMETER_PROOF.md) and
+[Neumann KS proof documentation](CAP/Kuramoto_PO/README.md). Proof execution is
+opt-in. Default notebook runs inspect certificates without regenerating them.
+MG construction writes new experiments under `outputs/`; the fixed-parameter
+proof continues to use its documented frozen candidate in
+`notebooks/mackey_glass/outputs_zero_correction/`.
