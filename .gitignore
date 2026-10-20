@@ -1,20 +1,74 @@
-# Local caches and environments
-.DS_Store
+# Python
 __pycache__/
 *.py[cod]
+*.so
+
+# macOS
+.DS_Store
+
+# Jupyter
 .ipynb_checkpoints/
+
+# Python environments
 .venv/
 venv/
-.cache/
-*.aux
-*.tmp
-# Regenerated KS inverse exceeds GitHub's normal per-file limit.
-CAP/Kuramoto_PO/outputs_surrogate/ks_neumann_fourier_proof_data.mat
+env/
 
-# Private working material and regenerable diagnostics
-archive/
-paper/
-overleaf_ready/
-tmp/
+# Matplotlib
+.matplotlib/
+
+# Generated outputs
+outputs/
+
+# Generated datasets
+data/generated/
+
+# Temporary files
+*.tmp
 *.log
-results/figures/trajectories.npz
+
+# LaTeX build intermediates (keep source and deliverable PDFs)
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Local scratch work and archived generated clutter
+/tmp/
+/archive/**/generated/
+/archive/revision_support/**/mpl/
+
+# Regenerable proof matrices and new construction runs; retain certificates,
+# candidates, and the small audited continuation checkpoints explicitly.
+CAP/**/outputs_*/*fourier_proof_data.mat
+CAP/**/outputs_surrogate_reproduced/
+
+# Do not accumulate standalone upload copies or screenshots in the root.
+/github_export/
+/github_paper_export/
+/github_*export_manifest.json
+/github_*.png
+/github_*.jpg
+
+# Editable package installs and verification caches
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Root manuscript build products
+/Paper.pdf
+
+# Unpublished manuscript and local research history
+/Paper.tex
+/figures/
+/archive/
+/docs/refactor_verification.md
+/docs/regression_comparison.json
+/docs/ifore_abstract.md
