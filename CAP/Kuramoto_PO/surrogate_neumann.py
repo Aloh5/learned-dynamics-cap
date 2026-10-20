@@ -7,7 +7,12 @@ fitted polynomial; no KS coefficient is inserted into the model.
 """
 from dataclasses import dataclass
 import numpy as np
-from scipy.linalg import lstsq
+from pathlib import Path
+import sys
+REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+from dpsr.polynomial import solve_dense_regression
 from ks_neumann import NeumannKSConfig, velocity_rhs_sine
 
 @dataclass
@@ -48,9 +53,12 @@ def fit_surrogate(modes, seed=173, interval_length=22.):
     x = z*scale
     positive = velocity_rhs_sine(x,config)
     negative = velocity_rhs_sine(-x,config)
-    linear = lstsq(z, (positive-negative)/2, lapack_driver='gelsy')[0].T/scale
+    linear_fit, linear_diagnostics = solve_dense_regression(z, (positive-negative)/2, driver='gelsy')
+    linear = linear_fit/scale
     features = np.column_stack([np.ones(count),z[:,i]*z[:,j]])
-    even,_,rank,_ = lstsq(features,(positive+negative)/2,lapack_driver='gelsy')
+    even_fit, even_diagnostics = solve_dense_regression(features, (positive+negative)/2, driver='gelsy')
+    even = even_fit.T
+    rank = even_diagnostics['rank']
     if rank != len(i)+1:
         raise RuntimeError('Training library is rank deficient')
     constant = even[0].copy()
