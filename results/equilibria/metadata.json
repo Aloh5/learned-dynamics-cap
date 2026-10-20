@@ -1,22 +1,16 @@
 {
   "sources": {
-    "notebooks/mackey_glass/Mackey_Glass_Current.ipynb": "767bb52ff5f316efc608142ed63caf9390f539675bb2fe97d087eba12307f1c8",
-    "notebooks/kuramoto_sivashinsky/Kuramoto.ipynb": "fc9a8a66d686a1faa9b7aaf768f6f341da1453b3d82bcb03edf07b0c8c7bdf19",
-    "paper/run_equilibria.py": "1850bd47ef1a030b5bec1010ee165a346a5abe2fc7b325b1d8de8603ebd83be0",
-    "paper/code/ddsr_benchmark/equilibria.py": "11618d14315e8e0c832bbf531a169334ca7cbc546be16e72cf6f28c31f48ae44"
+    "notebooks/mackey_glass/mg_delay_forecasting.ipynb": "92a56d043de4d4a9fbc0e1a0550e081e54f9c4240692fb1bad801baef0c4a97a",
+    "notebooks/kuramoto_sivashinsky/ks_periodic_forecasting.ipynb": "f6bce2534cc0e1bf805f72a7ab1a77cc1675d873d8a24b922d12d71e74e13002",
+    "analysis/run_equilibria.py": "00929044bf52079e59246314a378c9dcebd8965b6917f15b3534cd25082751a6",
+    "dpsr/equilibria.py": "11618d14315e8e0c832bbf531a169334ca7cbc546be16e72cf6f28c31f48ae44",
+    "dpsr/polynomial.py": "f5f6acd80dbdbed79e61fc34701e0b103d477c870fdb05ef2e5f726c3da483da",
+    "dpsr/systems.py": "7d9b9a0bfb69d243dde444fea366283cb821323e622d23d450b594e87d112e24"
   },
   "versions": {
     "numpy": "2.4.4",
     "scipy": "1.17.1",
-    "pysindy": "2.1.0",
     "scikit-learn": "1.8.0"
   },
-  "scope": "Current selected MG cubic and periodic KS quadratic forecasting fits; no CAP models or comparison refits.",
-  "export_sources_sha256": {
-    "notebooks/mackey_glass/Mackey_Glass_Current.ipynb": "4a174612e1e5f2867c516742cb84eff1732b2f810eaab4cca6d40548c0d35d49",
-    "notebooks/kuramoto_sivashinsky/Kuramoto.ipynb": "03b85479e03323d114d37b083dd6853ca342e8a5c49be88cf46f0c72a46e9710",
-    "analysis/run_equilibria.py": "0499d02d45aec6bbd90f7dc7c64186c21b7f9d4bd29720b48edfd3e5e04c0534",
-    "analysis/equilibria.py": "11618d14315e8e0c832bbf531a169334ca7cbc546be16e72cf6f28c31f48ae44"
-  },
-  "export_note": "Original source hashes retained as provenance; export paths changed, results not recomputed."
+  "scope": "Current selected MG cubic and periodic KS quadratic forecasting fits; no CAP models or comparison refits."
 }

@@ -16,38 +16,38 @@
   "roots": [
     {
       "state": [
-        0.9907219252496062,
-        0.995600704989317,
-        0.9810300646222367,
-        0.9916162967400888,
-        0.9928069903377336,
-        0.9910070733454938
+        0.990721925272549,
+        0.995600704870596,
+        0.9810300651043872,
+        0.9916162970095378,
+        0.9928069904923114,
+        0.9910070734603471
       ],
-      "residual": 5.928486197963879e-13,
+      "residual": 5.930974463209406e-13,
       "eigenvalues": [
         [
-          0.03962094356332382,
-          0.13937978249786356
+          0.03962094346995372,
+          0.1393797824482769
         ],
         [
-          0.03962094356332382,
-          -0.13937978249786356
+          0.03962094346995372,
+          -0.1393797824482769
         ],
         [
-          -0.04819512648194707,
-          0.3835595987854316
+          -0.04819512588522305,
+          0.3835596006808969
         ],
         [
-          -0.04819512648194707,
-          -0.3835595987854316
+          -0.04819512588522305,
+          -0.3835596006808969
         ],
         [
-          -0.16174224439304277,
-          0.4664338913503098
+          -0.1617422499008278,
+          0.4664338881684873
         ],
         [
-          -0.16174224439304277,
-          -0.4664338913503098
+          -0.1617422499008278,
+          -0.4664338881684873
         ]
       ],
       "stability": {
@@ -55,47 +55,47 @@
         "unstable": 2,
         "neutral": 0
       },
-      "jacobian_fd_error": 7.42812478193855e-10,
+      "jacobian_fd_error": 4.5399017878366976e-10,
       "nearest_true_constant": 1.0,
-      "position_error": 0.025849439337565183,
-      "coordinate_spread": 0.014570640367080223,
-      "min_distance_to_training": 0.21673532255724576,
+      "position_error": 0.025849438825342595,
+      "coordinate_spread": 0.01457063976620887,
+      "min_distance_to_training": 0.21673532261945555,
       "attractor_distance_rank": 1,
       "retained_by_historical_filter": true
     },
     {
       "state": [
-        1.543227227044948,
-        0.9056692751166344,
-        1.097301940656051,
-        1.10505795247401,
-        1.0652588687844076,
-        0.9858658338910997
+        1.543227256259167,
+        0.9056693084109001,
+        1.097301953827498,
+        1.1050579577880009,
+        1.0652588745283162,
+        0.9858658126688399
       ],
-      "residual": 5.956267379223251e-13,
+      "residual": 5.938662147718691e-13,
       "eigenvalues": [
         [
-          0.9635496927251607,
+          0.9635496763259244,
           0.0
         ],
         [
-          0.08786135682631507,
-          0.09535400346947018
+          0.08786136089298538,
+          0.09535400288301596
         ],
         [
-          0.08786135682631507,
-          -0.09535400346947018
+          0.08786136089298538,
+          -0.09535400288301596
         ],
         [
-          -0.1986479372764362,
-          0.947420630316974
+          -0.19864793454982427,
+          0.9474205986720156
         ],
         [
-          -0.1986479372764362,
-          -0.947420630316974
+          -0.19864793454982427,
+          -0.9474205986720156
         ],
         [
-          -0.3224728354088534,
+          -0.32247285912271983,
           0.0
         ]
       ],
@@ -104,47 +104,47 @@
         "unstable": 3,
         "neutral": 0
       },
-      "jacobian_fd_error": 6.487980153124795e-10,
+      "jacobian_fd_error": 1.5098653438627707e-09,
       "nearest_true_constant": 1.0,
-      "position_error": 0.5735481161158532,
-      "coordinate_spread": 0.6375579519283137,
-      "min_distance_to_training": 0.4580224328270994,
+      "position_error": 0.5735481426942198,
+      "coordinate_spread": 0.6375579478482668,
+      "min_distance_to_training": 0.45802243788232805,
       "attractor_distance_rank": 4,
       "retained_by_historical_filter": false
     },
     {
       "state": [
-        1.2821451357266787,
-        1.3152657919854283,
-        1.5126652034504127,
-        0.9505991146994507,
-        1.0663358574263708,
-        1.0061719257788764
+        1.282145116993119,
+        1.3152657789479039,
+        1.5126651863677305,
+        0.9505991088582143,
+        1.0663358520869795,
+        1.0061719232630042
       ],
-      "residual": 6.366480495822164e-14,
+      "residual": 6.385384773289945e-14,
       "eigenvalues": [
         [
-          0.6211932987465681,
+          0.6211933108176663,
           0.0
         ],
         [
-          0.18149344764419992,
-          0.8663798429781747
+          0.18149344702543974,
+          0.8663798493506139
         ],
         [
-          0.18149344764419992,
-          -0.8663798429781747
+          0.18149344702543974,
+          -0.8663798493506139
         ],
         [
-          0.1193549868165442,
-          0.11848325402391552
+          0.11935497155885616,
+          0.11848327186145996
         ],
         [
-          0.1193549868165442,
-          -0.11848325402391552
+          0.11935497155885616,
+          -0.11848327186145996
         ],
         [
-          -0.5992340118455308,
+          -0.5992339877597034,
           0.0
         ]
       ],
@@ -153,48 +153,48 @@
         "unstable": 5,
         "neutral": 0
       },
-      "jacobian_fd_error": 7.156721881784733e-10,
+      "jacobian_fd_error": 9.815652735056801e-10,
       "nearest_true_constant": 1.0,
-      "position_error": 0.6698529645795919,
-      "coordinate_spread": 0.562066088750962,
-      "min_distance_to_training": 0.3804310178993088,
+      "position_error": 0.6698529373576128,
+      "coordinate_spread": 0.5620660775095162,
+      "min_distance_to_training": 0.38043100416560505,
       "attractor_distance_rank": 3,
       "retained_by_historical_filter": false
     },
     {
       "state": [
-        0.8708800663242426,
-        0.9629075308792745,
-        0.8753208596323167,
-        0.9666745702501456,
-        0.36770856985995093,
-        0.6630722349724824
+        0.8708800636803586,
+        0.9629075260972616,
+        0.8753208418408899,
+        0.966674557713547,
+        0.36770858267752254,
+        0.6630722432041543
       ],
-      "residual": 1.4534767442383574e-12,
+      "residual": 1.4525137668433721e-12,
       "eigenvalues": [
         [
-          0.48861317679632804,
+          0.4886131688494431,
           0.0
         ],
         [
-          0.04632469404776966,
+          0.04632468661862643,
           0.0
         ],
         [
-          -0.26575515127959903,
-          0.5575839872608018
+          -0.26575517411811833,
+          0.5575839445392946
         ],
         [
-          -0.26575515127959903,
-          -0.5575839872608018
+          -0.26575517411811833,
+          -0.5575839445392946
         ],
         [
-          -0.5611766097955653,
-          0.19635481638949917
+          -0.5611765728013679,
+          0.19635490957608723
         ],
         [
-          -0.5611766097955653,
-          -0.19635481638949917
+          -0.5611765728013679,
+          -0.19635490957608723
         ]
       ],
       "stability": {
@@ -202,48 +202,48 @@
         "unstable": 2,
         "neutral": 0
       },
-      "jacobian_fd_error": 2.4492663452946317e-10,
+      "jacobian_fd_error": 3.341049659155715e-10,
       "nearest_true_constant": 1.0,
-      "position_error": 0.740281063058976,
-      "coordinate_spread": 0.5989660003901947,
-      "min_distance_to_training": 0.3246021278541764,
+      "position_error": 0.7402810526262398,
+      "coordinate_spread": 0.5989659750360246,
+      "min_distance_to_training": 0.3246021274680969,
       "attractor_distance_rank": 2,
       "retained_by_historical_filter": false
     },
     {
       "state": [
-        0.9011388589678748,
-        0.7593906215580235,
-        0.9062446896211657,
-        0.024135432480116514,
-        0.38253155911656356,
-        0.19417632290647768
+        0.901138728075957,
+        0.7593905199679983,
+        0.9062445906015366,
+        0.024135317787007372,
+        0.3825314755490849,
+        0.1941762871521491
       ],
-      "residual": 4.0127402068212035e-14,
+      "residual": 4.006121945459466e-14,
       "eigenvalues": [
         [
-          0.4460910966145103,
-          0.36695242896271646
+          0.44609110780550976,
+          0.36695245590933717
         ],
         [
-          0.4460910966145103,
-          -0.36695242896271646
+          0.44609110780550976,
+          -0.36695245590933717
         ],
         [
-          -0.030935372867799935,
+          -0.030935380609165113,
           0.0
         ],
         [
-          -0.36027364431251013,
+          -0.36027369791375474,
           0.0
         ],
         [
-          -1.2280502210859296,
-          0.8231045836877446
+          -1.2280501309703207,
+          0.823104504669186
         ],
         [
-          -1.2280502210859296,
-          -0.8231045836877446
+          -1.2280501309703207,
+          -0.823104504669186
         ]
       ],
       "stability": {
@@ -251,47 +251,47 @@
         "unstable": 2,
         "neutral": 0
       },
-      "jacobian_fd_error": 4.4996384396256417e-10,
+      "jacobian_fd_error": 2.8186342149183474e-10,
       "nearest_true_constant": 1.0,
-      "position_error": 1.4350565092068521,
-      "coordinate_spread": 0.8821092571410492,
-      "min_distance_to_training": 0.6492016061360253,
+      "position_error": 1.4350566757537258,
+      "coordinate_spread": 0.8821092728145292,
+      "min_distance_to_training": 0.6492017400500184,
       "attractor_distance_rank": 5,
       "retained_by_historical_filter": false
     },
     {
       "state": [
-        2.1143992305379173,
-        -0.23053604234175012,
-        0.6410680439777048,
-        0.9301418053956498,
-        0.632021566077866,
-        0.7180259829774323
+        2.1143992835317427,
+        -0.23053616287830572,
+        0.6410680508441573,
+        0.930141898102277,
+        0.6320215221902663,
+        0.7180260532119589
       ],
-      "residual": 6.880060414300722e-13,
+      "residual": 6.815560314278717e-13,
       "eigenvalues": [
         [
-          0.6563937181547137,
-          0.163590195183592
+          0.6563938596121484,
+          0.16358996128334768
         ],
         [
-          0.6563937181547137,
-          -0.163590195183592
+          0.6563938596121484,
+          -0.16358996128334768
         ],
         [
-          0.1980497687818861,
+          0.19804975810108788,
           0.0
         ],
         [
-          -0.8911701936981715,
-          1.1597541310654476
+          -0.891170209149567,
+          1.1597540551035639
         ],
         [
-          -0.8911701936981715,
-          -1.1597541310654476
+          -0.891170209149567,
+          -1.1597540551035639
         ],
         [
-          -1.5690036423869023,
+          -1.569003798766137,
           0.0
         ]
       ],
@@ -300,48 +300,48 @@
         "unstable": 3,
         "neutral": 0
       },
-      "jacobian_fd_error": 1.934012172633004e-09,
+      "jacobian_fd_error": 3.551659411016317e-09,
       "nearest_true_constant": 1.0,
-      "position_error": 1.7620256488032744,
-      "coordinate_spread": 2.3449352728796673,
-      "min_distance_to_training": 1.53332244063091,
+      "position_error": 1.762025759349529,
+      "coordinate_spread": 2.3449354464100485,
+      "min_distance_to_training": 1.5333225658983773,
       "attractor_distance_rank": 8,
       "retained_by_historical_filter": false
     },
     {
       "state": [
-        0.23946718849056697,
-        0.3605361340388743,
-        0.3143054050008816,
-        0.5264073946640181,
-        -0.04308421036846367,
-        0.3476245910746212
+        0.23946755595464983,
+        0.36053647070221506,
+        0.3143056456805888,
+        0.5264075380360107,
+        -0.04308378734419137,
+        0.34762480407149404
       ],
-      "residual": 2.383242711778543e-14,
+      "residual": 2.3946694457251975e-14,
       "eigenvalues": [
         [
-          0.19385443391669324,
+          0.1938546364093726,
           0.0
         ],
         [
-          -0.07615957716028396,
+          -0.07615959381468856,
           0.0
         ],
         [
-          -0.12635122897303247,
-          0.3231915543210348
+          -0.12635119423077956,
+          0.32319157157394035
         ],
         [
-          -0.12635122897303247,
-          -0.3231915543210348
+          -0.12635119423077956,
+          -0.32319157157394035
         ],
         [
-          -0.6304430831004453,
-          0.5869746962731701
+          -0.6304431651366612,
+          0.5869746226574172
         ],
         [
-          -0.6304430831004453,
-          -0.5869746962731701
+          -0.6304431651366612,
+          -0.5869746226574172
         ]
       ],
       "stability": {
@@ -349,47 +349,47 @@
         "unstable": 1,
         "neutral": 0
       },
-      "jacobian_fd_error": 1.1334980176691545e-10,
+      "jacobian_fd_error": 5.1686599444877857e-11,
       "nearest_true_constant": 0.0,
-      "position_error": 0.828204429222564,
-      "coordinate_spread": 0.5694916050324818,
-      "min_distance_to_training": 1.1588704280323894,
+      "position_error": 0.8282049318899233,
+      "coordinate_spread": 0.5694913253802021,
+      "min_distance_to_training": 1.1588697331658218,
       "attractor_distance_rank": 6,
       "retained_by_historical_filter": false
     },
     {
       "state": [
-        2.1298065768213683,
-        1.843696407301506,
-        1.775489031142761,
-        1.886816431778545,
-        1.1680629989044506,
-        1.244792018779814
+        2.1298066310133112,
+        1.84369644212762,
+        1.775489022869727,
+        1.8868164117635662,
+        1.1680630053324916,
+        1.2447920393738203
       ],
-      "residual": 4.974884968695437e-13,
+      "residual": 4.951054484584196e-13,
       "eigenvalues": [
         [
-          2.859184073603835,
+          2.8591839929169303,
           0.0
         ],
         [
-          0.3050817140930374,
+          0.30508173608059275,
           0.0
         ],
         [
-          -0.1431241200473755,
-          1.301023586641275
+          -0.14312411061686095,
+          1.3010236197109304
         ],
         [
-          -0.1431241200473755,
-          -1.301023586641275
+          -0.14312411061686095,
+          -1.3010236197109304
         ],
         [
-          -0.20965390473629336,
+          -0.20965389523006872,
           0.0
         ],
         [
-          -0.3883495875869677,
+          -0.3883495827312027,
           0.0
         ]
       ],
@@ -398,48 +398,48 @@
         "unstable": 2,
         "neutral": 0
       },
-      "jacobian_fd_error": 3.829088601747799e-09,
+      "jacobian_fd_error": 2.8855149381001866e-09,
       "nearest_true_constant": 1.0,
-      "position_error": 1.8612580299024932,
-      "coordinate_spread": 0.9617435779169177,
-      "min_distance_to_training": 1.4466237887645543,
+      "position_error": 1.861258068889773,
+      "coordinate_spread": 0.9617436256808196,
+      "min_distance_to_training": 1.4466238290435023,
       "attractor_distance_rank": 7,
       "retained_by_historical_filter": false
     },
     {
       "state": [
-        2.104475779291822,
-        2.3591672087419933,
-        1.9702482631924771,
-        1.6928840214260437,
-        0.7132745628028122,
-        0.9444231130222701
+        2.1044758729212583,
+        2.3591673444372216,
+        1.9702483824644204,
+        1.692884044747383,
+        0.7132744914478608,
+        0.9444230524495162
       ],
-      "residual": 4.708625464586317e-12,
+      "residual": 4.7078563804649505e-12,
       "eigenvalues": [
         [
-          0.929815771891782,
+          0.9298159411632152,
           0.0
         ],
         [
-          -0.06419279383397812,
-          0.435031397871976
+          -0.06419273471745389,
+          0.435031357085498
         ],
         [
-          -0.06419279383397812,
-          -0.435031397871976
+          -0.06419273471745389,
+          -0.435031357085498
         ],
         [
-          -0.35836924456021674,
+          -0.3583693100591934,
           0.0
         ],
         [
-          -0.38899622010094836,
-          1.7298176780928625
+          -0.38899652362319503,
+          1.7298185135212987
         ],
         [
-          -0.38899622010094836,
-          -1.7298176780928625
+          -0.38899652362319503,
+          -1.7298185135212987
         ]
       ],
       "stability": {
@@ -447,48 +447,48 @@
         "unstable": 1,
         "neutral": 0
       },
-      "jacobian_fd_error": 3.3029849966226266e-09,
+      "jacobian_fd_error": 2.3843114149713074e-09,
       "nearest_true_constant": 1.0,
-      "position_error": 2.1386847534032163,
-      "coordinate_spread": 1.6458926459391812,
-      "min_distance_to_training": 1.6625560513551711,
+      "position_error": 2.138684960797998,
+      "coordinate_spread": 1.6458928529893608,
+      "min_distance_to_training": 1.6625562523080541,
       "attractor_distance_rank": 10,
       "retained_by_historical_filter": false
     },
     {
       "state": [
-        -0.2916366431969413,
-        0.19685407115091266,
-        0.20188030288845654,
-        0.440955599792128,
-        -0.20790237353936078,
-        0.7169403712509772
+        -0.2916364943963171,
+        0.1968539713027846,
+        0.20188026898995712,
+        0.44095567245542283,
+        -0.20790252631203804,
+        0.7169402122052836
       ],
-      "residual": 2.1279709437617784e-13,
+      "residual": 2.127279563451435e-13,
       "eigenvalues": [
         [
-          0.5155718188917021,
+          0.5155715949076731,
           0.0
         ],
         [
-          0.18862353497194706,
-          0.17597719706716966
+          0.18862342226502674,
+          0.17597708366396858
         ],
         [
-          0.18862353497194706,
-          -0.17597719706716966
+          0.18862342226502674,
+          -0.17597708366396858
         ],
         [
-          -0.2178641295226576,
+          -0.21786412357916066,
           0.0
         ],
         [
-          -1.0919342631334672,
-          0.4752215510194332
+          -1.0919340944132436,
+          0.4752215022437309
         ],
         [
-          -1.0919342631334672,
-          -0.4752215510194332
+          -1.0919340944132436,
+          -0.4752215022437309
         ]
       ],
       "stability": {
@@ -496,48 +496,48 @@
         "unstable": 3,
         "neutral": 0
       },
-      "jacobian_fd_error": 2.0122248312048896e-10,
+      "jacobian_fd_error": 1.0632383862230199e-10,
       "nearest_true_constant": 0.0,
-      "position_error": 0.9571979144978471,
-      "coordinate_spread": 1.0085770144479185,
-      "min_distance_to_training": 1.5723764801496052,
+      "position_error": 0.9571977890088376,
+      "coordinate_spread": 1.0085767066016007,
+      "min_distance_to_training": 1.5723765244939056,
       "attractor_distance_rank": 9,
       "retained_by_historical_filter": false
     },
     {
       "state": [
-        -0.14709350733384827,
-        -0.02537440690092969,
-        0.012374148482657362,
-        0.49611489974277223,
-        -0.5995522018911553,
-        0.22028968847541178
+        -0.14709383210348084,
+        -0.025374635969121716,
+        0.012373983860493902,
+        0.49611509021515066,
+        -0.5995524947921774,
+        0.2202900480518275
       ],
-      "residual": 1.6375814123522338e-13,
+      "residual": 1.640342471537116e-13,
       "eigenvalues": [
         [
-          0.12956446195808036,
-          0.1472987699961202
+          0.12956485401208584,
+          0.1472986796776764
         ],
         [
-          0.12956446195808036,
-          -0.1472987699961202
+          0.12956485401208584,
+          -0.1472986796776764
         ],
         [
-          -0.15497926084936203,
+          -0.1549787978338283,
           0.0
         ],
         [
-          -0.42916569021617296,
+          -0.4291666285951874,
           0.0
         ],
         [
-          -0.7120796811809526,
-          0.4722922193404388
+          -0.7120801860644106,
+          0.4722914762294231
         ],
         [
-          -0.7120796811809526,
-          -0.4722922193404388
+          -0.7120801860644106,
+          -0.4722914762294231
         ]
       ],
       "stability": {
@@ -545,11 +545,11 @@
         "unstable": 2,
         "neutral": 0
       },
-      "jacobian_fd_error": 5.88059601014379e-11,
+      "jacobian_fd_error": 4.331530967238706e-11,
       "nearest_true_constant": 0.0,
-      "position_error": 0.8225289437849134,
-      "coordinate_spread": 1.0956671016339277,
-      "min_distance_to_training": 1.9623599035903998,
+      "position_error": 0.822529431139956,
+      "coordinate_spread": 1.095667585007328,
+      "min_distance_to_training": 1.962360271341987,
       "attractor_distance_rank": 11,
       "retained_by_historical_filter": false
     }
@@ -1077,8 +1077,8 @@
       ],
       "unstable_roots_in_branch_window": 2,
       "characteristic_residual": 1.4023410804503436e-12,
-      "surrogate_residual_at_exact_equilibrium": 4.915220351843348,
-      "nearest_learned_distance": 2.567113379754338
+      "surrogate_residual_at_exact_equilibrium": 4.915221113645804,
+      "nearest_learned_distance": 2.5671133562070847
     },
     {
       "constant": 0.0,
@@ -1602,8 +1602,8 @@
       ],
       "unstable_roots_in_branch_window": 1,
       "characteristic_residual": 7.496740224046367e-13,
-      "surrogate_residual_at_exact_equilibrium": 0.44562928328108176,
-      "nearest_learned_distance": 0.8225289437849134
+      "surrogate_residual_at_exact_equilibrium": 0.4456293671405354,
+      "nearest_learned_distance": 0.822529431139956
     },
     {
       "constant": 1.0,
@@ -2127,8 +2127,8 @@
       ],
       "unstable_roots_in_branch_window": 2,
       "characteristic_residual": 1.4023410804503436e-12,
-      "surrogate_residual_at_exact_equilibrium": 0.010474897504773715,
-      "nearest_learned_distance": 0.025849439337565183
+      "surrogate_residual_at_exact_equilibrium": 0.010474897319437546,
+      "nearest_learned_distance": 0.025849438825342595
     }
   ],
   "attractor_filter": {
@@ -2141,15 +2141,15 @@
     {
       "start": 0,
       "solver_success": false,
-      "residual": 0.008908149820407649,
+      "residual": 0.008904276636255055,
       "mean_error": 0.0,
       "accepted": false,
-      "nfev": 83
+      "nfev": 82
     },
     {
       "start": 1,
       "solver_success": false,
-      "residual": 0.008700504721468204,
+      "residual": 0.008700487755242254,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 65
@@ -2157,7 +2157,7 @@
     {
       "start": 2,
       "solver_success": true,
-      "residual": 5.928486197963879e-13,
+      "residual": 5.930974463209406e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 10
@@ -2165,7 +2165,7 @@
     {
       "start": 3,
       "solver_success": true,
-      "residual": 2.4469794632117652e-14,
+      "residual": 2.3169439516112803e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 33
@@ -2173,7 +2173,7 @@
     {
       "start": 4,
       "solver_success": true,
-      "residual": 1.4534767442383574e-12,
+      "residual": 1.4525137668433721e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 27
@@ -2181,7 +2181,7 @@
     {
       "start": 5,
       "solver_success": true,
-      "residual": 4.504068904726833e-14,
+      "residual": 4.836567338839216e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 16
@@ -2189,7 +2189,7 @@
     {
       "start": 6,
       "solver_success": true,
-      "residual": 5.432219522129331e-13,
+      "residual": 5.437448062689291e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 18
@@ -2197,7 +2197,7 @@
     {
       "start": 7,
       "solver_success": true,
-      "residual": 1.7826870624060222e-12,
+      "residual": 1.7838055353259778e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 51
@@ -2205,7 +2205,7 @@
     {
       "start": 8,
       "solver_success": false,
-      "residual": 0.02552299502112185,
+      "residual": 0.025522992788436158,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 33
@@ -2213,7 +2213,7 @@
     {
       "start": 9,
       "solver_success": true,
-      "residual": 3.929508299653759e-14,
+      "residual": 4.0592849593235674e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 21
@@ -2221,7 +2221,7 @@
     {
       "start": 10,
       "solver_success": true,
-      "residual": 1.4490110267724753e-12,
+      "residual": 1.4494566137295953e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 34
@@ -2229,7 +2229,7 @@
     {
       "start": 11,
       "solver_success": false,
-      "residual": 0.08513670652233381,
+      "residual": 0.08513670651577791,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 13
@@ -2237,7 +2237,7 @@
     {
       "start": 12,
       "solver_success": true,
-      "residual": 4.0047704346337473e-13,
+      "residual": 3.981514287479637e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 14
@@ -2245,7 +2245,7 @@
     {
       "start": 13,
       "solver_success": true,
-      "residual": 2.3265554113548524e-13,
+      "residual": 2.3261538590523403e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 13
@@ -2253,7 +2253,7 @@
     {
       "start": 14,
       "solver_success": false,
-      "residual": 0.02536486980729528,
+      "residual": 0.025364869220082943,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 42
@@ -2261,7 +2261,7 @@
     {
       "start": 15,
       "solver_success": true,
-      "residual": 2.9077498216176143e-13,
+      "residual": 2.8940218422428547e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 22
@@ -2269,7 +2269,7 @@
     {
       "start": 16,
       "solver_success": true,
-      "residual": 1.3543561019539935e-11,
+      "residual": 1.3543033673359108e-11,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 40
@@ -2277,7 +2277,7 @@
     {
       "start": 17,
       "solver_success": true,
-      "residual": 2.383242711778543e-14,
+      "residual": 2.3946694457251975e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 25
@@ -2285,7 +2285,7 @@
     {
       "start": 18,
       "solver_success": true,
-      "residual": 9.010963360158475e-14,
+      "residual": 9.1920566513752e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 16
@@ -2293,7 +2293,7 @@
     {
       "start": 19,
       "solver_success": true,
-      "residual": 5.34084969490133e-13,
+      "residual": 5.351747356877125e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 15
@@ -2301,7 +2301,7 @@
     {
       "start": 20,
       "solver_success": true,
-      "residual": 3.3804191819856754e-13,
+      "residual": 3.389862298098995e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 39
@@ -2309,7 +2309,7 @@
     {
       "start": 21,
       "solver_success": false,
-      "residual": 0.025679763489529474,
+      "residual": 0.025679762330039078,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 35
@@ -2317,7 +2317,7 @@
     {
       "start": 22,
       "solver_success": true,
-      "residual": 1.0526642300445185e-12,
+      "residual": 1.0521139438426789e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 17
@@ -2325,7 +2325,7 @@
     {
       "start": 23,
       "solver_success": false,
-      "residual": 0.0077853196224931896,
+      "residual": 0.007785318275289723,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 54
@@ -2333,7 +2333,7 @@
     {
       "start": 24,
       "solver_success": false,
-      "residual": 0.091753244364597,
+      "residual": 0.0917532546205597,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 50
@@ -2341,7 +2341,7 @@
     {
       "start": 25,
       "solver_success": false,
-      "residual": 0.025527972834418888,
+      "residual": 0.025527974247703242,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 59
@@ -2349,7 +2349,7 @@
     {
       "start": 26,
       "solver_success": true,
-      "residual": 6.366480495822164e-14,
+      "residual": 6.385384773289945e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 23
@@ -2357,7 +2357,7 @@
     {
       "start": 27,
       "solver_success": false,
-      "residual": 0.0097367334193815,
+      "residual": 0.009736731950356407,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 61
@@ -2365,7 +2365,7 @@
     {
       "start": 28,
       "solver_success": true,
-      "residual": 8.105521722009201e-13,
+      "residual": 8.085479681457448e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 31
@@ -2373,7 +2373,7 @@
     {
       "start": 29,
       "solver_success": true,
-      "residual": 2.2972477690668197e-12,
+      "residual": 2.2967509095179945e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 45
@@ -2381,7 +2381,7 @@
     {
       "start": 30,
       "solver_success": true,
-      "residual": 5.956267379223251e-13,
+      "residual": 5.938662147718691e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 18
@@ -2389,7 +2389,7 @@
     {
       "start": 31,
       "solver_success": false,
-      "residual": 0.0076303945148572345,
+      "residual": 0.007630395464147614,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 58
@@ -2397,7 +2397,7 @@
     {
       "start": 32,
       "solver_success": true,
-      "residual": 9.783784645170523e-13,
+      "residual": 9.774582890644598e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 27
@@ -2405,7 +2405,7 @@
     {
       "start": 33,
       "solver_success": true,
-      "residual": 9.736691134653665e-14,
+      "residual": 9.839660033183907e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 23
@@ -2413,7 +2413,7 @@
     {
       "start": 34,
       "solver_success": true,
-      "residual": 1.0949800509827373e-12,
+      "residual": 1.0935764391969063e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 27
@@ -2421,7 +2421,7 @@
     {
       "start": 35,
       "solver_success": false,
-      "residual": 0.009697036728605148,
+      "residual": 0.009697028245584714,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 65
@@ -2429,7 +2429,7 @@
     {
       "start": 36,
       "solver_success": false,
-      "residual": 0.09195851220913727,
+      "residual": 0.09195844620797558,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 67
@@ -2437,7 +2437,7 @@
     {
       "start": 37,
       "solver_success": true,
-      "residual": 1.6375814123522338e-13,
+      "residual": 1.640342471537116e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 33
@@ -2445,7 +2445,7 @@
     {
       "start": 38,
       "solver_success": false,
-      "residual": 0.05141112726692437,
+      "residual": 0.05139537039872773,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 58
@@ -2453,7 +2453,7 @@
     {
       "start": 39,
       "solver_success": false,
-      "residual": 0.06183530483961039,
+      "residual": 0.0618353284198575,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 38
@@ -2461,7 +2461,7 @@
     {
       "start": 40,
       "solver_success": false,
-      "residual": 0.07045685769513003,
+      "residual": 0.07045679431066139,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 56
@@ -2469,7 +2469,7 @@
     {
       "start": 41,
       "solver_success": true,
-      "residual": 7.102591060731879e-14,
+      "residual": 7.164074847530521e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 23
@@ -2477,7 +2477,7 @@
     {
       "start": 42,
       "solver_success": true,
-      "residual": 3.967774312044166e-12,
+      "residual": 3.970939825484428e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 35
@@ -2485,7 +2485,7 @@
     {
       "start": 43,
       "solver_success": false,
-      "residual": 0.08949896343591485,
+      "residual": 0.08949897374328834,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 37
@@ -2493,7 +2493,7 @@
     {
       "start": 44,
       "solver_success": false,
-      "residual": 0.05382769650522385,
+      "residual": 0.05382380211164362,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 35
@@ -2501,7 +2501,7 @@
     {
       "start": 45,
       "solver_success": true,
-      "residual": 2.321918320910745e-13,
+      "residual": 2.316831499117349e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 32
@@ -2509,7 +2509,7 @@
     {
       "start": 46,
       "solver_success": false,
-      "residual": 0.025259491077211385,
+      "residual": 0.025260653601521448,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 72
@@ -2517,7 +2517,7 @@
     {
       "start": 47,
       "solver_success": false,
-      "residual": 0.02442625601934411,
+      "residual": 0.024426252281435516,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 58
@@ -2525,7 +2525,7 @@
     {
       "start": 48,
       "solver_success": false,
-      "residual": 0.02609218157327729,
+      "residual": 0.026092197118070933,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 40
@@ -2533,7 +2533,7 @@
     {
       "start": 49,
       "solver_success": false,
-      "residual": 0.04888806396370028,
+      "residual": 0.048888072793454904,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 52
@@ -2541,7 +2541,7 @@
     {
       "start": 50,
       "solver_success": true,
-      "residual": 7.774887461909817e-13,
+      "residual": 7.785353644717181e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 27
@@ -2549,7 +2549,7 @@
     {
       "start": 51,
       "solver_success": false,
-      "residual": 0.007723510516402021,
+      "residual": 0.007723512996725672,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 125
@@ -2557,7 +2557,7 @@
     {
       "start": 52,
       "solver_success": false,
-      "residual": 0.05581433980346194,
+      "residual": 0.05581433656201028,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 62
@@ -2565,7 +2565,7 @@
     {
       "start": 53,
       "solver_success": true,
-      "residual": 1.0188073360296511e-14,
+      "residual": 9.484450173757227e-15,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 23
@@ -2573,7 +2573,7 @@
     {
       "start": 54,
       "solver_success": true,
-      "residual": 6.600597455696201e-12,
+      "residual": 6.650356197045776e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 32
@@ -2581,15 +2581,15 @@
     {
       "start": 55,
       "solver_success": false,
-      "residual": 0.05689968472517047,
+      "residual": 0.053694255936376556,
       "mean_error": 0.0,
       "accepted": false,
-      "nfev": 100
+      "nfev": 101
     },
     {
       "start": 56,
       "solver_success": false,
-      "residual": 0.00866453407678084,
+      "residual": 0.008664800236037216,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 66
@@ -2597,7 +2597,7 @@
     {
       "start": 57,
       "solver_success": true,
-      "residual": 6.353541660708338e-16,
+      "residual": 5.613217783960923e-16,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 25
@@ -2605,7 +2605,7 @@
     {
       "start": 58,
       "solver_success": true,
-      "residual": 3.5258977445828716e-13,
+      "residual": 3.509372932339962e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 25
@@ -2613,7 +2613,7 @@
     {
       "start": 59,
       "solver_success": false,
-      "residual": 0.06624849157910198,
+      "residual": 0.06624849874186445,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 65
@@ -2621,7 +2621,7 @@
     {
       "start": 60,
       "solver_success": true,
-      "residual": 3.465574331122005e-13,
+      "residual": 3.461976578639293e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 32
@@ -2629,7 +2629,7 @@
     {
       "start": 61,
       "solver_success": true,
-      "residual": 6.880060414300722e-13,
+      "residual": 6.815560314278717e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 56
@@ -2637,7 +2637,7 @@
     {
       "start": 62,
       "solver_success": true,
-      "residual": 4.708625464586317e-12,
+      "residual": 4.7078563804649505e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 20
@@ -2645,7 +2645,7 @@
     {
       "start": 63,
       "solver_success": true,
-      "residual": 1.3738421162486618e-14,
+      "residual": 1.1941898902856814e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 38
@@ -2653,7 +2653,7 @@
     {
       "start": 64,
       "solver_success": true,
-      "residual": 8.404827905550603e-13,
+      "residual": 8.375884413424131e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 27
@@ -2661,7 +2661,7 @@
     {
       "start": 65,
       "solver_success": true,
-      "residual": 1.227287063310908e-12,
+      "residual": 1.225836530043982e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 46
@@ -2669,7 +2669,7 @@
     {
       "start": 66,
       "solver_success": true,
-      "residual": 1.6410987649175925e-12,
+      "residual": 1.6393916926747657e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 38
@@ -2677,7 +2677,7 @@
     {
       "start": 67,
       "solver_success": false,
-      "residual": 0.01034510630473227,
+      "residual": 0.01034536211153175,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 102
@@ -2685,7 +2685,7 @@
     {
       "start": 68,
       "solver_success": true,
-      "residual": 7.817982617476712e-14,
+      "residual": 7.740255260419825e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 28
@@ -2693,7 +2693,7 @@
     {
       "start": 69,
       "solver_success": true,
-      "residual": 2.075245411078177e-13,
+      "residual": 2.074343578157845e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 21
@@ -2701,7 +2701,7 @@
     {
       "start": 70,
       "solver_success": true,
-      "residual": 1.5620404947713438e-13,
+      "residual": 1.5663970432889454e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 21
@@ -2709,7 +2709,7 @@
     {
       "start": 71,
       "solver_success": true,
-      "residual": 9.003895040143205e-14,
+      "residual": 9.146644754388282e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 35
@@ -2717,7 +2717,7 @@
     {
       "start": 72,
       "solver_success": true,
-      "residual": 8.238579128908359e-12,
+      "residual": 8.238763820588712e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 19
@@ -2725,7 +2725,7 @@
     {
       "start": 73,
       "solver_success": true,
-      "residual": 1.2888873178120123e-13,
+      "residual": 1.6323028298074355e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 31
@@ -2733,7 +2733,7 @@
     {
       "start": 74,
       "solver_success": false,
-      "residual": 0.024130590653778868,
+      "residual": 0.024131576750405347,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 45
@@ -2741,7 +2741,7 @@
     {
       "start": 75,
       "solver_success": false,
-      "residual": 0.05205343968262316,
+      "residual": 0.05205405152819156,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 39
@@ -2749,7 +2749,7 @@
     {
       "start": 76,
       "solver_success": true,
-      "residual": 3.411257286022699e-12,
+      "residual": 3.409765999143506e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 23
@@ -2757,7 +2757,7 @@
     {
       "start": 77,
       "solver_success": true,
-      "residual": 3.3411180884207998e-12,
+      "residual": 3.3382173027272278e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 28
@@ -2765,7 +2765,7 @@
     {
       "start": 78,
       "solver_success": true,
-      "residual": 4.193231197546877e-12,
+      "residual": 4.192570856875172e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 24
@@ -2773,7 +2773,7 @@
     {
       "start": 79,
       "solver_success": true,
-      "residual": 5.933919420666473e-14,
+      "residual": 5.960445724790389e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 60
@@ -2781,7 +2781,7 @@
     {
       "start": 80,
       "solver_success": false,
-      "residual": 0.024418880305796472,
+      "residual": 0.02441887547501703,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 46
@@ -2789,15 +2789,15 @@
     {
       "start": 81,
       "solver_success": false,
-      "residual": 0.008663410683633714,
+      "residual": 0.008125996710246806,
       "mean_error": 0.0,
       "accepted": false,
-      "nfev": 56
+      "nfev": 73
     },
     {
       "start": 82,
       "solver_success": true,
-      "residual": 5.853184337654325e-14,
+      "residual": 5.756685707136747e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 24
@@ -2805,7 +2805,7 @@
     {
       "start": 83,
       "solver_success": true,
-      "residual": 4.326010763011074e-14,
+      "residual": 4.5029227968093415e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 23
@@ -2813,7 +2813,7 @@
     {
       "start": 84,
       "solver_success": true,
-      "residual": 2.9185994240423048e-12,
+      "residual": 2.918322941160677e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 33
@@ -2821,7 +2821,7 @@
     {
       "start": 85,
       "solver_success": false,
-      "residual": 0.07385088808930385,
+      "residual": 0.07385087770509356,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 44
@@ -2829,7 +2829,7 @@
     {
       "start": 86,
       "solver_success": true,
-      "residual": 7.73372316723388e-13,
+      "residual": 7.777893366645427e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 39
@@ -2837,7 +2837,7 @@
     {
       "start": 87,
       "solver_success": true,
-      "residual": 3.1511075030341924e-14,
+      "residual": 3.12457891684076e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 32
@@ -2845,7 +2845,7 @@
     {
       "start": 88,
       "solver_success": true,
-      "residual": 2.0946411177500353e-11,
+      "residual": 2.094713482606021e-11,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 48
@@ -2853,7 +2853,7 @@
     {
       "start": 89,
       "solver_success": false,
-      "residual": 0.0076723568787517675,
+      "residual": 0.00767236427540879,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 39
@@ -2861,7 +2861,7 @@
     {
       "start": 90,
       "solver_success": false,
-      "residual": 0.0077563129287604215,
+      "residual": 0.007756313896131607,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 64
@@ -2869,7 +2869,7 @@
     {
       "start": 91,
       "solver_success": false,
-      "residual": 0.06702099206748761,
+      "residual": 0.06702099567614313,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 40
@@ -2877,7 +2877,7 @@
     {
       "start": 92,
       "solver_success": true,
-      "residual": 2.1279709437617784e-13,
+      "residual": 2.127279563451435e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 38
@@ -2885,7 +2885,7 @@
     {
       "start": 93,
       "solver_success": false,
-      "residual": 0.008059350061401847,
+      "residual": 0.008059342968818443,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 63
@@ -2893,7 +2893,7 @@
     {
       "start": 94,
       "solver_success": true,
-      "residual": 1.768589203947391e-12,
+      "residual": 1.770308882848223e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 31
@@ -2901,7 +2901,7 @@
     {
       "start": 95,
       "solver_success": false,
-      "residual": 0.08177827974066622,
+      "residual": 0.0817782805844375,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 41
@@ -2909,7 +2909,7 @@
     {
       "start": 96,
       "solver_success": false,
-      "residual": 0.02709807748801909,
+      "residual": 0.02709808000941839,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 46
@@ -2917,15 +2917,15 @@
     {
       "start": 97,
       "solver_success": false,
-      "residual": 0.007761203345483497,
+      "residual": 0.007707423819276342,
       "mean_error": 0.0,
       "accepted": false,
-      "nfev": 71
+      "nfev": 76
     },
     {
       "start": 98,
       "solver_success": false,
-      "residual": 0.04032928493373815,
+      "residual": 0.04032943183064078,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 59
@@ -2933,7 +2933,7 @@
     {
       "start": 99,
       "solver_success": false,
-      "residual": 0.024923228329694194,
+      "residual": 0.024923786217039917,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 53
@@ -2941,7 +2941,7 @@
     {
       "start": 100,
       "solver_success": true,
-      "residual": 2.3640389210318897e-12,
+      "residual": 2.3610602707733496e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 43
@@ -2949,7 +2949,7 @@
     {
       "start": 101,
       "solver_success": true,
-      "residual": 7.322476358699862e-15,
+      "residual": 3.488380105524097e-15,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 27
@@ -2957,7 +2957,7 @@
     {
       "start": 102,
       "solver_success": true,
-      "residual": 4.579249418244023e-15,
+      "residual": 5.398013494481199e-15,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 27
@@ -2965,7 +2965,7 @@
     {
       "start": 103,
       "solver_success": true,
-      "residual": 1.7999924556001891e-13,
+      "residual": 1.7668791338907556e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 35
@@ -2973,7 +2973,7 @@
     {
       "start": 104,
       "solver_success": true,
-      "residual": 3.997188364167557e-15,
+      "residual": 2.5000055710988842e-15,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 27
@@ -2981,7 +2981,7 @@
     {
       "start": 105,
       "solver_success": false,
-      "residual": 0.00800473326167128,
+      "residual": 0.008004734155089791,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 48
@@ -2989,7 +2989,7 @@
     {
       "start": 106,
       "solver_success": false,
-      "residual": 0.0598857313816002,
+      "residual": 0.05988573193572696,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 72
@@ -2997,7 +2997,7 @@
     {
       "start": 107,
       "solver_success": true,
-      "residual": 2.0522784052869044e-12,
+      "residual": 2.053312192208026e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 25
@@ -3005,7 +3005,7 @@
     {
       "start": 108,
       "solver_success": true,
-      "residual": 2.56127874291153e-14,
+      "residual": 2.575561885502238e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 47
@@ -3013,7 +3013,7 @@
     {
       "start": 109,
       "solver_success": true,
-      "residual": 6.768169085063862e-14,
+      "residual": 6.758273494974828e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 45
@@ -3021,7 +3021,7 @@
     {
       "start": 110,
       "solver_success": true,
-      "residual": 2.413185074239309e-13,
+      "residual": 2.415187249722194e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 28
@@ -3029,7 +3029,7 @@
     {
       "start": 111,
       "solver_success": true,
-      "residual": 3.410360138333312e-13,
+      "residual": 3.406882162997461e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 27
@@ -3037,7 +3037,7 @@
     {
       "start": 112,
       "solver_success": false,
-      "residual": 0.06480581297080092,
+      "residual": 0.06480582140767908,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 38
@@ -3045,7 +3045,7 @@
     {
       "start": 113,
       "solver_success": true,
-      "residual": 2.1292673246749305e-12,
+      "residual": 1.503540789813198e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 35
@@ -3053,7 +3053,7 @@
     {
       "start": 114,
       "solver_success": false,
-      "residual": 0.08269012960730128,
+      "residual": 0.08269012705709071,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 36
@@ -3061,7 +3061,7 @@
     {
       "start": 115,
       "solver_success": true,
-      "residual": 2.8172006599300265e-13,
+      "residual": 2.8069671269102044e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 35
@@ -3069,7 +3069,7 @@
     {
       "start": 116,
       "solver_success": false,
-      "residual": 0.009743605210768233,
+      "residual": 0.009743881863250111,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 64
@@ -3077,7 +3077,7 @@
     {
       "start": 117,
       "solver_success": false,
-      "residual": 0.0077012331137488324,
+      "residual": 0.00770123041852314,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 42
@@ -3085,7 +3085,7 @@
     {
       "start": 118,
       "solver_success": true,
-      "residual": 3.382179466244475e-14,
+      "residual": 3.029937764856743e-15,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 44
@@ -3093,7 +3093,7 @@
     {
       "start": 119,
       "solver_success": false,
-      "residual": 0.00763766341682183,
+      "residual": 0.007637664762838283,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 45
@@ -3101,7 +3101,7 @@
     {
       "start": 120,
       "solver_success": true,
-      "residual": 4.974884968695437e-13,
+      "residual": 4.951054484584196e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 37
@@ -3109,7 +3109,7 @@
     {
       "start": 121,
       "solver_success": false,
-      "residual": 0.06608055725777909,
+      "residual": 0.06608032972688246,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 42
@@ -3117,7 +3117,7 @@
     {
       "start": 122,
       "solver_success": true,
-      "residual": 1.1789717790275467e-14,
+      "residual": 1.0906387359031608e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 41
@@ -3125,7 +3125,7 @@
     {
       "start": 123,
       "solver_success": false,
-      "residual": 0.007622690445839993,
+      "residual": 0.007622703969153524,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 43
@@ -3133,7 +3133,7 @@
     {
       "start": 124,
       "solver_success": false,
-      "residual": 0.00902398919263438,
+      "residual": 0.009023984377841868,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 42
@@ -3141,7 +3141,7 @@
     {
       "start": 125,
       "solver_success": false,
-      "residual": 0.061120326595780754,
+      "residual": 0.06112127747186656,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 38
@@ -3149,7 +3149,7 @@
     {
       "start": 126,
       "solver_success": true,
-      "residual": 1.899206953295564e-12,
+      "residual": 1.928060479555089e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 32
@@ -3157,7 +3157,7 @@
     {
       "start": 127,
       "solver_success": false,
-      "residual": 0.007632494449626323,
+      "residual": 0.0076324970624634305,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 50
@@ -3165,7 +3165,7 @@
     {
       "start": 128,
       "solver_success": true,
-      "residual": 5.86610528430145e-14,
+      "residual": 5.896230278864415e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 33
@@ -3173,7 +3173,7 @@
     {
       "start": 129,
       "solver_success": true,
-      "residual": 1.194647468862578e-13,
+      "residual": 1.224784365433487e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 22
@@ -3181,7 +3181,7 @@
     {
       "start": 130,
       "solver_success": true,
-      "residual": 1.1115296820907675e-13,
+      "residual": 1.0914835204243875e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 32
@@ -3189,7 +3189,7 @@
     {
       "start": 131,
       "solver_success": true,
-      "residual": 1.573358716033935e-12,
+      "residual": 1.5755351907460034e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 28
@@ -3197,7 +3197,7 @@
     {
       "start": 132,
       "solver_success": false,
-      "residual": 0.007997846462829607,
+      "residual": 0.007997843458724166,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 71
@@ -3205,7 +3205,7 @@
     {
       "start": 133,
       "solver_success": true,
-      "residual": 8.087984259294496e-14,
+      "residual": 7.925742518917556e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 36
@@ -3213,7 +3213,7 @@
     {
       "start": 134,
       "solver_success": true,
-      "residual": 1.9125182745219034e-15,
+      "residual": 8.98526478567621e-16,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 42
@@ -3221,7 +3221,7 @@
     {
       "start": 135,
       "solver_success": true,
-      "residual": 2.0333149153288528e-13,
+      "residual": 2.0241473560832655e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 29
@@ -3229,7 +3229,7 @@
     {
       "start": 136,
       "solver_success": true,
-      "residual": 1.988359178158733e-14,
+      "residual": 2.0018199011821736e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 27
@@ -3237,7 +3237,7 @@
     {
       "start": 137,
       "solver_success": true,
-      "residual": 1.6592256656739141e-12,
+      "residual": 1.6889955402190354e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 32
@@ -3245,7 +3245,7 @@
     {
       "start": 138,
       "solver_success": true,
-      "residual": 2.2693125339496653e-12,
+      "residual": 2.272330218439521e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 36
@@ -3253,7 +3253,7 @@
     {
       "start": 139,
       "solver_success": false,
-      "residual": 0.0006375711875166419,
+      "residual": 0.0006375642613771827,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 82
@@ -3261,7 +3261,7 @@
     {
       "start": 140,
       "solver_success": false,
-      "residual": 0.04267845622000421,
+      "residual": 0.042682319558725174,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 65
@@ -3269,7 +3269,7 @@
     {
       "start": 141,
       "solver_success": true,
-      "residual": 4.5678358578283965e-14,
+      "residual": 4.073066178730014e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 34
@@ -3277,7 +3277,7 @@
     {
       "start": 142,
       "solver_success": false,
-      "residual": 0.00785822667788623,
+      "residual": 0.007858222545563651,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 40
@@ -3285,7 +3285,7 @@
     {
       "start": 143,
       "solver_success": true,
-      "residual": 6.394748059095783e-13,
+      "residual": 6.39753948064474e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 26
@@ -3293,7 +3293,7 @@
     {
       "start": 144,
       "solver_success": true,
-      "residual": 1.913360434978209e-13,
+      "residual": 1.9203122992848915e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 27
@@ -3301,7 +3301,7 @@
     {
       "start": 145,
       "solver_success": true,
-      "residual": 9.276717267601805e-15,
+      "residual": 1.0151789125080084e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 37
@@ -3309,15 +3309,15 @@
     {
       "start": 146,
       "solver_success": true,
-      "residual": 1.4178600790683905e-14,
+      "residual": 1.6249322229892198e-13,
       "mean_error": 0.0,
       "accepted": true,
-      "nfev": 38
+      "nfev": 37
     },
     {
       "start": 147,
       "solver_success": false,
-      "residual": 0.11781153807650356,
+      "residual": 0.11781153970371905,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 55
@@ -3325,7 +3325,7 @@
     {
       "start": 148,
       "solver_success": false,
-      "residual": 0.00866513376047885,
+      "residual": 0.008665205994843458,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 94
@@ -3333,7 +3333,7 @@
     {
       "start": 149,
       "solver_success": false,
-      "residual": 0.0639118118539748,
+      "residual": 0.06391243422209318,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 52
@@ -3341,7 +3341,7 @@
     {
       "start": 150,
       "solver_success": true,
-      "residual": 7.415621626691904e-14,
+      "residual": 7.364598313811152e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 28
@@ -3349,7 +3349,7 @@
     {
       "start": 151,
       "solver_success": true,
-      "residual": 7.092622233518052e-16,
+      "residual": 1.7439691993198512e-15,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 26
@@ -3357,7 +3357,7 @@
     {
       "start": 152,
       "solver_success": true,
-      "residual": 3.1981349191821066e-12,
+      "residual": 3.2007703132244172e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 24
@@ -3365,7 +3365,7 @@
     {
       "start": 153,
       "solver_success": false,
-      "residual": 0.059540654487205934,
+      "residual": 0.059540662806143486,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 45
@@ -3373,7 +3373,7 @@
     {
       "start": 154,
       "solver_success": true,
-      "residual": 5.392207690233758e-12,
+      "residual": 5.391379445141259e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 28
@@ -3381,7 +3381,7 @@
     {
       "start": 155,
       "solver_success": true,
-      "residual": 5.008325051414288e-13,
+      "residual": 5.008292804898967e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 19
@@ -3389,7 +3389,7 @@
     {
       "start": 156,
       "solver_success": true,
-      "residual": 2.8287304605005858e-12,
+      "residual": 2.8266917733534826e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 22
@@ -3397,7 +3397,7 @@
     {
       "start": 157,
       "solver_success": false,
-      "residual": 0.06563304049509655,
+      "residual": 0.06563303376611014,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 41
@@ -3405,7 +3405,7 @@
     {
       "start": 158,
       "solver_success": true,
-      "residual": 5.091108480131577e-13,
+      "residual": 5.058913625193263e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 41
@@ -3413,7 +3413,7 @@
     {
       "start": 159,
       "solver_success": false,
-      "residual": 0.04920885925207051,
+      "residual": 0.04920947294802044,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 35
@@ -3421,7 +3421,7 @@
     {
       "start": 160,
       "solver_success": true,
-      "residual": 4.0127402068212035e-14,
+      "residual": 4.006121945459466e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 27
@@ -3429,7 +3429,7 @@
     {
       "start": 161,
       "solver_success": true,
-      "residual": 2.3082228224659872e-15,
+      "residual": 3.2652638748082423e-15,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 27
@@ -3437,7 +3437,7 @@
     {
       "start": 162,
       "solver_success": true,
-      "residual": 5.719688140068644e-13,
+      "residual": 5.71943182352011e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 33
@@ -3445,7 +3445,7 @@
     {
       "start": 163,
       "solver_success": false,
-      "residual": 0.06620544124143238,
+      "residual": 0.06620544430517888,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 39
@@ -3453,7 +3453,7 @@
     {
       "start": 164,
       "solver_success": true,
-      "residual": 1.4483723521949502e-12,
+      "residual": 1.4471340831614991e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 30
@@ -3461,7 +3461,7 @@
     {
       "start": 165,
       "solver_success": false,
-      "residual": 0.038548770539516344,
+      "residual": 0.03854875556651206,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 61
@@ -3469,7 +3469,7 @@
     {
       "start": 166,
       "solver_success": true,
-      "residual": 1.1205680514199194e-12,
+      "residual": 1.119519668488818e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 31
@@ -3477,7 +3477,7 @@
     {
       "start": 167,
       "solver_success": true,
-      "residual": 1.0733539641932314e-13,
+      "residual": 1.0642614573840457e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 27
@@ -3485,7 +3485,7 @@
     {
       "start": 168,
       "solver_success": false,
-      "residual": 0.007619657106324059,
+      "residual": 0.007619658474550715,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 50
@@ -3493,7 +3493,7 @@
     {
       "start": 169,
       "solver_success": true,
-      "residual": 4.329052013932727e-12,
+      "residual": 4.33233062238989e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 27
@@ -3501,7 +3501,7 @@
     {
       "start": 170,
       "solver_success": false,
-      "residual": 0.024199483622433685,
+      "residual": 0.024199523060985075,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 68
@@ -3509,7 +3509,7 @@
     {
       "start": 171,
       "solver_success": true,
-      "residual": 4.593615895014833e-15,
+      "residual": 4.506565864782184e-15,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 48
@@ -3517,7 +3517,7 @@
     {
       "start": 172,
       "solver_success": false,
-      "residual": 0.043461586324621555,
+      "residual": 0.043461649829680316,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 52
@@ -3525,7 +3525,7 @@
     {
       "start": 173,
       "solver_success": false,
-      "residual": 0.07746656819116213,
+      "residual": 0.07746714970704928,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 53
@@ -3533,7 +3533,7 @@
     {
       "start": 174,
       "solver_success": false,
-      "residual": 0.007998724633288474,
+      "residual": 0.007998726733800652,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 167
@@ -3541,7 +3541,7 @@
     {
       "start": 175,
       "solver_success": false,
-      "residual": 0.04856433450626677,
+      "residual": 0.0485643321455881,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 48
@@ -3549,7 +3549,7 @@
     {
       "start": 176,
       "solver_success": true,
-      "residual": 3.8020166981437076e-13,
+      "residual": 3.8019680381747907e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 39
@@ -3557,7 +3557,7 @@
     {
       "start": 177,
       "solver_success": true,
-      "residual": 1.3284324946748847e-12,
+      "residual": 1.3271728955339222e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 27
@@ -3565,7 +3565,7 @@
     {
       "start": 178,
       "solver_success": true,
-      "residual": 9.585850453194302e-14,
+      "residual": 9.540923303769855e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 30
@@ -3573,7 +3573,7 @@
     {
       "start": 179,
       "solver_success": false,
-      "residual": 0.007638520011923855,
+      "residual": 0.007638521403959999,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 47
@@ -3581,7 +3581,7 @@
     {
       "start": 180,
       "solver_success": true,
-      "residual": 1.0358179184540391e-12,
+      "residual": 1.0355762465721575e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 34
@@ -3589,7 +3589,7 @@
     {
       "start": 181,
       "solver_success": false,
-      "residual": 0.024575784327194986,
+      "residual": 0.024577440649057886,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 48
@@ -3597,7 +3597,7 @@
     {
       "start": 182,
       "solver_success": false,
-      "residual": 0.02408444790528857,
+      "residual": 0.024084421630816876,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 40
@@ -3605,7 +3605,7 @@
     {
       "start": 183,
       "solver_success": false,
-      "residual": 0.09167855504505441,
+      "residual": 0.09167843088170564,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 43
@@ -3613,7 +3613,7 @@
     {
       "start": 184,
       "solver_success": false,
-      "residual": 0.024319213921126886,
+      "residual": 0.024319209858573013,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 51
@@ -3621,7 +3621,7 @@
     {
       "start": 185,
       "solver_success": true,
-      "residual": 2.6043669626124823e-11,
+      "residual": 2.566068106576582e-11,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 28
@@ -3629,7 +3629,7 @@
     {
       "start": 186,
       "solver_success": true,
-      "residual": 9.961177650523455e-12,
+      "residual": 9.95822502386292e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 29
@@ -3637,7 +3637,7 @@
     {
       "start": 187,
       "solver_success": true,
-      "residual": 2.3652195459626103e-13,
+      "residual": 2.0842435722266903e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 55
@@ -3645,7 +3645,7 @@
     {
       "start": 188,
       "solver_success": true,
-      "residual": 2.5166934098320434e-13,
+      "residual": 2.532261501647554e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 24
@@ -3653,7 +3653,7 @@
     {
       "start": 189,
       "solver_success": true,
-      "residual": 4.694934643694845e-12,
+      "residual": 4.70031563823417e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 27
@@ -3661,7 +3661,7 @@
     {
       "start": 190,
       "solver_success": true,
-      "residual": 2.78881896940403e-13,
+      "residual": 2.773361740422114e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 37
@@ -3669,7 +3669,7 @@
     {
       "start": 191,
       "solver_success": false,
-      "residual": 0.007627269554310602,
+      "residual": 0.007627270130503156,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 72
@@ -3677,7 +3677,7 @@
     {
       "start": 192,
       "solver_success": true,
-      "residual": 1.425383255258928e-14,
+      "residual": 1.4665795071295427e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 31
@@ -3685,7 +3685,7 @@
     {
       "start": 193,
       "solver_success": false,
-      "residual": 0.01085238927435376,
+      "residual": 0.010855194391919662,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 110
@@ -3693,7 +3693,7 @@
     {
       "start": 194,
       "solver_success": false,
-      "residual": 0.00782195125670404,
+      "residual": 0.007821952172623704,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 58
@@ -3701,7 +3701,7 @@
     {
       "start": 195,
       "solver_success": true,
-      "residual": 1.1888290750262689e-13,
+      "residual": 1.182684846394747e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 37
@@ -3709,7 +3709,7 @@
     {
       "start": 196,
       "solver_success": true,
-      "residual": 2.6213962008009504e-15,
+      "residual": 1.5113414286795892e-15,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 30
@@ -3717,7 +3717,7 @@
     {
       "start": 197,
       "solver_success": true,
-      "residual": 2.3889121568452086e-13,
+      "residual": 2.3852987195485057e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 45
@@ -3725,7 +3725,7 @@
     {
       "start": 198,
       "solver_success": false,
-      "residual": 0.008874528928100194,
+      "residual": 0.00887452805013592,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 54
@@ -3733,7 +3733,7 @@
     {
       "start": 199,
       "solver_success": true,
-      "residual": 3.6310943355354886e-12,
+      "residual": 3.6302612257749744e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 23
@@ -3741,7 +3741,7 @@
     {
       "start": 200,
       "solver_success": true,
-      "residual": 1.0889720318512059e-13,
+      "residual": 1.1237453477977731e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 48
@@ -3749,7 +3749,7 @@
     {
       "start": 201,
       "solver_success": false,
-      "residual": 0.08645067752966745,
+      "residual": 0.08645068653375322,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 34
@@ -3757,7 +3757,7 @@
     {
       "start": 202,
       "solver_success": true,
-      "residual": 9.473709642123176e-13,
+      "residual": 9.460870566341143e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 22
@@ -3765,7 +3765,7 @@
     {
       "start": 203,
       "solver_success": true,
-      "residual": 1.9312160723374555e-12,
+      "residual": 1.928062287154607e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 39
@@ -3773,7 +3773,7 @@
     {
       "start": 204,
       "solver_success": true,
-      "residual": 1.6758921363796108e-13,
+      "residual": 1.6703302638229456e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 55
@@ -3781,7 +3781,7 @@
     {
       "start": 205,
       "solver_success": false,
-      "residual": 0.008359271755655394,
+      "residual": 0.008359269757300275,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 60
@@ -3789,7 +3789,7 @@
     {
       "start": 206,
       "solver_success": false,
-      "residual": 0.009330739367993644,
+      "residual": 0.009331717033857417,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 78
@@ -3797,7 +3797,7 @@
     {
       "start": 207,
       "solver_success": true,
-      "residual": 1.9246925747015534e-14,
+      "residual": 2.0150318510718525e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 38
@@ -3805,7 +3805,7 @@
     {
       "start": 208,
       "solver_success": false,
-      "residual": 0.008733661290691468,
+      "residual": 0.008731712457416338,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 157
@@ -3813,7 +3813,7 @@
     {
       "start": 209,
       "solver_success": true,
-      "residual": 2.780190333504475e-13,
+      "residual": 2.7398881147117967e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 63
@@ -3821,7 +3821,7 @@
     {
       "start": 210,
       "solver_success": true,
-      "residual": 6.9274642924696e-13,
+      "residual": 6.930930128373738e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 26
@@ -3829,7 +3829,7 @@
     {
       "start": 211,
       "solver_success": true,
-      "residual": 5.115904612389568e-13,
+      "residual": 5.121075262949097e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 30
@@ -3837,7 +3837,7 @@
     {
       "start": 212,
       "solver_success": false,
-      "residual": 0.008112280976173244,
+      "residual": 0.008112289713996478,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 49
@@ -3845,7 +3845,7 @@
     {
       "start": 213,
       "solver_success": true,
-      "residual": 2.2367968866030876e-13,
+      "residual": 2.2231581249885332e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 27
@@ -3853,7 +3853,7 @@
     {
       "start": 214,
       "solver_success": true,
-      "residual": 9.908235128274496e-15,
+      "residual": 9.2205760035373e-15,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 23
@@ -3861,7 +3861,7 @@
     {
       "start": 215,
       "solver_success": true,
-      "residual": 1.20308488326069e-13,
+      "residual": 1.196463574314392e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 32
@@ -3869,7 +3869,7 @@
     {
       "start": 216,
       "solver_success": true,
-      "residual": 6.083737983882638e-13,
+      "residual": 6.038985359844001e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 33
@@ -3877,7 +3877,7 @@
     {
       "start": 217,
       "solver_success": true,
-      "residual": 1.0636618854448991e-13,
+      "residual": 1.0801101062402858e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 37
@@ -3885,7 +3885,7 @@
     {
       "start": 218,
       "solver_success": false,
-      "residual": 0.025206542035137947,
+      "residual": 0.025206542140059483,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 45
@@ -3893,7 +3893,7 @@
     {
       "start": 219,
       "solver_success": false,
-      "residual": 0.024459589158452987,
+      "residual": 0.024459356470013852,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 44
@@ -3901,7 +3901,7 @@
     {
       "start": 220,
       "solver_success": false,
-      "residual": 0.0594574379000713,
+      "residual": 0.05945749791832058,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 37
@@ -3909,7 +3909,7 @@
     {
       "start": 221,
       "solver_success": false,
-      "residual": 0.06321862864110825,
+      "residual": 0.06321876582718539,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 36
@@ -3917,7 +3917,7 @@
     {
       "start": 222,
       "solver_success": false,
-      "residual": 0.036527370427776595,
+      "residual": 0.03652736573877837,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 48
@@ -3925,7 +3925,7 @@
     {
       "start": 223,
       "solver_success": true,
-      "residual": 7.079061405333672e-13,
+      "residual": 7.107031150716856e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 23
@@ -3933,7 +3933,7 @@
     {
       "start": 224,
       "solver_success": true,
-      "residual": 1.1956887495751157e-12,
+      "residual": 1.193402487333985e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 28
@@ -3941,7 +3941,7 @@
     {
       "start": 225,
       "solver_success": true,
-      "residual": 1.2547178034523727e-14,
+      "residual": 1.2146418328206687e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 25
@@ -3949,7 +3949,7 @@
     {
       "start": 226,
       "solver_success": false,
-      "residual": 0.06139881209887605,
+      "residual": 0.06139883466164893,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 49
@@ -3957,7 +3957,7 @@
     {
       "start": 227,
       "solver_success": true,
-      "residual": 3.4163043574872906e-15,
+      "residual": 4.034977246264462e-15,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 39
@@ -3965,7 +3965,7 @@
     {
       "start": 228,
       "solver_success": false,
-      "residual": 0.07631474612289044,
+      "residual": 0.07629872029000641,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 50
@@ -3973,7 +3973,7 @@
     {
       "start": 229,
       "solver_success": false,
-      "residual": 0.008324235808576746,
+      "residual": 0.008324283383847947,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 40
@@ -3981,7 +3981,7 @@
     {
       "start": 230,
       "solver_success": true,
-      "residual": 4.213965092139749e-13,
+      "residual": 4.217633569433694e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 28
@@ -3989,7 +3989,7 @@
     {
       "start": 231,
       "solver_success": true,
-      "residual": 4.6800246354932856e-14,
+      "residual": 4.710931535817836e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 57
@@ -3997,7 +3997,7 @@
     {
       "start": 232,
       "solver_success": true,
-      "residual": 5.420677418891568e-14,
+      "residual": 5.1645810221739e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 38
@@ -4005,7 +4005,7 @@
     {
       "start": 233,
       "solver_success": true,
-      "residual": 3.401886008565832e-14,
+      "residual": 3.413254765682776e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 33
@@ -4013,7 +4013,7 @@
     {
       "start": 234,
       "solver_success": false,
-      "residual": 0.06223561258523679,
+      "residual": 0.062236054889283784,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 70
@@ -4021,7 +4021,7 @@
     {
       "start": 235,
       "solver_success": true,
-      "residual": 4.2675440850442204e-14,
+      "residual": 4.2379810174488416e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 39
@@ -4029,7 +4029,7 @@
     {
       "start": 236,
       "solver_success": false,
-      "residual": 0.08996887547084484,
+      "residual": 0.08996344449327819,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 45
@@ -4037,7 +4037,7 @@
     {
       "start": 237,
       "solver_success": false,
-      "residual": 0.11826479475298635,
+      "residual": 0.1182647975588827,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 45
@@ -4045,7 +4045,7 @@
     {
       "start": 238,
       "solver_success": true,
-      "residual": 3.2594501628483107e-13,
+      "residual": 3.266532598577097e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 23
@@ -4053,7 +4053,7 @@
     {
       "start": 239,
       "solver_success": true,
-      "residual": 1.3512367886410008e-13,
+      "residual": 1.354295432217317e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 34
@@ -4061,7 +4061,7 @@
     {
       "start": 240,
       "solver_success": true,
-      "residual": 7.741264400586962e-14,
+      "residual": 7.608250835659307e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 28
@@ -4069,7 +4069,7 @@
     {
       "start": 241,
       "solver_success": false,
-      "residual": 0.03054938697346697,
+      "residual": 0.03054932596621602,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 52
@@ -4077,7 +4077,7 @@
     {
       "start": 242,
       "solver_success": false,
-      "residual": 0.06388627758333516,
+      "residual": 0.06388628794654978,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 46
@@ -4085,7 +4085,7 @@
     {
       "start": 243,
       "solver_success": true,
-      "residual": 1.1084586578849332e-13,
+      "residual": 1.1123124757580197e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 39
@@ -4093,7 +4093,7 @@
     {
       "start": 244,
       "solver_success": true,
-      "residual": 5.072641074140471e-14,
+      "residual": 5.0838183958220765e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 23
@@ -4101,7 +4101,7 @@
     {
       "start": 245,
       "solver_success": true,
-      "residual": 2.3956776148459465e-15,
+      "residual": 2.2509412470550935e-15,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 23
@@ -4109,7 +4109,7 @@
     {
       "start": 246,
       "solver_success": false,
-      "residual": 0.03839936462662769,
+      "residual": 0.03839938214271301,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 60
@@ -4117,7 +4117,7 @@
     {
       "start": 247,
       "solver_success": false,
-      "residual": 0.02390416404278894,
+      "residual": 0.023904159648982407,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 100
@@ -4125,7 +4125,7 @@
     {
       "start": 248,
       "solver_success": true,
-      "residual": 1.414923166404181e-13,
+      "residual": 1.4168631703432055e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 30
@@ -4133,7 +4133,7 @@
     {
       "start": 249,
       "solver_success": false,
-      "residual": 0.0006452461781760913,
+      "residual": 0.0006452290725399735,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 53
@@ -4141,7 +4141,7 @@
     {
       "start": 250,
       "solver_success": true,
-      "residual": 6.95135054964382e-13,
+      "residual": 6.990061792903999e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 28
@@ -4149,7 +4149,7 @@
     {
       "start": 251,
       "solver_success": true,
-      "residual": 3.851353651120636e-13,
+      "residual": 3.845131317528742e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 51
@@ -4157,7 +4157,7 @@
     {
       "start": 252,
       "solver_success": true,
-      "residual": 8.732795812143898e-12,
+      "residual": 8.729953555515176e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 29
@@ -4165,7 +4165,7 @@
     {
       "start": 253,
       "solver_success": false,
-      "residual": 0.015313322809887455,
+      "residual": 0.01531330533038234,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 69
@@ -4173,7 +4173,7 @@
     {
       "start": 254,
       "solver_success": false,
-      "residual": 0.00800832348341643,
+      "residual": 0.008008324761274666,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 68
@@ -4181,7 +4181,7 @@
     {
       "start": 255,
       "solver_success": false,
-      "residual": 0.06460920213482045,
+      "residual": 0.06460921499671565,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 44
@@ -4189,7 +4189,7 @@
     {
       "start": 256,
       "solver_success": false,
-      "residual": 0.025026603473259527,
+      "residual": 0.02502669578519675,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 66
@@ -4197,7 +4197,7 @@
     {
       "start": 257,
       "solver_success": true,
-      "residual": 6.654090184427854e-13,
+      "residual": 6.478938826634835e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 33
@@ -4205,7 +4205,7 @@
     {
       "start": 258,
       "solver_success": true,
-      "residual": 1.6835281025427079e-12,
+      "residual": 1.68227357604613e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 28
@@ -4213,7 +4213,7 @@
     {
       "start": 259,
       "solver_success": false,
-      "residual": 0.08011501218803237,
+      "residual": 0.080115110732473,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 33
@@ -4221,7 +4221,7 @@
     {
       "start": 260,
       "solver_success": true,
-      "residual": 1.5717058140061393e-14,
+      "residual": 1.5536825048979667e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 19
@@ -4229,7 +4229,7 @@
     {
       "start": 261,
       "solver_success": true,
-      "residual": 3.677948119530936e-13,
+      "residual": 3.696029631817291e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 30
@@ -4237,7 +4237,7 @@
     {
       "start": 262,
       "solver_success": true,
-      "residual": 1.5689626699785782e-12,
+      "residual": 1.5628427302227885e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 33
@@ -4245,7 +4245,7 @@
     {
       "start": 263,
       "solver_success": false,
-      "residual": 0.007745182311694484,
+      "residual": 0.007745184659297184,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 65
@@ -4253,7 +4253,7 @@
     {
       "start": 264,
       "solver_success": true,
-      "residual": 1.964805023606712e-13,
+      "residual": 1.9297813612197906e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 49
@@ -4261,7 +4261,7 @@
     {
       "start": 265,
       "solver_success": true,
-      "residual": 4.393135989739833e-14,
+      "residual": 4.367546860518008e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 28
@@ -4269,7 +4269,7 @@
     {
       "start": 266,
       "solver_success": true,
-      "residual": 1.060061531184382e-11,
+      "residual": 1.0594708983377077e-11,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 28
@@ -4277,7 +4277,7 @@
     {
       "start": 267,
       "solver_success": true,
-      "residual": 1.1050564818383774e-12,
+      "residual": 1.104892298867158e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 36
@@ -4285,7 +4285,7 @@
     {
       "start": 268,
       "solver_success": true,
-      "residual": 3.3046623362536423e-15,
+      "residual": 4.704467722167978e-15,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 29
@@ -4293,7 +4293,7 @@
     {
       "start": 269,
       "solver_success": true,
-      "residual": 1.2169508651913325e-13,
+      "residual": 1.212011555499665e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 31
@@ -4301,7 +4301,7 @@
     {
       "start": 270,
       "solver_success": false,
-      "residual": 0.00828843751625375,
+      "residual": 0.008288418862481505,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 65
@@ -4309,7 +4309,7 @@
     {
       "start": 271,
       "solver_success": false,
-      "residual": 0.12480340830663467,
+      "residual": 0.12480309169558636,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 40
@@ -4317,7 +4317,7 @@
     {
       "start": 272,
       "solver_success": false,
-      "residual": 0.007911456403242707,
+      "residual": 0.007911436461176355,
       "mean_error": 0.0,
       "accepted": false,
       "nfev": 66
@@ -4325,7 +4325,7 @@
     {
       "start": 273,
       "solver_success": true,
-      "residual": 2.409224077583746e-13,
+      "residual": 2.401490547759025e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 32
@@ -4333,7 +4333,7 @@
     {
       "start": 274,
       "solver_success": true,
-      "residual": 1.8299430131847993e-14,
+      "residual": 1.8503811908392958e-14,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 61
@@ -4341,7 +4341,7 @@
     {
       "start": 275,
       "solver_success": true,
-      "residual": 7.623208458213319e-13,
+      "residual": 7.629104561881682e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 27
@@ -4349,7 +4349,7 @@
     {
       "start": 276,
       "solver_success": true,
-      "residual": 4.424981837384665e-12,
+      "residual": 4.425703046209568e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 36
@@ -4357,7 +4357,7 @@
     {
       "start": 277,
       "solver_success": true,
-      "residual": 2.550123939166501e-13,
+      "residual": 2.5755954751470673e-13,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 31
@@ -4365,7 +4365,7 @@
     {
       "start": 278,
       "solver_success": true,
-      "residual": 1.2108608561544106e-12,
+      "residual": 1.2110359510826927e-12,
       "mean_error": 0.0,
       "accepted": true,
       "nfev": 25

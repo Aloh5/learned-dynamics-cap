@@ -14,77 +14,77 @@
   "roots": [
     {
       "state": [
-        0.0013749104212186281,
-        0.0013747839897574909,
-        0.0013747068720602212,
-        0.001374798021200113,
-        0.001374900511976219,
-        0.0013749211215596294,
-        0.001374892774850299,
-        0.001374910409143053,
-        0.0013750738091166783,
-        0.001375125971740765,
-        0.0013749803980675718,
-        0.0013748737418019465,
-        0.0013747999807129942,
-        0.0013748577147251184
+        0.001374819151727466,
+        0.0013746953402717815,
+        0.0013747959225672212,
+        0.0013751268991602672,
+        0.00137533657693499,
+        0.0013752983004677562,
+        0.0013751450193540597,
+        0.0013749701178739759,
+        0.0013750246764072894,
+        0.001375003104011064,
+        0.0013746550820411207,
+        0.0013743987931374236,
+        0.0013744981670131059,
+        0.001374768586982752
       ],
-      "residual": 5.706736621647134e-09,
+      "residual": 8.361884907954424e-09,
       "eigenvalues": [
         [
-          0.21981716607628374,
-          0.0007853532712631707
+          0.21981715785995604,
+          0.0007853461503637464
         ],
         [
-          0.21981716607628374,
-          -0.0007853532712631707
+          0.21981715785995604,
+          -0.0007853461503637464
         ],
         [
-          0.19519585427924796,
-          0.0011780201874480398
+          0.19519579849202048,
+          0.001178050564237186
         ],
         [
-          0.19519585427924796,
-          -0.0011780201874480398
+          0.19519579849202048,
+          -0.001178050564237186
         ],
         [
-          0.07491378333204078,
-          0.0003926704452060966
+          0.07491373231572497,
+          0.00039271130519217303
         ],
         [
-          0.07491378333204078,
-          -0.0003926704452060966
+          0.07491373231572497,
+          -0.00039271130519217303
         ],
         [
-          -3.4838436710555237e-11,
+          4.462340310024091e-06,
           0.0
         ],
         [
-          -0.39814036933069213,
-          0.0015706467532340426
+          -0.3981403843014978,
+          0.0015706504087293818
         ],
         [
-          -0.39814036933069213,
-          -0.0015706467532340426
+          -0.3981403843014978,
+          -0.0015706504087293818
         ],
         [
-          -2.1190579435424493,
-          0.0019634108142464954
+          -2.1190579866537234,
+          0.001963424891881934
         ],
         [
-          -2.1190579435424493,
-          -0.0019634108142464954
+          -2.1190579866537234,
+          -0.001963424891881934
         ],
         [
-          -5.686099860103456,
-          0.0023561040184956424
+          -5.686099909867842,
+          0.002356183003901449
         ],
         [
-          -5.686099860103456,
-          -0.0023561040184956424
+          -5.686099909867842,
+          -0.002356183003901449
         ],
         [
-          -11.977485113125885,
+          -11.977485417738286,
           0.0
         ]
       ],
@@ -93,83 +93,83 @@
         "unstable": 6,
         "neutral": 1
       },
-      "jacobian_fd_error": 1.3608003612830544e-12,
-      "min_distance_to_training": 3.4723559499491867,
+      "jacobian_fd_error": 1.1343148642595224e-12,
+      "min_distance_to_training": 3.4723562501711718,
       "attractor_distance_rank": 3
     },
     {
       "state": [
-        -0.02286776109403959,
-        0.8205292339349448,
-        2.104824307264823,
-        0.10996933361888767,
-        -1.9071997033983223,
-        -0.07044673733476789,
-        1.862745707775657,
-        0.07408465508669505,
-        -1.8640872475330241,
-        -0.039474612379112387,
-        1.906390685983244,
-        0.042225243169201364,
-        -2.10123267214557,
-        -0.8962118972106862
+        -0.02286748893359435,
+        0.8205296232560454,
+        2.1048243140222134,
+        0.10996856017887505,
+        -1.9071997149822357,
+        -0.07044614935029432,
+        1.8627458852703966,
+        0.0740839551124612,
+        -1.8640874160281082,
+        -0.03947413240951848,
+        1.9063907683204644,
+        0.042224589913684406,
+        -2.101232744693747,
+        -0.8962115139387318
       ],
-      "residual": 2.106380877106564e-09,
+      "residual": 8.76219225342654e-09,
       "eigenvalues": [
         [
-          0.4213199735412445,
+          0.4213199607968814,
           0.0
         ],
         [
-          0.26672881192182224,
+          0.26672878455920074,
           0.0
         ],
         [
-          -3.003071154339923e-08,
+          4.483265784363234e-06,
           0.0
         ],
         [
-          -0.036424713519950275,
+          -0.03642483694909049,
           0.0
         ],
         [
-          -0.20131882957522548,
-          0.3873914680076213
+          -0.201318847912759,
+          0.3873914822632036
         ],
         [
-          -0.20131882957522548,
-          -0.3873914680076213
+          -0.201318847912759,
+          -0.3873914822632036
         ],
         [
-          -0.3565622083874398,
-          0.38988282705719896
+          -0.356562187362675,
+          0.389882816790265
         ],
         [
-          -0.3565622083874398,
-          -0.38988282705719896
+          -0.356562187362675,
+          -0.389882816790265
         ],
         [
-          -0.6214528946678296,
+          -0.6214528195317288,
           0.0
         ],
         [
-          -1.7112993675439057,
+          -1.7112995016778945,
           0.0
         ],
         [
-          -1.8727349376460374,
+          -1.8727349734949768,
           0.0
         ],
         [
-          -5.463023750530577,
+          -5.463023751043805,
           0.0
         ],
         [
-          -5.469922671375926,
+          -5.469923025684009,
           0.0
         ],
         [
-          -11.80165700736179,
+          -11.80165784472186,
           0.0
         ]
       ],
@@ -178,83 +178,83 @@
         "unstable": 2,
         "neutral": 1
       },
-      "jacobian_fd_error": 1.3891544026201075e-09,
-      "min_distance_to_training": 2.4965666648235967,
+      "jacobian_fd_error": 1.5268439845783632e-09,
+      "min_distance_to_training": 2.496565715925511,
       "attractor_distance_rank": 1
     },
     {
       "state": [
-        -2.597239694827029,
-        -0.8135378304776408,
-        0.9594477015977112,
-        2.6155754838093537,
-        -0.41898730482891394,
-        -2.425300600250166,
-        -0.16925967029309688,
-        2.283792169068471,
-        0.9707109417944959,
-        -2.4847564951814465,
-        -1.2013795287795184,
-        0.8330887959682678,
-        2.5677793460655947,
-        -0.10068477792815224
+        -2.5972395250054685,
+        -0.8135367252384857,
+        0.9594468413061938,
+        2.61557575660572,
+        -0.4189846856430888,
+        -2.4253010306356972,
+        -0.1692620338422991,
+        2.283790479875862,
+        0.9707160219081841,
+        -2.484754652788405,
+        -1.2013819866305737,
+        0.8330893587370549,
+        2.56777884923096,
+        -0.10068813214201672
       ],
-      "residual": 2.765783109010042e-09,
+      "residual": 4.525365987146526e-09,
       "eigenvalues": [
         [
-          0.16671229642176225,
+          0.1667119337749544,
           0.0
         ],
         [
-          -4.1344465239541924e-07,
+          3.6904087123988226e-06,
           0.0
         ],
         [
-          -0.0347159390075299,
+          -0.03471605136204017,
           0.0
         ],
         [
-          -0.06890439588032807,
+          -0.0689024755630344,
           0.0
         ],
         [
-          -0.37906712207059506,
+          -0.37915063625782963,
           0.0
         ],
         [
-          -0.38704941583351954,
+          -0.3869664731796484,
           0.0
         ],
         [
-          -0.4036190122016269,
-          0.5033555637607458
+          -0.4036190452656267,
+          0.5033554142457644
         ],
         [
-          -0.4036190122016269,
-          -0.5033555637607458
+          -0.4036190452656267,
+          -0.5033554142457644
         ],
         [
-          -1.0964617133268844,
-          0.324863911968875
+          -1.0964616741901703,
+          0.3248638367669339
         ],
         [
-          -1.0964617133268844,
-          -0.324863911968875
+          -1.0964616741901703,
+          -0.3248638367669339
         ],
         [
-          -1.4315985691481172,
+          -1.4315992240082829,
           0.0
         ],
         [
-          -5.284321670843093,
+          -5.284321708248239,
           0.0
         ],
         [
-          -5.304614841815252,
+          -5.304614970394075,
           0.0
         ],
         [
-          -11.680507534642178,
+          -11.68050825762485,
           0.0
         ]
       ],
@@ -263,8 +263,8 @@
         "unstable": 1,
         "neutral": 1
       },
-      "jacobian_fd_error": 1.3912262453175117e-09,
-      "min_distance_to_training": 2.6817518764168637,
+      "jacobian_fd_error": 1.5491585791949092e-09,
+      "min_distance_to_training": 2.681747838676775,
       "attractor_distance_rank": 2
     }
   ],
@@ -529,25 +529,25 @@
     {
       "learned_index": 0,
       "true_index": 0,
-      "position_error": 4.0223761523541964e-07,
-      "true_residual_at_learned_root": 1.4698379447353558e-07,
-      "max_matched_eigenvalue_error": 1.124424217735509e-06,
+      "position_error": 1.0201681228669793e-06,
+      "true_residual_at_learned_root": 1.8718067522580329e-07,
+      "max_matched_eigenvalue_error": 4.462340310194587e-06,
       "stability_matches": true
     },
     {
       "learned_index": 1,
       "true_index": 1,
-      "position_error": 1.328985725483882e-06,
-      "true_residual_at_learned_root": 2.6466878990507556e-07,
-      "max_matched_eigenvalue_error": 1.7621565344683177e-06,
+      "position_error": 4.118842690243444e-07,
+      "true_residual_at_learned_root": 2.820503740385395e-07,
+      "max_matched_eigenvalue_error": 4.483265782082515e-06,
       "stability_matches": true
     },
     {
       "learned_index": 2,
       "true_index": 2,
-      "position_error": 1.5381468474418775e-06,
-      "true_residual_at_learned_root": 4.280854567237186e-07,
-      "max_matched_eigenvalue_error": 6.316002365169826e-06,
+      "position_error": 8.339353264996768e-06,
+      "true_residual_at_learned_root": 5.093524161552913e-07,
+      "max_matched_eigenvalue_error": 7.78183747611183e-05,
       "stability_matches": true
     }
   ],
@@ -555,1194 +555,1194 @@
     {
       "start": 0,
       "solver_success": true,
-      "residual": 5.706736621647134e-09,
-      "mean_error": 0.0,
+      "residual": 8.361884907954424e-09,
+      "mean_error": 1.3962355577268326e-15,
       "accepted": true,
       "nfev": 2
     },
     {
       "start": 1,
       "solver_success": false,
-      "residual": 0.0004316085019171344,
-      "mean_error": 9.348551856525056e-07,
+      "residual": 0.00043139868425377446,
+      "mean_error": 9.20120721773247e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 2,
       "solver_success": true,
-      "residual": 2.106380877106564e-09,
-      "mean_error": 0.0,
+      "residual": 8.76219225342654e-09,
+      "mean_error": 1.4432899320127035e-15,
       "accepted": true,
       "nfev": 22
     },
     {
       "start": 3,
       "solver_success": true,
-      "residual": 4.4105083195474445e-08,
-      "mean_error": 6.186457596202288e-16,
+      "residual": 2.4665205428573233e-08,
+      "mean_error": 4.274358644806853e-15,
       "accepted": false,
       "nfev": 59
     },
     {
       "start": 4,
       "solver_success": true,
-      "residual": 4.410508387792994e-08,
-      "mean_error": 6.344751113385172e-16,
+      "residual": 2.466520477578825e-08,
+      "mean_error": 4.298211092601534e-15,
       "accepted": false,
       "nfev": 62
     },
     {
       "start": 5,
       "solver_success": false,
-      "residual": 0.006747095317494137,
-      "mean_error": 0.00013542225145932564,
+      "residual": 0.0067463996162568565,
+      "mean_error": 0.00013555920471211179,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 6,
       "solver_success": false,
-      "residual": 0.0067471011980493765,
-      "mean_error": 0.00013542238484012424,
+      "residual": 0.006746373366818429,
+      "mean_error": 0.00013556539439424364,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 7,
       "solver_success": false,
-      "residual": 0.0004315977861283023,
-      "mean_error": 9.348323588484735e-07,
+      "residual": 0.00043159264430765726,
+      "mean_error": 9.317497239710783e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 8,
-      "solver_success": false,
-      "residual": 0.00043157064801137307,
-      "mean_error": 9.347734650697308e-07,
+      "solver_success": true,
+      "residual": 0.00043157306557087207,
+      "mean_error": 9.301050546656024e-07,
       "accepted": false,
-      "nfev": 500
+      "nfev": 45
     },
     {
       "start": 9,
-      "solver_success": false,
-      "residual": 0.000431570642846858,
-      "mean_error": 9.34773455965902e-07,
+      "solver_success": true,
+      "residual": 0.000431573065010823,
+      "mean_error": 9.301082072865618e-07,
       "accepted": false,
-      "nfev": 500
+      "nfev": 45
     },
     {
       "start": 10,
       "solver_success": false,
-      "residual": 0.0004315672681597984,
-      "mean_error": 9.3476611907309e-07,
+      "residual": 0.00043157167930007307,
+      "mean_error": 9.313978865546722e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 11,
       "solver_success": false,
-      "residual": 0.00043156315711334186,
-      "mean_error": 9.347572433315854e-07,
+      "residual": 0.0004315700668231317,
+      "mean_error": 9.321977201667744e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 12,
       "solver_success": false,
-      "residual": 0.00043156907728488176,
-      "mean_error": 9.347700639808585e-07,
+      "residual": 0.0004315724838324764,
+      "mean_error": 9.309281250075192e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 13,
       "solver_success": true,
-      "residual": 2.765783109010042e-09,
-      "mean_error": 3.2742905609062234e-17,
+      "residual": 4.525365987146526e-09,
+      "mean_error": 6.938893903907228e-16,
       "accepted": true,
-      "nfev": 40
+      "nfev": 39
     },
     {
       "start": 14,
       "solver_success": true,
-      "residual": 2.7657831535181175e-09,
-      "mean_error": 2.190088388420719e-17,
+      "residual": 4.5253680908627395e-09,
+      "mean_error": 5.770123961967855e-16,
       "accepted": true,
       "nfev": 31
     },
     {
       "start": 15,
       "solver_success": true,
-      "residual": 2.765784726135753e-09,
-      "mean_error": 8.716985466783456e-17,
+      "residual": 4.5253680908622e-09,
+      "mean_error": 5.937091096530622e-16,
       "accepted": true,
       "nfev": 36
     },
     {
       "start": 16,
       "solver_success": false,
-      "residual": 0.00043162068125216754,
-      "mean_error": 9.348814205953262e-07,
+      "residual": 0.00043161378301359376,
+      "mean_error": 9.38761488671622e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 17,
       "solver_success": false,
-      "residual": 0.00043159123919294187,
-      "mean_error": 9.348180990170936e-07,
+      "residual": 0.0004315873503478193,
+      "mean_error": 9.311896563754789e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 18,
-      "solver_success": false,
-      "residual": 0.00043157063905869495,
-      "mean_error": 9.347734425163741e-07,
+      "solver_success": true,
+      "residual": 0.0004315730644896084,
+      "mean_error": 9.301112491707977e-07,
       "accepted": false,
-      "nfev": 500
+      "nfev": 39
     },
     {
       "start": 19,
       "solver_success": false,
-      "residual": 0.0004315567231873346,
-      "mean_error": 9.347434176767717e-07,
+      "residual": 0.00043157025615991944,
+      "mean_error": 9.343644475831841e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 20,
       "solver_success": false,
-      "residual": 0.0004315611251727634,
-      "mean_error": 9.347528734143969e-07,
+      "residual": 0.0004315693571335662,
+      "mean_error": 9.326065981141163e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 21,
       "solver_success": false,
-      "residual": 0.0004315958104720512,
-      "mean_error": 9.348258055350261e-07,
+      "residual": 0.0004314276285970416,
+      "mean_error": 9.331936061435404e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 22,
       "solver_success": true,
-      "residual": 5.706736627406534e-09,
-      "mean_error": 0.0,
+      "residual": 8.361884908951775e-09,
+      "mean_error": 1.3962355577268326e-15,
       "accepted": true,
       "nfev": 13
     },
     {
       "start": 23,
       "solver_success": true,
-      "residual": 0.00013723996048430298,
-      "mean_error": 3.143874013661514e-07,
+      "residual": 0.0001372566295489028,
+      "mean_error": 3.1300019834703055e-07,
       "accepted": false,
-      "nfev": 70
+      "nfev": 77
     },
     {
       "start": 24,
       "solver_success": true,
-      "residual": 5.706736622164861e-09,
-      "mean_error": 0.0,
+      "residual": 8.36188490507906e-09,
+      "mean_error": 1.3958018768578384e-15,
       "accepted": true,
       "nfev": 16
     },
     {
       "start": 25,
       "solver_success": false,
-      "residual": 0.00043177729489257997,
-      "mean_error": 9.352207469559559e-07,
+      "residual": 0.00043177614831509906,
+      "mean_error": 9.371899307951664e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 26,
       "solver_success": true,
-      "residual": 0.00013720797047947676,
-      "mean_error": 3.14314191158507e-07,
+      "residual": 0.0001372048411103516,
+      "mean_error": 3.1978923353023596e-07,
       "accepted": false,
-      "nfev": 98
+      "nfev": 90
     },
     {
       "start": 27,
       "solver_success": true,
-      "residual": 5.706736623208016e-09,
-      "mean_error": 2.168404344971009e-19,
+      "residual": 8.361884905542685e-09,
+      "mean_error": 1.3962355577268326e-15,
       "accepted": true,
       "nfev": 18
     },
     {
       "start": 28,
       "solver_success": true,
-      "residual": 4.8570618716797386e-08,
-      "mean_error": 3.5496779127175415e-16,
+      "residual": 1.112627977277955e-07,
+      "mean_error": 1.7431585688787443e-14,
       "accepted": false,
       "nfev": 8
     },
     {
       "start": 29,
       "solver_success": true,
-      "residual": 0.00013718034665842645,
-      "mean_error": 3.142503993414092e-07,
+      "residual": 0.00013745157998316018,
+      "mean_error": 3.033762922227505e-07,
       "accepted": false,
-      "nfev": 93
+      "nfev": 92
     },
     {
       "start": 30,
       "solver_success": true,
-      "residual": 1.5970490777140345e-08,
-      "mean_error": 1.0299920638612292e-16,
-      "accepted": false,
+      "residual": 2.0433544775031376e-09,
+      "mean_error": 3.410900034639397e-16,
+      "accepted": true,
       "nfev": 11
     },
     {
       "start": 31,
       "solver_success": true,
-      "residual": 0.0001371967891703802,
-      "mean_error": 3.1428834795788063e-07,
+      "residual": 0.00013729610505675748,
+      "mean_error": 3.246707577866676e-07,
       "accepted": false,
-      "nfev": 48
+      "nfev": 51
     },
     {
       "start": 32,
       "solver_success": true,
-      "residual": 2.7657835577551154e-09,
-      "mean_error": 3.2742905609062234e-17,
+      "residual": 4.525366372068788e-09,
+      "mean_error": 6.919378264802489e-16,
       "accepted": true,
       "nfev": 66
     },
     {
       "start": 33,
       "solver_success": true,
-      "residual": 1.5970491370606747e-08,
-      "mean_error": 1.1904539853890839e-16,
-      "accepted": false,
+      "residual": 2.0433539287192013e-09,
+      "mean_error": 3.410900034639397e-16,
+      "accepted": true,
       "nfev": 17
     },
     {
       "start": 34,
       "solver_success": true,
-      "residual": 0.000137314996944532,
-      "mean_error": 3.145587532474032e-07,
+      "residual": 0.00013730278264052848,
+      "mean_error": 3.188220727978752e-07,
       "accepted": false,
-      "nfev": 74
+      "nfev": 63
     },
     {
       "start": 35,
       "solver_success": true,
-      "residual": 5.70673662216486e-09,
-      "mean_error": 2.168404344971009e-19,
+      "residual": 8.361884906817651e-09,
+      "mean_error": 1.3960187172923355e-15,
       "accepted": true,
       "nfev": 14
     },
     {
       "start": 36,
       "solver_success": true,
-      "residual": 2.5464494906837575e-09,
-      "mean_error": 2.3852447794681098e-17,
-      "accepted": true,
+      "residual": 9.568266849134653e-08,
+      "mean_error": 1.7945931199414566e-14,
+      "accepted": false,
       "nfev": 8
     },
     {
       "start": 37,
       "solver_success": true,
-      "residual": 2.292686552445537e-08,
-      "mean_error": 1.0993810029003015e-16,
+      "residual": 7.909575816244693e-08,
+      "mean_error": 1.2842808413959794e-14,
       "accepted": false,
       "nfev": 19
     },
     {
       "start": 38,
       "solver_success": true,
-      "residual": 4.857061806401522e-08,
-      "mean_error": 4.132978681514743e-16,
+      "residual": 1.1126279750525742e-07,
+      "mean_error": 1.7370003005390267e-14,
       "accepted": false,
       "nfev": 9
     },
     {
       "start": 39,
       "solver_success": true,
-      "residual": 0.00013724360558618528,
-      "mean_error": 3.143956237375029e-07,
+      "residual": 0.00013705039826980453,
+      "mean_error": 3.1157897906891607e-07,
       "accepted": false,
       "nfev": 81
     },
     {
       "start": 40,
       "solver_success": true,
-      "residual": 0.00013720797047907943,
-      "mean_error": 3.143141941799616e-07,
+      "residual": 0.00013720484111066333,
+      "mean_error": 3.197892336254289e-07,
       "accepted": false,
-      "nfev": 124
+      "nfev": 131
     },
     {
       "start": 41,
       "solver_success": true,
-      "residual": 5.7067366213535184e-09,
-      "mean_error": 0.0,
+      "residual": 8.361884905890403e-09,
+      "mean_error": 1.3960187172923355e-15,
       "accepted": true,
       "nfev": 17
     },
     {
       "start": 42,
       "solver_success": true,
-      "residual": 0.00013734150878076106,
-      "mean_error": 3.14619933012867e-07,
+      "residual": 0.0001373376910842796,
+      "mean_error": 3.1453175144166394e-07,
       "accepted": false,
-      "nfev": 72
+      "nfev": 104
     },
     {
       "start": 43,
       "solver_success": true,
-      "residual": 0.00013720797047968427,
-      "mean_error": 3.143141914835508e-07,
+      "residual": 0.00013720484111049813,
+      "mean_error": 3.1978923613926007e-07,
       "accepted": false,
-      "nfev": 78
+      "nfev": 64
     },
     {
       "start": 44,
       "solver_success": false,
-      "residual": 0.0004315701658488448,
-      "mean_error": 9.3477241029454e-07,
+      "residual": 0.00043157296207572607,
+      "mean_error": 9.304647589161458e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 45,
       "solver_success": false,
-      "residual": 0.00043164341926021357,
-      "mean_error": 9.349286763421678e-07,
+      "residual": 0.00043142877327259264,
+      "mean_error": 9.339701789021129e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 46,
       "solver_success": false,
-      "residual": 0.00043159184463651914,
-      "mean_error": 9.348184661719678e-07,
+      "residual": 0.0004315851828020414,
+      "mean_error": 9.433776266831728e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 47,
       "solver_success": true,
-      "residual": 5.965957511073387e-08,
-      "mean_error": 2.458970527197124e-16,
+      "residual": 1.418489716723925e-07,
+      "mean_error": 2.2688231501866163e-14,
       "accepted": false,
       "nfev": 12
     },
     {
       "start": 48,
       "solver_success": true,
-      "residual": 0.0001371206135524981,
-      "mean_error": 3.141139949497211e-07,
+      "residual": 0.00013711031654669196,
+      "mean_error": 3.09361900001923e-07,
       "accepted": false,
-      "nfev": 56
+      "nfev": 51
     },
     {
       "start": 49,
       "solver_success": true,
-      "residual": 2.5464497280610844e-09,
-      "mean_error": 8.023096076392733e-18,
-      "accepted": true,
+      "residual": 9.568266884741185e-08,
+      "mean_error": 1.78984431442597e-14,
+      "accepted": false,
       "nfev": 18
     },
     {
       "start": 50,
       "solver_success": true,
-      "residual": 0.00013719529747085354,
-      "mean_error": 3.142851034659659e-07,
+      "residual": 0.0001371461541383254,
+      "mean_error": 3.1327621696775054e-07,
       "accepted": false,
-      "nfev": 73
+      "nfev": 82
     },
     {
       "start": 51,
       "solver_success": true,
-      "residual": 0.00013719529747090902,
-      "mean_error": 3.142851027998321e-07,
+      "residual": 0.0001371461541407093,
+      "mean_error": 3.1327620893446297e-07,
       "accepted": false,
       "nfev": 63
     },
     {
       "start": 52,
       "solver_success": true,
-      "residual": 0.0001371206135563098,
-      "mean_error": 3.141139781534779e-07,
+      "residual": 0.00013711031654567823,
+      "mean_error": 3.0936190487909805e-07,
       "accepted": false,
-      "nfev": 79
+      "nfev": 78
     },
     {
       "start": 53,
       "solver_success": true,
-      "residual": 0.00013724360558569758,
-      "mean_error": 3.143956229789951e-07,
+      "residual": 0.00013705039826952502,
+      "mean_error": 3.1157897846826807e-07,
       "accepted": false,
-      "nfev": 87
+      "nfev": 82
     },
     {
       "start": 54,
       "solver_success": true,
-      "residual": 0.0001371803466619163,
-      "mean_error": 3.1425038548335386e-07,
+      "residual": 0.00013745157998850635,
+      "mean_error": 3.0337626862639126e-07,
       "accepted": false,
-      "nfev": 84
+      "nfev": 75
     },
     {
       "start": 55,
       "solver_success": true,
-      "residual": 5.403365486147175e-08,
-      "mean_error": 1.5829351718288365e-17,
+      "residual": 6.259082160379656e-08,
+      "mean_error": 1.029037965949442e-14,
       "accepted": false,
       "nfev": 10
     },
     {
       "start": 56,
       "solver_success": true,
-      "residual": 5.706736621121705e-09,
-      "mean_error": 0.0,
+      "residual": 8.361884906122214e-09,
+      "mean_error": 1.3962355577268326e-15,
       "accepted": true,
       "nfev": 19
     },
     {
       "start": 57,
       "solver_success": true,
-      "residual": 6.746364384816304e-08,
-      "mean_error": 3.0531133177191805e-15,
+      "residual": 5.904153261447617e-08,
+      "mean_error": 7.22447275613991e-15,
       "accepted": false,
-      "nfev": 40
+      "nfev": 39
     },
     {
       "start": 58,
       "solver_success": false,
-      "residual": 0.00043158411056150265,
-      "mean_error": 9.348026235708653e-07,
+      "residual": 0.0004315893476710373,
+      "mean_error": 9.36533144178537e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 59,
       "solver_success": true,
-      "residual": 5.7067366213535184e-09,
-      "mean_error": 2.168404344971009e-19,
+      "residual": 8.36188490531087e-09,
+      "mean_error": 1.3964523981613297e-15,
       "accepted": true,
       "nfev": 16
     },
     {
       "start": 60,
       "solver_success": true,
-      "residual": 5.706736621817143e-09,
-      "mean_error": 2.168404344971009e-19,
+      "residual": 8.361884906701743e-09,
+      "mean_error": 1.3960187172923355e-15,
       "accepted": true,
       "nfev": 17
     },
     {
       "start": 61,
       "solver_success": true,
-      "residual": 1.5954156527195717e-08,
-      "mean_error": 1.1904539853890839e-16,
+      "residual": 4.1426342168269e-08,
+      "mean_error": 6.827871601444713e-15,
       "accepted": false,
       "nfev": 53
     },
     {
       "start": 62,
       "solver_success": false,
-      "residual": 0.00043155750804746564,
-      "mean_error": 9.347451371583167e-07,
+      "residual": 0.0004315714733404427,
+      "mean_error": 9.34668773322489e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 63,
       "solver_success": true,
-      "residual": 5.706736621933049e-09,
-      "mean_error": 2.168404344971009e-19,
+      "residual": 8.361884906585839e-09,
+      "mean_error": 1.3964523981613297e-15,
       "accepted": true,
       "nfev": 19
     },
     {
       "start": 64,
       "solver_success": false,
-      "residual": 0.00043162371114976913,
-      "mean_error": 9.348881158666167e-07,
+      "residual": 0.0004316165222155209,
+      "mean_error": 9.375670588626563e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 65,
       "solver_success": true,
-      "residual": 0.00013718034666215852,
-      "mean_error": 3.142503856776429e-07,
+      "residual": 0.0001374515799895172,
+      "mean_error": 3.0337626272247675e-07,
       "accepted": false,
-      "nfev": 59
+      "nfev": 68
     },
     {
       "start": 66,
       "solver_success": true,
-      "residual": 2.2926867304772815e-08,
-      "mean_error": 1.0798653637955624e-16,
+      "residual": 7.909575869654218e-08,
+      "mean_error": 1.2879671287824301e-14,
       "accepted": false,
       "nfev": 21
     },
     {
       "start": 67,
       "solver_success": true,
-      "residual": 5.706736621469426e-09,
-      "mean_error": 2.168404344971009e-19,
+      "residual": 8.36188490612221e-09,
+      "mean_error": 1.3958018768578384e-15,
       "accepted": true,
       "nfev": 13
     },
     {
       "start": 68,
       "solver_success": false,
-      "residual": 0.0067469815409074985,
-      "mean_error": 0.00013541979150273804,
+      "residual": 0.006749616256657407,
+      "mean_error": 0.00013479527409908962,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 69,
       "solver_success": true,
-      "residual": 0.00013724360558562253,
-      "mean_error": 3.1439562414581346e-07,
+      "residual": 0.00013705039827062088,
+      "mean_error": 3.115789766858397e-07,
       "accepted": false,
-      "nfev": 47
+      "nfev": 39
     },
     {
       "start": 70,
       "solver_success": true,
-      "residual": 0.00013725055846073304,
-      "mean_error": 3.144118326009644e-07,
-      "accepted": false,
-      "nfev": 111
-    },
-    {
-      "start": 71,
-      "solver_success": true,
-      "residual": 0.00013723750741144008,
-      "mean_error": 3.143818561907215e-07,
+      "residual": 0.00013728816425591188,
+      "mean_error": 3.281649110073361e-07,
       "accepted": false,
       "nfev": 112
     },
     {
+      "start": 71,
+      "solver_success": true,
+      "residual": 0.00013731199548896198,
+      "mean_error": 3.1851060689727824e-07,
+      "accepted": false,
+      "nfev": 101
+    },
+    {
       "start": 72,
       "solver_success": true,
-      "residual": 5.526046885468431e-08,
-      "mean_error": 5.702903427273753e-17,
+      "residual": 7.629947910846436e-08,
+      "mean_error": 1.1967857260763992e-14,
       "accepted": false,
       "nfev": 20
     },
     {
       "start": 73,
       "solver_success": true,
-      "residual": 0.0001372849111735687,
-      "mean_error": 3.1449061268671794e-07,
+      "residual": 0.0001375315321990859,
+      "mean_error": 3.1044831982104774e-07,
       "accepted": false,
-      "nfev": 45
+      "nfev": 41
     },
     {
       "start": 74,
       "solver_success": true,
-      "residual": 3.8912419392215654e-10,
-      "mean_error": 3.968179951296946e-17,
-      "accepted": true,
+      "residual": 1.076270576699193e-08,
+      "mean_error": 1.7683337433238577e-15,
+      "accepted": false,
       "nfev": 22
     },
     {
       "start": 75,
       "solver_success": true,
-      "residual": 4.720917275571583e-08,
-      "mean_error": 9.356664748549903e-16,
+      "residual": 1.6122450125024636e-07,
+      "mean_error": 2.8175812377684295e-14,
       "accepted": false,
       "nfev": 53
     },
     {
       "start": 76,
       "solver_success": true,
-      "residual": 0.000137207970479729,
-      "mean_error": 3.1431419240360477e-07,
+      "residual": 0.0001372048411112142,
+      "mean_error": 3.19789232285355e-07,
       "accepted": false,
-      "nfev": 112
+      "nfev": 108
     },
     {
       "start": 77,
       "solver_success": true,
-      "residual": 0.0001373415087812869,
-      "mean_error": 3.146199308143218e-07,
+      "residual": 0.00013733769108418,
+      "mean_error": 3.145317495623079e-07,
       "accepted": false,
-      "nfev": 118
+      "nfev": 120
     },
     {
       "start": 78,
       "solver_success": true,
-      "residual": 1.5970491622766642e-08,
-      "mean_error": 1.0299920638612292e-16,
-      "accepted": false,
+      "residual": 2.0433543883089578e-09,
+      "mean_error": 3.2504381131115423e-16,
+      "accepted": true,
       "nfev": 17
     },
     {
       "start": 79,
       "solver_success": true,
-      "residual": 0.00013725055846173703,
-      "mean_error": 3.1441182927029535e-07,
+      "residual": 0.0001372881642545101,
+      "mean_error": 3.281649149564341e-07,
       "accepted": false,
       "nfev": 86
     },
     {
       "start": 80,
       "solver_success": true,
-      "residual": 5.70673662216486e-09,
-      "mean_error": 0.0,
+      "residual": 8.361884906469933e-09,
+      "mean_error": 1.3962355577268326e-15,
       "accepted": true,
       "nfev": 15
     },
     {
       "start": 81,
       "solver_success": false,
-      "residual": 0.000431586757149303,
-      "mean_error": 9.348065110642741e-07,
+      "residual": 0.0004314600258869846,
+      "mean_error": 9.317371095060503e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 82,
       "solver_success": true,
-      "residual": 3.810286930400694e-08,
-      "mean_error": 3.2504381131115423e-16,
+      "residual": 1.7787432010703497e-08,
+      "mean_error": 3.0056252625643154e-15,
       "accepted": false,
       "nfev": 21
     },
     {
       "start": 83,
       "solver_success": true,
-      "residual": 0.0001371206135573317,
-      "mean_error": 3.14113974156675e-07,
+      "residual": 0.00013711031654611795,
+      "mean_error": 3.093619028726735e-07,
       "accepted": false,
       "nfev": 110
     },
     {
       "start": 84,
       "solver_success": false,
-      "residual": 0.00043178450880172926,
-      "mean_error": 9.35235765058386e-07,
+      "residual": 0.0004317473919477244,
+      "mean_error": 9.455289735199601e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 85,
       "solver_success": false,
-      "residual": 0.0004316241220530542,
-      "mean_error": 9.348891098334613e-07,
+      "residual": 0.00043161621969508684,
+      "mean_error": 9.35971808454757e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 86,
       "solver_success": true,
-      "residual": 0.00013719678916967174,
-      "mean_error": 3.1428834989274783e-07,
+      "residual": 0.0001372961050559288,
+      "mean_error": 3.246707624415812e-07,
       "accepted": false,
-      "nfev": 95
+      "nfev": 84
     },
     {
       "start": 87,
       "solver_success": false,
-      "residual": 0.0004315608829963971,
-      "mean_error": 9.347524822036785e-07,
+      "residual": 0.00043157537588968327,
+      "mean_error": 9.352966173850358e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 88,
       "solver_success": false,
-      "residual": 0.0004315694468260236,
-      "mean_error": 9.34770835459009e-07,
+      "residual": 0.0004315726450458454,
+      "mean_error": 9.308074898073393e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 89,
       "solver_success": false,
-      "residual": 0.006746874026102787,
-      "mean_error": 0.0001354184317592297,
+      "residual": 0.006744818556551798,
+      "mean_error": 0.00013585713997685657,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 90,
       "solver_success": false,
-      "residual": 0.000431644566399847,
-      "mean_error": 9.34931742864898e-07,
+      "residual": 0.00043160320327401136,
+      "mean_error": 9.524854117242982e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 91,
       "solver_success": true,
-      "residual": 5.706736622280766e-09,
-      "mean_error": 4.336808689942018e-19,
+      "residual": 8.361884906701743e-09,
+      "mean_error": 1.3960187172923355e-15,
       "accepted": true,
       "nfev": 11
     },
     {
       "start": 92,
       "solver_success": true,
-      "residual": 6.494187424560925e-08,
-      "mean_error": 4.996003610813204e-16,
+      "residual": 1.24224306480431e-08,
+      "mean_error": 2.1332761945824785e-15,
       "accepted": false,
       "nfev": 27
     },
     {
       "start": 93,
       "solver_success": false,
-      "residual": 0.00043175880831432245,
-      "mean_error": 9.351797016614056e-07,
+      "residual": 0.0004317131980107564,
+      "mean_error": 9.496371670806875e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 94,
       "solver_success": true,
-      "residual": 0.00013719529746818182,
-      "mean_error": 3.142851142826173e-07,
+      "residual": 0.00013714615413878539,
+      "mean_error": 3.1327621348637737e-07,
       "accepted": false,
-      "nfev": 95
+      "nfev": 91
     },
     {
       "start": 95,
       "solver_success": false,
-      "residual": 0.00043173649316997524,
-      "mean_error": 9.351323645514793e-07,
+      "residual": 0.0004317417821470595,
+      "mean_error": 9.267666914447581e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 96,
       "solver_success": true,
-      "residual": 2.5492214554257723e-08,
-      "mean_error": 8.010085650322907e-16,
+      "residual": 2.4508431292284774e-08,
+      "mean_error": 2.323445255636436e-15,
       "accepted": false,
       "nfev": 46
     },
     {
       "start": 97,
       "solver_success": true,
-      "residual": 0.00013725055845794485,
-      "mean_error": 3.144118432035943e-07,
+      "residual": 0.00013728816425555613,
+      "mean_error": 3.28164909746409e-07,
       "accepted": false,
-      "nfev": 47
+      "nfev": 41
     },
     {
       "start": 98,
       "solver_success": true,
-      "residual": 0.0001371206135566499,
-      "mean_error": 3.141139770274255e-07,
+      "residual": 0.00013711031654431224,
+      "mean_error": 3.093619098035443e-07,
       "accepted": false,
-      "nfev": 95
+      "nfev": 99
     },
     {
       "start": 99,
       "solver_success": true,
-      "residual": 0.00013728491117540818,
-      "mean_error": 3.1449060723079576e-07,
+      "residual": 0.00013753153219907258,
+      "mean_error": 3.104483191709601e-07,
       "accepted": false,
-      "nfev": 87
+      "nfev": 85
     },
     {
       "start": 100,
       "solver_success": false,
-      "residual": 0.006747087400377069,
-      "mean_error": 0.00013542240873043064,
+      "residual": 0.0067448589095212156,
+      "mean_error": 0.0001359604221421926,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 101,
       "solver_success": true,
-      "residual": 5.965957499206331e-08,
-      "mean_error": 2.7755575615628914e-16,
+      "residual": 1.4184897240678015e-07,
+      "mean_error": 2.2656572798429586e-14,
       "accepted": false,
       "nfev": 32
     },
     {
       "start": 102,
       "solver_success": true,
-      "residual": 0.00013714169204564913,
-      "mean_error": 3.141623871447032e-07,
+      "residual": 0.00013791000174768984,
+      "mean_error": 3.031702920136721e-07,
       "accepted": false,
-      "nfev": 80
+      "nfev": 76
     },
     {
       "start": 103,
       "solver_success": true,
-      "residual": 0.00013719529747053898,
-      "mean_error": 3.1428510267298045e-07,
+      "residual": 0.00013714615413832238,
+      "mean_error": 3.1327621766554306e-07,
       "accepted": false,
-      "nfev": 70
+      "nfev": 68
     },
     {
       "start": 104,
       "solver_success": true,
-      "residual": 0.00013715824675817018,
-      "mean_error": 3.142000024563933e-07,
+      "residual": 0.00013687986841018061,
+      "mean_error": 3.1429655049960807e-07,
       "accepted": false,
-      "nfev": 112
+      "nfev": 114
     },
     {
       "start": 105,
       "solver_success": true,
-      "residual": 1.4025702273066354e-09,
-      "mean_error": 5.551115123125783e-17,
+      "residual": 6.854134807158299e-09,
+      "mean_error": 1.6256527374247653e-15,
       "accepted": true,
       "nfev": 42
     },
     {
       "start": 106,
       "solver_success": true,
-      "residual": 4.3111421767451336e-08,
-      "mean_error": 2.432949675057472e-16,
+      "residual": 1.6609070178088345e-08,
+      "mean_error": 2.734357879008442e-15,
       "accepted": false,
       "nfev": 16
     },
     {
       "start": 107,
       "solver_success": true,
-      "residual": 5.706736621701236e-09,
-      "mean_error": 0.0,
+      "residual": 8.361884906122214e-09,
+      "mean_error": 1.3960187172923355e-15,
       "accepted": true,
       "nfev": 23
     },
     {
       "start": 108,
       "solver_success": true,
-      "residual": 0.00013718034666097362,
-      "mean_error": 3.1425038942876557e-07,
+      "residual": 0.00013745157998749257,
+      "mean_error": 3.0337627219905426e-07,
       "accepted": false,
-      "nfev": 85
+      "nfev": 84
     },
     {
       "start": 109,
       "solver_success": false,
-      "residual": 0.0004317167555823189,
-      "mean_error": 9.350882100008038e-07,
+      "residual": 0.00043166882177825765,
+      "mean_error": 9.517828134044965e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 110,
       "solver_success": true,
-      "residual": 5.70673662251258e-09,
-      "mean_error": 0.0,
+      "residual": 8.361884905774495e-09,
+      "mean_error": 1.3962355577268326e-15,
       "accepted": true,
       "nfev": 21
     },
     {
       "start": 111,
       "solver_success": false,
-      "residual": 0.000431572505721079,
-      "mean_error": 9.347775400958547e-07,
+      "residual": 0.0004315739609855285,
+      "mean_error": 9.299296783965398e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 112,
       "solver_success": false,
-      "residual": 0.00043159667248103317,
-      "mean_error": 9.348282767171392e-07,
+      "residual": 0.00043149876385966887,
+      "mean_error": 9.308751976625038e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 113,
       "solver_success": true,
-      "residual": 0.00013715824675841502,
-      "mean_error": 3.1420000215888824e-07,
+      "residual": 0.00013687986841047007,
+      "mean_error": 3.1429654917536354e-07,
       "accepted": false,
-      "nfev": 115
+      "nfev": 125
     },
     {
       "start": 114,
       "solver_success": false,
-      "residual": 0.00043161722604142107,
-      "mean_error": 9.348738440606574e-07,
+      "residual": 0.00043161060632674047,
+      "mean_error": 9.395728122554587e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 115,
       "solver_success": false,
-      "residual": 0.00043157193258948795,
-      "mean_error": 9.347763081448985e-07,
+      "residual": 0.0004315735811809311,
+      "mean_error": 9.299187171327421e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 116,
       "solver_success": true,
-      "residual": 5.706736621469425e-09,
-      "mean_error": 0.0,
+      "residual": 8.361884906933556e-09,
+      "mean_error": 1.3964523981613297e-15,
       "accepted": true,
       "nfev": 15
     },
     {
       "start": 117,
       "solver_success": true,
-      "residual": 2.106381233170838e-09,
-      "mean_error": 0.0,
+      "residual": 8.762192230735829e-09,
+      "mean_error": 1.4116312285761268e-15,
       "accepted": true,
       "nfev": 13
     },
     {
       "start": 118,
       "solver_success": true,
-      "residual": 0.00013719678917037317,
-      "mean_error": 3.1428834646710264e-07,
+      "residual": 0.00013729610505568086,
+      "mean_error": 3.2467076191032215e-07,
       "accepted": false,
-      "nfev": 40
+      "nfev": 37
     },
     {
       "start": 119,
       "solver_success": true,
-      "residual": 0.00013720797047862954,
-      "mean_error": 3.143141951949917e-07,
+      "residual": 0.00013720484111097737,
+      "mean_error": 3.197892338238379e-07,
       "accepted": false,
-      "nfev": 80
+      "nfev": 92
     },
     {
       "start": 120,
       "solver_success": true,
-      "residual": 0.00013724360558399723,
-      "mean_error": 3.1439563174693805e-07,
+      "residual": 0.00013705039827116341,
+      "mean_error": 3.11578971616544e-07,
       "accepted": false,
-      "nfev": 107
+      "nfev": 104
     },
     {
       "start": 121,
       "solver_success": true,
-      "residual": 5.706736622976203e-09,
-      "mean_error": 2.168404344971009e-19,
+      "residual": 8.361884906469921e-09,
+      "mean_error": 1.3964523981613297e-15,
       "accepted": true,
-      "nfev": 18
+      "nfev": 16
     },
     {
       "start": 122,
       "solver_success": true,
-      "residual": 0.00013734150878051937,
-      "mean_error": 3.1461993495575727e-07,
+      "residual": 0.0001373376910838444,
+      "mean_error": 3.1453174939577444e-07,
       "accepted": false,
-      "nfev": 77
+      "nfev": 87
     },
     {
       "start": 123,
       "solver_success": false,
-      "residual": 0.00043162181930723954,
-      "mean_error": 9.348839193584584e-07,
+      "residual": 0.00043161490930964356,
+      "mean_error": 9.383847917360418e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 124,
       "solver_success": true,
-      "residual": 3.891269143013103e-10,
-      "mean_error": 1.0299920638612292e-16,
-      "accepted": true,
+      "residual": 1.0762704710453507e-08,
+      "mean_error": 1.736675039887281e-15,
+      "accepted": false,
       "nfev": 16
     },
     {
       "start": 125,
       "solver_success": true,
-      "residual": 5.706736622313434e-09,
-      "mean_error": 2.168404344971009e-19,
+      "residual": 8.361884906107867e-09,
+      "mean_error": 1.3962355577268326e-15,
       "accepted": true,
       "nfev": 10
     },
     {
       "start": 126,
       "solver_success": true,
-      "residual": 2.1456627528041886e-08,
-      "mean_error": 5.551115123125783e-17,
-      "accepted": false,
+      "residual": 6.714210485677651e-09,
+      "mean_error": 1.1340754724198376e-15,
+      "accepted": true,
       "nfev": 25
     },
     {
       "start": 127,
       "solver_success": true,
-      "residual": 4.3111421553840433e-08,
-      "mean_error": 2.0773313624822265e-16,
+      "residual": 1.660906913410135e-08,
+      "mean_error": 2.7651492207070305e-15,
       "accepted": false,
       "nfev": 29
     },
     {
       "start": 128,
       "solver_success": false,
-      "residual": 0.006747188818219945,
-      "mean_error": 0.000135424317051874,
+      "residual": 0.006745000260278873,
+      "mean_error": 0.0001359979966515765,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 129,
       "solver_success": true,
-      "residual": 0.00013731499694371512,
-      "mean_error": 3.145587573552284e-07,
+      "residual": 0.00013730278264084106,
+      "mean_error": 3.1882207277011965e-07,
       "accepted": false,
-      "nfev": 98
+      "nfev": 108
     },
     {
       "start": 130,
       "solver_success": true,
-      "residual": 0.00013719529747034244,
-      "mean_error": 3.142851054721736e-07,
+      "residual": 0.00013714615413858223,
+      "mean_error": 3.1327621630161673e-07,
       "accepted": false,
-      "nfev": 105
+      "nfev": 102
     },
     {
       "start": 131,
       "solver_success": false,
-      "residual": 0.00043162477165080356,
-      "mean_error": 9.348902359365783e-07,
+      "residual": 0.00043163690842966493,
+      "mean_error": 9.239419707532479e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 132,
       "solver_success": true,
-      "residual": 6.494187361141403e-08,
-      "mean_error": 1.4352668359363108e-15,
+      "residual": 1.2422429457456237e-08,
+      "mean_error": 2.228469145326706e-15,
       "accepted": false,
-      "nfev": 19
+      "nfev": 18
     },
     {
       "start": 133,
       "solver_success": true,
-      "residual": 1.5970491049966088e-08,
-      "mean_error": 3.2593285709259234e-15,
-      "accepted": false,
-      "nfev": 21
+      "residual": 2.04335282311121e-09,
+      "mean_error": 3.0921445959286586e-16,
+      "accepted": true,
+      "nfev": 20
     },
     {
       "start": 134,
       "solver_success": true,
-      "residual": 5.40336554849154e-08,
-      "mean_error": 2.0816681711721685e-17,
+      "residual": 6.259082323610953e-08,
+      "mean_error": 1.0304257447302234e-14,
       "accepted": false,
       "nfev": 20
     },
     {
       "start": 135,
       "solver_success": true,
-      "residual": 0.00013723996048518782,
-      "mean_error": 3.1438739958198833e-07,
+      "residual": 0.00013725662955046,
+      "mean_error": 3.1300019245504226e-07,
       "accepted": false,
-      "nfev": 57
+      "nfev": 64
     },
     {
       "start": 136,
       "solver_success": true,
-      "residual": 5.526046802015682e-08,
-      "mean_error": 1.207801220148852e-16,
+      "residual": 7.629947866112585e-08,
+      "mean_error": 1.1917550279960665e-14,
       "accepted": false,
       "nfev": 19
     },
     {
       "start": 137,
       "solver_success": true,
-      "residual": 0.00013714169204548328,
-      "mean_error": 3.141623888655489e-07,
+      "residual": 0.0001379100017481418,
+      "mean_error": 3.0317028921447893e-07,
       "accepted": false,
-      "nfev": 80
+      "nfev": 93
     },
     {
       "start": 138,
       "solver_success": true,
-      "residual": 0.00013731499694426042,
-      "mean_error": 3.145587547501074e-07,
+      "residual": 0.00013730278264083802,
+      "mean_error": 3.188220727146085e-07,
       "accepted": false,
-      "nfev": 89
+      "nfev": 91
     },
     {
       "start": 139,
       "solver_success": false,
-      "residual": 0.00043168068373400446,
-      "mean_error": 9.350094247581511e-07,
+      "residual": 0.0004314492243367961,
+      "mean_error": 9.349829018154548e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 140,
       "solver_success": true,
-      "residual": 0.00013731499694344453,
-      "mean_error": 3.14558759409141e-07,
+      "residual": 0.00013730278264002119,
+      "mean_error": 3.188220740943642e-07,
       "accepted": false,
-      "nfev": 80
+      "nfev": 87
     },
     {
       "start": 141,
       "solver_success": false,
-      "residual": 0.00043159196810288366,
-      "mean_error": 9.348187354405162e-07,
+      "residual": 0.00043158531801933744,
+      "mean_error": 9.433607072531231e-07,
       "accepted": false,
       "nfev": 500
     },
     {
       "start": 142,
       "solver_success": true,
-      "residual": 0.0001372849111744175,
-      "mean_error": 3.1449060976826253e-07,
+      "residual": 0.00013753153219911164,
+      "mean_error": 3.104483189805742e-07,
       "accepted": false,
-      "nfev": 87
+      "nfev": 86
     },
     {
       "start": 143,
       "solver_success": true,
-      "residual": 0.00013715824676223732,
-      "mean_error": 3.1419998466506935e-07,
+      "residual": 0.00013687986841037718,
+      "mean_error": 3.1429655105883955e-07,
       "accepted": false,
-      "nfev": 71
+      "nfev": 64
     },
     {
       "start": 144,
       "solver_success": true,
-      "residual": 0.00013719529747101882,
-      "mean_error": 3.142851020623578e-07,
+      "residual": 0.00013714615413892796,
+      "mean_error": 3.1327621466013464e-07,
       "accepted": false,
-      "nfev": 60
+      "nfev": 61
     },
     {
       "start": 145,
       "solver_success": true,
-      "residual": 2.1456627105216006e-08,
-      "mean_error": 1.0299920638612292e-16,
-      "accepted": false,
+      "residual": 6.714210188958117e-09,
+      "mean_error": 1.229268423164065e-15,
+      "accepted": true,
       "nfev": 10
     },
     {
       "start": 146,
       "solver_success": true,
-      "residual": 2.7657854085891184e-09,
-      "mean_error": 4.9873299934333204e-18,
+      "residual": 4.525366458904186e-09,
+      "mean_error": 6.810958047553939e-16,
       "accepted": true,
       "nfev": 41
     },
     {
       "start": 147,
       "solver_success": true,
-      "residual": 0.00013723750741123503,
-      "mean_error": 3.143818573803081e-07,
+      "residual": 0.00013731199549003146,
+      "mean_error": 3.1851060520006816e-07,
       "accepted": false,
-      "nfev": 71
+      "nfev": 70
     },
     {
       "start": 148,
       "solver_success": true,
-      "residual": 0.00013723750741196833,
-      "mean_error": 3.1438185508049846e-07,
+      "residual": 0.00013731199548980757,
+      "mean_error": 3.1851060491470615e-07,
       "accepted": false,
-      "nfev": 34
+      "nfev": 36
     }
   ],
   "true_attempts": [
