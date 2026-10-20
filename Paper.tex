@@ -1,0 +1,1179 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[textwidth=6in,textheight=8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,array,graphicx}
+\usepackage{microtype}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{placeins}
+
+% Permit large figures alongside text; avoid sparse float-only pages.
+\renewcommand{\topfraction}{0.90}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.90}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\setlength{\textfloatsep}{14pt plus 2pt minus 2pt}
+\setlength{\floatsep}{12pt plus 2pt minus 2pt}
+\setlength{\intextsep}{12pt plus 2pt minus 2pt}
+\raggedbottom
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Nzero}{\mathbb{N}_0}
+\newcommand{\Xdot}{\dot{\mathbf X}}
+\newcommand{\Thetahat}{\widehat{\mathbf\Theta}}
+\DeclareMathOperator{\diag}{diag}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}[proposition]{Theorem}
+\newtheorem{remark}[proposition]{Remark}
+
+% Self-contained manuscript; upload the accompanying figures/ directory.
+\newcommand{\OverleafFigure}[1]{\includegraphics[width=\textwidth]{figures/#1}}
+
+\title{Validation of Learned Polynomial Dynamics:\protect\\Forecasts, Attractor Diagnostics, and Certified Periodic Orbits}
+\author{Aaron Loh \and J. D. Mireles James}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+\label{sec:introduction}
+\begin{itemize}
+ \item \textbf{Motivation.} A surrogate can predict a trajectory over a finite
+ interval while failing to reproduce the dynamical structures of its source
+ system. Assessing a learned model therefore requires evidence beyond
+ predictive accuracy.
+ \item \textbf{Explicit surrogate models.} Dense polynomial ordinary
+ differential equations fitted in delay or spatial coordinates provide
+ inspectable vector fields without a learned latent transformation. Delay
+ coordinates connect scalar observations to a finite-dimensional state
+ description \cite{takens1981,sauer1991}.
+ \item \textbf{Assessment framework.} Held-out forecasts, long-time
+ integrations, equilibrium stability, Lyapunov growth, attractor geometry,
+ and invariant structures test different aspects of surrogate fidelity.
+ Numerical agreement in one test does not establish agreement in the others.
+ \item \textbf{Periodic orbits as a stronger test.} A periodic-orbit candidate
+ discovered in a surrogate can be evaluated in the source equations and
+ subjected to computer-assisted proof. Successful validation establishes
+ the existence of a nearby true periodic solution, rather than only a
+ numerical resemblance between trajectories.
+ \item \textbf{Examples and distinct roles.} Mackey--Glass and periodic-domain
+ Kuramoto--Sivashinsky illustrate forecasting and numerical dynamical
+ assessment. Mackey--Glass and Kuramoto--Sivashinsky with Neumann potential
+ conditions provide candidates for infinite-dimensional validation; the two
+ KS boundary-value problems have different scientific roles.
+ \item \textbf{Main contribution.} Surrogate-discovered candidates are
+ certified in the delay equation and Neumann KS problem without Newton
+ corrections in the source equations. The certified distances are
+ $6.00\times10^{-4}$ and $1.00\times10^{-5}$ in the individual proofs' Fourier
+ norms and scalings; these radii are not directly comparable across systems.
+ \item \textbf{Scope.} The certificates establish nearby invariant objects
+ at fixed physical parameters. They do not establish global equivalence of
+ the surrogate and source dynamics, chaotic behavior, or orbital stability.
+\end{itemize}
+
+
+\section{Polynomial regression and surrogate construction}
+\label{sec:regression}
+Dense polynomial surrogate reconstruction (DPSR) fits an explicit autonomous
+vector field to observations in prescribed delay or spatial coordinates.
+We assess these models through held-out forecasts, numerical dynamical
+diagnostics, and certification of surrogate-generated periodic candidates in
+the reference equations. These assessments address finite-time prediction,
+selected qualitative behavior, and local invariant structure, respectively.
+The candidate-based method in Section~\ref{sec:assessment} adds a rigorous
+structural test to the numerical assessments; the regression construction
+below supplies the models on which all three are performed.
+
+\subsection{Observation coordinates and polynomial library}
+\label{sec:delay-coordinates}
+For scalar samples $y_j=x(t_0+jh)$, choose an integer lag $\ell\geq1$, delay $\Delta=\ell h$, and dimension $d$. At indices with all delayed entries available, define
+\begin{equation}
+ X_j=(y_j,y_{j-\ell},\ldots,y_{j-(d-1)\ell})^\top\in\R^d.
+ \label{eq:sampled-delay-state}
+\end{equation}
+Embedding theory motivates this construction \cite{takens1981,sauer1991}; the regression requires only aligned data vectors. Reindexing $N$ valid states gives $\mathbf X\in\R^{N\times d}$ with rows $X_j^\top$. Derivative targets use second-order differences:
+\begin{equation}
+ \begin{aligned}
+ \dot X_j&=(X_{j+1}-X_{j-1})/(2h),&&1\leq j\leq N-2,\\
+ \dot X_0&=(-3X_0+4X_1-X_2)/(2h),\\
+ \dot X_{N-1}&=(3X_{N-1}-4X_{N-2}+X_{N-3})/(2h).
+ \end{aligned}
+ \label{eq:derivatives}
+\end{equation}
+Their rows form $\Xdot\in\R^{N\times d}$. For maximum degree $p$, the complete library is
+\begin{equation}
+ \mathcal A_{d,p}=\{a\in\Nzero^d:|a|\leq p\},\qquad
+ \theta_a(X)=\prod_{k=1}^{d}X_k^{a_k},\qquad q=\binom{d+p}{p}.
+ \label{eq:polynomial-library}
+\end{equation}
+Writing $|a|=\sum_k a_k$ and ordering the indices with $a^{(0)}=0$ defines
+$\Theta_p(X)=(\theta_{a^{(r)}}(X))_{r=0}^{q-1}$ and
+$\mathbf\Theta_{j,r}=\theta_{a^{(r)}}(X_j)$. We fit
+$\dot X=f_C(X)=C\Theta_p(X)$, where $C\in\R^{d\times q}$.
+This uses the polynomial-library framework of data-driven identification
+\cite{brunton2016}, retaining the complete library rather than imposing sparsity.
+
+\subsection{Normalized ridge regression and model selection}
+\label{sec:ridge-regression}
+To account for differing feature magnitudes, set
+\begin{equation}
+ s_r=\left(N^{-1}\sum_j\mathbf\Theta_{j,r}^2\right)^{1/2},
+ \quad \Thetahat_{j,r}=\mathbf\Theta_{j,r}/s_r,\quad
+ w_0=0,\quad w_r=\max\{|a^{(r)}|,1\}^{\kappa}\ (r\geq1),
+ \label{eq:feature-normalization}
+\end{equation}
+replacing $s_r<10^{-14}$ by one. With $\lambda,\kappa\geq0$, the unpenalized
+intercept and degree-weighted ridge estimator \cite{hoerl1970} give
+\begin{equation}
+ \widehat C\in\mathop{\rm argmin}_{B\in\R^{d\times q}}
+ \left\{\|\Thetahat B^\top-\Xdot\|_F^2+
+ \lambda\sum_r w_r\|B_{:,r}\|_2^2\right\},\qquad
+ C_{:,r}=\widehat C_{:,r}/s_r.
+ \label{eq:ridge-objective}
+\end{equation}
+The estimator is computed by rank-revealing least squares on the augmented
+system with design matrix $[\Thetahat;\sqrt{\lambda}\diag(\sqrt w)]$
+and target $[\Xdot;0]$, avoiding normal equations. With zero regularization,
+rank-deficient libraries use the minimum-norm solution in the stated feature
+scaling; rank and singular values are recorded for the periodic KS fit.
+
+Derivative fit alone does not ensure useful chaotic dynamics. Coefficients are
+fitted on training data, while $(\Delta,d,p,\lambda)$ are selected on disjoint
+validation windows using forecasts, numerical boundedness, and amplitude,
+variance, autocorrelation, and spectral diagnostics. Test data are reserved for
+assessment. The main Mackey--Glass forecast model has
+\begin{equation}
+ (\Delta,d,p,\lambda,\kappa)=(4.5,6,3,10^{-4},1),
+ \qquad q=84.
+ \label{eq:cubic-regression-parameters}
+\end{equation}
+Orbit construction uses two distinct fits. A cubic discovery flow retains
+$(\Delta,d,p)=(4.5,6,3)$ but uses $\lambda=5\times10^{-5}$ on
+$[117,417]$, $[700,1000]$, $[1100,1400]$, $[2700,3000]$, and $[3100,3400]$.
+Close returns supply an initial orbit proposal. A degree-five fit, with
+$\lambda=10^{-7}$ and 462 features per component, refines that proposal using the
+same coordinates and windows, with training values generated at step $10^{-3}$
+and sampled every $0.1$. Its purpose is local refinement; existence of an exact
+orbit requires a separate rigorous validation argument.
+
+\subsection{Dense polynomial regression and relation to SINDy}
+\label{sec:sindy}
+All experiments fit explicit polynomial vector fields in a prescribed monomial
+library using dense least squares or degree-weighted ridge regression. SINDy
+\cite{brunton2016} uses the same library-regression formulation but seeks a
+small active set of terms. In sequentially thresholded least squares,
+coefficients below a chosen threshold are removed and the remaining
+coefficients are refitted. Our baseline models retain the complete library:
+ridge regularization controls coefficient magnitudes without selecting a
+sparse support. Pruning and library augmentation are assessed separately as
+ablations, rather than as stages of baseline fitting.
+
+The common regression algorithm takes state--derivative pairs, constructs the
+polynomial library, applies the specified scaling and regularization, and
+solves the resulting dense least-squares problem. Mackey--Glass uses delay
+coordinates and finite-difference derivative targets; periodic KS uses nodal
+trajectory snapshots and exact spectral targets; Neumann KS uses paired
+independent random states and exact Galerkin targets, with reflection
+symmetry enforced in the fitted field. These choices specify the data and
+constraints within the same regression framework. Forecasting, invariant-object
+discovery, and rigorous validation provide separate assessments of the fitted
+models.
+
+\subsection{Spatial coordinates and KS surrogates}
+For periodic KS on $[0,L)$, use nodal states
+$X(t)=(u(x_1,t),\ldots,u(x_d,t))^\top$ with $x_j=(j-1)L/d$.
+The main forecast fit uses all quadratic monomials and exact dealiased spectral
+derivatives at the training snapshots. The fit uses unscaled, unregularized
+dense least squares, with no coefficient threshold. For a rank-deficient
+library, the SVD solver selects a minimum-norm coefficient vector in these
+unscaled coordinates.
+
+For Neumann-potential KS, let $u=h_x$ and use
+\begin{equation}
+ u(x,t)=\sum_{k=1}^{K}a_k(t)\sin(k\pi x/\ell),\qquad
+ \dot a=c+La+Q(a,a).
+ \label{eq:sine-coordinates}
+\end{equation}
+The coefficients and values at $x_j=j\ell/(K+1)$ are related by an invertible
+discrete sine transform. Training states are $a_k=\sigma_k z_k$, with independent
+standard normal $z_k$ and $\sigma_k=(1+(k-1)/4)^{-2}$. Paired states separate the
+odd and even terms of the sine-Galerkin derivative target $g$:
+\begin{equation}
+ \tfrac12(g(a)-g(-a))=La,\qquad
+ \tfrac12(g(a)+g(-a))=c+Q(a,a).
+\end{equation}
+Rank-revealing least squares fits each part in scaled coordinates. With
+$q_e=1+K(K+1)/2$ even features, $2q_e$ independent states and their negatives
+give $4q_e$ training snapshots; 512 further states assess derivative error.
+Reflection equivariance is imposed by averaging the fitted field with its
+reflection conjugate, using $(Ra)_k=(-1)^k a_k$. The training ensemble contains
+no selected periodic orbit.
+
+A full-column-rank library recovers any polynomial target within its span in
+exact arithmetic: if $D=\Theta C_*^\top$ and $\ker\Theta=\{0\}$, then $C_*$
+is the unique zero-residual fit. This explains near-machine-precision Neumann
+derivative errors, without certifying spatial truncation or PDE dynamics.
+
+\paragraph{Regression implementation.}
+The shared polynomial library, dense regression, and vector-field routines are
+provided in \path{dpsr/polynomial.py}, with experiment configurations in
+\path{notebooks/} in the
+\href{https://github.com/Aloh5/learned-dynamics-cap}{project's GitHub repository}.
+The Neumann sampling and symmetry routines are in
+\path{CAP/Kuramoto_PO/surrogate_neumann.py}.
+
+\subsection{Assessment protocols}
+\label{sec:protocols}
+Let $e_j$ be the scalar forecast error for Mackey--Glass or the spatial RMS error
+for KS. We measure
+\begin{equation}
+ H_\varepsilon=\min\{jh:h\sum_{i=0}^j e_i^2>\varepsilon\},
+ \quad \varepsilon_{\rm MG}=0.05,\quad\varepsilon_{\rm KS}=0.5,
+ \label{eq:horizon}
+\end{equation}
+capped at the forecast duration. NRMSE divides full-window RMSE
+by the reference rollout's standard deviation, including samples after horizon
+crossing. The systems' thresholds and scales differ, so horizons are interpreted
+within each setting. The explicit field supports repeated-renormalization estimates of trajectory
+separation; long-time diagnostics assess numerical survival, distributions,
+variance, autocorrelation, and spectra.
+
+\paragraph{Reference data.}
+The main Mackey--Glass assessment uses Euler reference and RK4 surrogate steps
+of $0.1$, accepting finite coordinates in $[0.15,1.65]$. Training, validation,
+test, and reference-statistics windows are $[117,417)$, $[700,1300)$,
+$[1500,2500)$, and $[3500,4500)$. Reference-statistics windows are used only for assessment. Overlapping
+forecast windows from one trajectory make medians and ranges descriptive
+rather than independent-replicate confidence estimates.
+
+\section{Forecasting and numerical dynamical assessment}
+\label{sec:results}
+Three settings support distinct claims: Mackey--Glass assesses delayed-scalar
+forecasting and local dynamics; periodic KS assesses a 14-node spectral
+semidiscretization; Neumann-potential KS supplies an orbit candidate for rigorous
+validation. The two KS problems differ in boundary conditions and coordinates.
+Forecasts use the assessment protocols in section~\ref{sec:protocols}.
+
+\subsection{Mackey--Glass: prediction and local dynamics}
+\label{sec:mg-results}
+The reference equation, with constant history $x(t)=1.2$, is \cite{mackey1977}
+\begin{equation}
+ x'(t)=\frac{0.2x(t-17)}{1+x(t-17)^{10}}-0.1x(t).
+ \label{eq:mgphysical}
+\end{equation}
+All 12 forecasts of the main cubic model complete 150 time units within the
+numerical bounds (Figure~\ref{fig:mgforecast}). Horizon has mean $99.34$, median
+$99.7$, and range $67.1$--$140.2$; full-window NRMSE has mean $0.1676$, median
+$0.1715$, and range $0.0862$--$0.2994$. These starts sample overlapping windows
+of one held-out segment.
+
+\begin{figure}[htb]
+\centering
+\OverleafFigure{mg_heldout.png}
+\caption{Main cubic Mackey--Glass forecast on a disjoint held-out window.}
+\label{fig:mgforecast}
+\end{figure}
+
+\paragraph{Numerical evidence of chaos.}
+Three integrations reach 20,000 time units while remaining within the prescribed
+numerical bounds. For each initial condition, a two-trajectory Benettin-style
+calculation discards a 5,000-unit transient, accumulates logarithmic separation
+growth for a further 2,000 units, and renormalizes a perturbation of size
+$10^{-7}$ every unit of time, using RK4 at step $0.1$. All three resulting
+maximal Lyapunov estimates are positive (Table~\ref{tab:chaos}). These are
+finite-time numerical estimates, not validated asymptotic exponents.
+
+\begin{table}[htb]
+\centering\small
+\caption{Long-run diagnostics of the main cubic Mackey--Glass surrogate.
+Statistics and peak counts use the final 5,000 units of each 20,000-unit run;
+Lyapunov accumulation uses the separate post-transient protocol in the text.
+Standard deviations are relative to the reference-statistics window.
+Distinct peak heights are counted after rounding to $10^{-4}$.}
+\label{tab:chaos}
+\begin{tabular}{crrrr}
+\toprule
+Run & Lyapunov estimate & Std.\ ratio & Peaks & Distinct heights\\
+\midrule
+1 & 0.006405 & 1.0103 & 158 & 153\\
+2 & 0.007114 & 1.0136 & 163 & 156\\
+3 & 0.005867 & 1.0133 & 151 & 144\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Qualitative attractor diagnostics.}
+Figure~\ref{fig:mg-attractor-comparison} compares long-time reference and
+surrogate geometry directly in the first three observation coordinates.
+Figure~\ref{fig:mgattractor} shows the existing 2,000-unit learned rollout,
+a projection onto the first two surrogate coordinates, and empirical scalar
+distributions for the learned and reference trajectories. The rollout remains
+irregular and explores a folded band of states rather than visibly collapsing
+onto one simple loop. The distributions have similar range and broad shape,
+while their local differences remain visible. The plotted coordinate labels
+use the delay-coordinate convention; a free surrogate trajectory need not
+satisfy exact delayed-copy compatibility.
+
+The separate 20,000-unit runs provide a longer check: their standard deviations
+are within approximately $1.4\%$ of the reference value, and most late peak
+heights remain distinct (Table~\ref{tab:chaos}). Positive finite-time separation
+growth, persistent amplitude variation, and the projected geometry together
+support chaotic-like dynamics of the cubic surrogate over the sampled intervals.
+These are qualitative numerical checks of attractor behavior. They do not
+prove a chaotic invariant set, equality of invariant measures, a conjugacy, or
+global boundedness. The periodic-orbit theorems below establish different,
+local existence statements.
+
+\begin{figure}[htb]
+\centering
+\OverleafFigure{mg_attractor_comparison.png}
+\caption{Mackey--Glass attractor comparison in the first three observation
+coordinates, with identical axis limits and viewing angles. Left: reference
+Euler data at step $0.1$ on $[3500,4500)$, with
+$(X_1,X_2,X_3)=(x(t),x(t-4.5),x(t-9))$. Right: the stored main cubic surrogate,
+integrated with RK4 at step $0.1$ for 2,000 units from the reference state at
+$t=1500$, with the first 500 units discarded. The surrogate coordinates
+need not remain exact delayed copies. These finite trajectory projections
+compare sampled geometry; they do not prove equality of attractors.}
+\label{fig:mg-attractor-comparison}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\OverleafFigure{mg_chaos_long_run_diagnostics.png}
+\caption{Qualitative Mackey--Glass diagnostics from the saved cubic-model
+experiment: a 2,000-unit rollout, its first-two-coordinate projection, scalar
+histograms, and a running Lyapunov estimate. The histogram discards the first
+500 units of the learned rollout. The displayed Lyapunov value, approximately
+$0.0049$, uses a separate 200-unit transient and 600-unit accumulation and is
+not one of the longer estimates in Table~\ref{tab:chaos}. ``Attractor'' and
+``invariant-distribution'' in the panel titles refer to numerical projections
+and empirical histograms, not rigorous invariant-set or measure claims.}
+\label{fig:mgattractor}
+\end{figure}
+
+A search from 279 starts finds 11 equilibria with field residual below $10^{-8}$.
+The root nearest $\mathbf1\in\R^6$ has error $2.59\times10^{-2}$ and unstable
+eigenvalues $0.03962\pm0.13938i$, versus the DDE's leading roots
+$0.04129\pm0.13907i$ at $x=1$; both have two unstable directions. This root is
+also closest to the sampled training trajectory (distance $0.2167$, versus
+$0.3246$ for the next closest). The other ten roots have inconsistent delay
+coordinates and lie at least $0.5735$ from the constant-equilibrium embeddings
+$-\mathbf1,\mathbf0,\mathbf1$. Thus local instability is approximated despite
+additional surrogate equilibria. The search is finite, and proximity to training
+data does not establish attractor membership.
+
+The degree-five orbit-refinement model has a narrower role: global-rollout
+tests cross the prescribed escape threshold near $57.91$ from a reference-attractor
+state and $2.81$ from a perturbed state. Local candidate refinement therefore
+does not imply improved global forecasting.
+
+\subsection{Periodic KS: prediction and invariant structures}
+\label{sec:periodic-ks-results}
+The periodic reference is
+\begin{equation}
+ u_t=-uu_x-u_{xx}-u_{xxxx},\qquad u(x+L,t)=u(x,t),\quad L=22.
+ \label{eq:ksperiodic}
+\end{equation}
+The main quadratic model uses 14 nodes, 120 features, and 1,680 coefficients.
+ETDRK4 at step $0.025$, sampled every $0.1$, generates a 100-unit burn-in,
+70-unit training window (701 snapshots), and 100-unit forecast (1,001 snapshots)
+\cite{kassam2005}. The shared endpoint initializes the forecast. The training
+library has numerical rank 106, and the relative training derivative residual
+is $5.64\times10^{-14}$.
+
+This single held-out trajectory has horizon $51.6$ and NRMSE $0.6758$
+(Figure~\ref{fig:ksforecast}), including substantial post-horizon error.
+It supplies no estimate of variation across starts. Both derivative labels
+and reference trajectories use the same 14-node system; fully resolved PDE
+forecasting would require a finer-reference spatial-convergence study.
+
+\begin{figure}[htb]
+\centering
+\OverleafFigure{ks_periodic_heldout.png}
+\caption{Periodic KS: reference, surrogate, and error over the 100-unit forecast.}
+\label{fig:ksforecast}
+\end{figure}
+
+\paragraph{Qualitative attractor comparison.}
+Figure~\ref{fig:ks-attractor-comparison} compares reference and learned
+long-time trajectories of this same 14-node periodic system. Both start at
+the final training snapshot and run for 1,000 additional time units, with the
+first 200 discarded. A principal-component basis fitted only to the retained
+reference states is used for both panels, with identical axis limits and
+viewing angles. The plots compare sampled geometry after trajectory-wise
+forecast agreement is lost. The panels occupy comparable coordinate ranges
+but show visibly different sampled paths and occupancy; this figure alone
+does not establish statistical agreement. They are numerical projections, not a proof of
+chaos, equality of invariant measures, or a statement about the different
+Neumann KS problem used for certification.
+
+\begin{figure}[htb]
+\centering
+\OverleafFigure{ks_periodic_attractor_comparison.png}
+\caption{Periodic KS attractor comparison for $L=22$ and 14 nodes.
+Reference: ETDRK4 with step $0.025$, sampled every $0.1$.
+Learned surrogate: the stored quadratic forecasting model, integrated with
+DOP853, relative tolerance $10^{-9}$, absolute tolerance $10^{-11}$, maximum
+step $0.1$, and output spacing $0.1$. Both panels show the retained interval
+$[200,1000]$ in the same three-dimensional PCA projection; the title reports
+the reference variance captured. No model is refitted for this figure.
+The comparison concerns a spectral semidiscretization, not a
+spatially converged PDE attractor.}
+\label{fig:ks-attractor-comparison}
+\end{figure}
+
+Using 149 common starts and fixing the training mean finds three matched
+equilibria in each vector field (Table~\ref{tab:ksequilibria}). Field residual
+and mean-error tolerances are $10^{-8}$; roots are deduplicated modulo discrete
+shifts and matched within $10^{-3}$. Stable, unstable, and neutral counts agree
+at real-part tolerance $10^{-5}$. These finite searches assess local fidelity
+in the semidiscretization.
+
+\begin{table}[htb]
+\centering\small
+\caption{Periodic KS equilibria. Position errors minimize over discrete shifts;
+spectral errors use one-to-one eigenvalue assignment. Counts $(s,u,n)$ denote
+stable, unstable, and neutral directions and agree for fitted and reference fields.}
+\label{tab:ksequilibria}
+\begin{tabular}{lrrc}
+\toprule
+Equilibrium & Position error & Spectral error & $(s,u,n)$\\
+\midrule
+Nearly constant & $1.02\times10^{-6}$ & $4.46\times10^{-6}$ & $(7,6,1)$\\
+Nonconstant 1 & $4.12\times10^{-7}$ & $4.48\times10^{-6}$ & $(11,2,1)$\\
+Nonconstant 2 & $8.34\times10^{-6}$ & $7.78\times10^{-5}$ & $(12,1,1)$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Five surrogate-generated relative-orbit proposals are corrected in the reference
+semidiscretization, with independent validation defects between approximately
+$10^{-13}$ and $6\times10^{-12}$. Return up to spatial translation requires a
+shift or drift variable and both temporal and spatial phase conditions.
+These computations establish numerical closure in the 14-node system.
+
+\subsection{Neumann-potential KS: orbit construction}
+\label{sec:neumann-results}
+On $[0,\ell]$, $\ell=22$, the mean-zero potential satisfies
+\begin{align}
+ h_t&=-\tfrac12h_x^2-h_{xx}-h_{xxxx}
+       +\left\langle\tfrac12h_x^2\right\rangle_x,
+ \label{eq:kspotential}\\
+ h_x(0,t)&=h_x(\ell,t)=h_{xxx}(0,t)=h_{xxx}(\ell,t)=0.\nonumber
+\end{align}
+The velocity $u=h_x$ has $u=u_{xx}=0$ at the endpoints and an odd periodic
+extension of length $44$. This differs from the length-22 periodic forecast
+problem.
+
+The 60-mode quadratic fit uses 7,324 training snapshots and 512 independent
+derivative-evaluation snapshots, with relative error $5.98\times10^{-16}$
+(rounded upward). This measures recovery of a quadratic Galerkin operator,
+rather than time-series prediction. A recurrence from a 16-mode fitted
+trajectory seeds continuation through 60 modes (Table~\ref{tab:continuation});
+neither training nor initialization uses a known reference periodic orbit.
+
+\begin{table}[htb]
+\centering\small
+\caption{Neumann KS continuation with fitted quadratic models. $M$ and $K$
+are temporal and spatial orders; residuals have stage-specific scaling.}
+\label{tab:continuation}
+\begin{tabular}{rrrr}
+\toprule
+$M$ & $K$ & Physical period & Surrogate residual RMS\\
+\midrule
+16&16&73.36969486&$8.65\times10^{-17}$\\
+24&20&72.70716150&$9.15\times10^{-17}$\\
+40&28&72.70549994&$9.24\times10^{-17}$\\
+64&36&72.70550498&$8.67\times10^{-17}$\\
+80&40&72.70550498&$8.37\times10^{-12}$\\
+96&44&72.70550498&$4.67\times10^{-12}$\\
+128&52&72.70550498&$4.10\times10^{-12}$\\
+160&60&72.70550498&$3.68\times10^{-15}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The final candidate has period approximately $72.705505$, independently
+oversampled PDE RMS residual $2.42\times10^{-13}$, and closure error
+$2.92\times10^{-11}$ using 72 modes and 40,000 steps per period.
+These checks differ from the stage residuals and supply input to rigorous
+validation, which additionally requires inverse, nonlinear, and infinite-tail
+bounds.
+
+Together, these experiments support finite-time forecasting and recovery of
+selected local structures. Global fidelity depends on model selection, and
+the Neumann orbit candidate supplies a separate input to rigorous validation;
+forecast accuracy, long-time dynamics, and exact existence require distinct
+evidence.
+
+\paragraph{Numerical-assessment implementation.}
+The forecast, attractor, Lyapunov, and equilibrium computations are implemented
+in the Mackey--Glass and Kuramoto--Sivashinsky notebooks in the
+\href{https://github.com/Aloh5/learned-dynamics-cap}{project's GitHub repository}.
+The periodic KS orbit-transfer routines are provided in
+\path{dpsr/ks_orbits.py}.
+
+\section{Surrogate validation through certified invariant objects}
+\label{sec:assessment}
+We propose a method for validating learned surrogate models by testing whether
+they generate invariant structures that can be certified in the reference
+system. The method complements held-out prediction errors and numerical
+attractor diagnostics with a local, mathematically controlled comparison.
+Its contribution is the use of surrogate-generated candidates and their
+certificates as evidence about the learned model's structural fidelity.
+Polynomial fitting, invariant-solution searches, and a posteriori existence
+theorems are established components \cite{brunton2016,page2021,framework2017}.
+Here they are organized into a validation procedure that keeps the source of
+the candidate and the scope of the resulting model assessment explicit.
+
+\subsection{Validation procedure}
+After fitting a vector field $\widehat g$ and evaluating its forecasts and
+numerical dynamics, search for recurrence and refine a periodic candidate
+using the surrogate. Export that candidate into the coordinates required by
+the original equation, recording any compatibility constraints. Freeze the
+waveform, frequency, coordinate conversion, and phase convention before the
+proof stage. Then construct the original phase-augmented equation $F$ and
+compute a posteriori bounds around this fixed export. Successful certification
+gives
+\begin{equation}
+ \exists z_*:\quad F(z_*)=0,\qquad \|z_*-\bar z\|_X\leq r.
+ \label{eq:object-assessment}
+\end{equation}
+The validation record specifies the candidate's provenance, the norm and
+radius, fixed physical parameters, phase and symmetry restrictions, and
+coverage of arithmetic errors and infinitely many omitted modes.
+
+Freezing the export makes the certificate informative about the surrogate's
+output: the enclosure is centered at the candidate the learned model supplied.
+A correction in the reference equation could still produce a useful rigorous
+existence result, but its distance from the original surrogate candidate would
+also need to be tracked for this model-validation purpose. In the present
+experiments no such correction is applied. This does not require zero access
+to the governing equations: KS derivative labels and both proof operators use
+the reference equations. The method therefore applies when an appropriate
+reference operator and computable rigorous bounds are available.
+
+\subsection{Interpretation alongside numerical validation}
+A successful certificate validates one aspect of the surrogate: its ability
+to supply a specified recurrent structure close to an exact object of the
+reference system. The radius bounds the exported object's error in the stated
+norm. It does not bound global vector-field error or indefinitely synchronized
+trajectory error. In particular, the delay-consistent Mackey--Glass export
+need not be an exact orbit of the unconstrained surrogate; the certificate
+assesses the candidate produced by the stated construction procedure.
+
+This interpretation preserves the role of the other results. Forecasts test
+trajectory agreement over finite intervals, while numerical attractor
+projections, distributions, Lyapunov estimates, and equilibrium spectra examine
+selected dynamical properties. Certification adds a rigorous local test; it
+does not replace those assessments or establish global equivalence of flows.
+A model can therefore supply a certifiable periodic candidate while failing
+long-time rollout tests, as the degree-five Mackey--Glass example illustrates.
+
+Proof radii depend on scaling, inverse conditioning, and the sharpness of the
+bounds, so they are not a universal ranking of models across different norms
+or systems. A certification fraction would additionally require a candidate
+sampling rule, duplicate handling, and common search and proof budgets. Here
+we report two successful applications, not a population success rate or a
+controlled comparison of validation methods. Failure of a sufficient
+contraction criterion is inconclusive about whether a nearby exact object
+exists. These qualifications define what the method validates without
+weakening the quantitative statement in \eqref{eq:object-assessment}.
+
+\section{Candidate construction and certification bounds}
+\label{sec:cap}
+
+\subsection{Harmonic balance and candidate export}
+For a fitted ODE $\dot X=\widehat g(X)$, represent a periodic candidate as
+\begin{equation}
+ X_N(\theta)=b_0+\sum_{n=1}^{N}
+ \bigl(b_n\cos(n\theta)+c_n\sin(n\theta)\bigr),\qquad \theta=\omega t.
+\end{equation}
+A close return seeds the solve. Harmonic balance equates Fourier coefficients
+of $\omega X_N'$ and $\widehat g(X_N)$; collocation equates grid values.
+A temporal phase condition removes time-translation freedom. The waveform
+and frequency are refined by Newton or least-squares steps in the fitted
+model, with enough temporal resolution to avoid nonlinear aliasing.
+Increasing the harmonic order does not change the polynomial degree of
+$\widehat g$. Numerical convergence alone supplies no existence theorem;
+the frozen export is validated independently in the original equation.
+
+For Mackey--Glass, a further compatibility issue arises. The six components of a free surrogate orbit need not be delayed copies of a single scalar history. The final export therefore parameterizes one scalar trigonometric polynomial $w$ and reconstructs all components from it:
+\begin{equation}
+ X_j(\theta)=w\!\left(\theta-(j-1)2\pi\Delta/T\right),
+ \qquad j=1,\ldots,6.
+ \label{eq:delaycompatible}
+\end{equation}
+The degree-five fitted ODE is evaluated on these constrained states. The least-squares refinement uses 40 temporal harmonics, 384 phase samples, a temporal phase condition, and penalties preserving the seed's mean and oscillation energy. The period is restricted to within five percent of the seed. Since these conditions need not admit an exact fitted-flow orbit, the exported waveform is described as a delay-consistent periodic candidate. Its reported surrogate collocation RMS is $0.0038437$, and its physical period is $46.7310078183329$. The construction audit records zero pre-CAP calls to the true DDE.
+
+For Neumann KS, all discovery and continuation optimizations evaluate fitted vector fields. Reality and the observed half-period reflection symmetry are canonicalized at export, changing coefficients by at most $6.47\times10^{-14}$. The candidate is then frozen. ``Zero true-system Newton corrections'' means that no Newton update of this waveform is performed using the true equation; it does not mean that no surrogate optimization, Fourier conversion, or phase choice occurred. Nor does it mean zero access to the original equations: the KS training labels are exact spectral derivatives, and the frozen candidate is evaluated in the true equation for diagnostics and proof.
+
+\subsection{An a posteriori contraction criterion}
+Write the phase-augmented, suitably smoothed invariance equation as $F(z)=0$
+on a Banach space $X$. A bounded injective approximate inverse $A$ gives the
+Newton-like map $\mathcal T(z)=z-AF(z)$. We use the following scalar form of
+\citet[Theorem~2.4 and Sections~2.3--2.5]{validatedDFT2026}; the underlying
+Fourier/radii-polynomial methodology is also developed in
+\citet{lessard2016,framework2017}. We state the criterion and the bounds used,
+rather than repeat the general derivations.
+
+\begin{proposition}[Scalar-radius validation]
+\label{prop:radii}
+Suppose $F$ is continuously differentiable on a neighborhood of
+$B_{r_*}(\bar z)$ and $A$ is bounded and injective. Assume
+\begin{align}
+ \|AF(\bar z)\|_X&\leq Y,\\
+ \|I-ADF(\bar z)\|&\leq\alpha,\\
+ \|A[DF(\bar z+v)-DF(\bar z)]\|&\leq2Z_2\|v\|_X
+ \quad(\|v\|_X\leq r_*).
+\end{align}
+If $0<r\leq r_*$ satisfies
+\begin{equation}
+ p(r)=Y-(1-\alpha)r+Z_2r^2<0,
+ \qquad \alpha+2Z_2r<1,
+ \label{eq:scalar-radii}
+\end{equation}
+then $F$ has a unique zero in $B_r(\bar z)$.
+\end{proposition}
+Here $Y$ bounds the preconditioned residual and
+$Z(r)=\alpha+2Z_2r$ bounds the derivative of $\mathcal T$ throughout the ball.
+In the reference's notation, $Z_1=\alpha$ and its derivative-Lipschitz
+constant is $2Z_2$; the factor of two matters when comparing certificates.
+Finite inverse defects, all finite/tail couplings, and the infinite remainder
+are included. Uniqueness is within the phase slice and any imposed symmetry
+space. The reference supplies the general theorem, not the numerical bounds
+for our particular candidates.
+
+\subsection{Mackey--Glass with fixed physical parameters}
+\label{sec:mgcap}
+We validate the candidate directly in \eqref{eq:mgphysical}, fixing the feedback coefficient, damping, delay, and exponent. Set $s=t/10$, $\tau=17/10$, and $G(z)=z/(1+z^{10})$. With $\theta=\omega s$ and $w(\theta)=\sum_{k\in\mathbb Z}u_ke^{ik\theta}$, the periodic equation is
+\begin{equation}
+ \omega w'(\theta)+w(\theta)-2G(w(\theta-\omega\tau))=0.
+ \label{eq:mgproof}
+\end{equation}
+The unknown scalar is $\omega$; the physical period is $T=20\pi/\omega$. In particular, no damping parameter is varied. We work in the real Banach space of conjugate-symmetric Fourier coefficients with
+\begin{equation}
+ \|u\|_\nu=\sum_{k\in\mathbb Z}|u_k|\nu^{|k|},\quad
+ \nu=1.01,\qquad
+ \|(\delta\omega,h)\|_X=|\delta\omega|+\|h\|_\nu.
+ \label{eq:mgnorm}
+\end{equation}
+Fourier validation in weighted sequence spaces follows the general approach of \citet{berg2022}; the rational nonlinearity is treated here by verified partial-fraction reciprocals.
+
+Let $\omega_{\rm ref}>0$ be the candidate frequency, held constant as an equation-scaling factor. Let $P$ remove the zero Fourier mode, define $(S_\omega a)_k=e^{-ik\omega\tau}a_k$, and set $J_0=1$, $J_k=(ik\omega_{\rm ref})^{-1}$ for $k\neq0$. The integrated state residual is
+\begin{equation}
+ F_u(\omega,u)=\frac{\omega}{\omega_{\rm ref}}Pu
+                  +J\bigl(u-2S_\omega G(u)\bigr).
+ \label{eq:mgfixedoperator}
+\end{equation}
+Its zero component is $u_0-2G(u)_0$; each nonzero component is \eqref{eq:mgproof} divided by $ik\omega_{\rm ref}$. A finite linear phase condition $\varphi u-b=0$ completes $F$. The row $\varphi$ is obtained from the conjugate temporal tangent of the candidate, normalized in the finite Euclidean inner product, with support $|k|\leq80$. Both $\varphi$ and $b$ are stored as dyadic data, and their rounding residual is included in the proof. This phase condition preserves the time origin of the exported waveform.
+
+The approximate inverse acts on the augmented core $|k|\leq80$ and equals
+the identity on the state tail. The finite inverse is verified by an interval
+defect bound below $6.71\times10^{-12}$. The implementation includes the
+frequency derivative of the delayed phase; fixing the physical delay does not
+fix the phase shift $\omega\tau$.
+
+For the rational nonlinearity, verified degree-160 Fourier reciprocals of
+$\bar w-p_j$, where $p_j=e^{i\pi(2j-1)/10}$, enclose the partial fractions of
+$G$. Let $B_j$ bound the corresponding exact reciprocal norm. The checks
+$B_jr<1$ exclude every pole on the full proof ball. This is the reciprocal
+Neumann-series principle described in \citet[Remark~2.1]{validatedDFT2026}.
+The same reference's Section~4.4 illustrates a related Mackey--Glass proof,
+but varies the damping parameter; here all physical parameters are fixed and
+the frequency is the extra unknown. Its example's numerical bounds are
+therefore not imported into this certificate.
+
+The actual estimates are $Y\leq4.194761221\times10^{-4}$,
+$\alpha=Z_0\leq0.069980673$, and $2Z_2=C\leq494.208949$ on the
+radius-$0.0006$ ball. The full infinite-tail contribution to the linear defect
+is bounded by $0.068703474$, and the maximum $B_jr$ is below $0.003483453$.
+Table~\ref{tab:mgcap} and Theorem~\ref{thm:mgorbit} record the resulting
+inequalities. The interval convolution and weighted-norm calculations,
+including the frequency column and omitted modes, are implemented in
+\path{CAP/Mackey-Glass_PO/proof_MG_fixed_parameter.m}.
+
+\subsection{Neumann KS: scaled space--time Fourier equation}
+\label{sec:kscap}
+Set
+\begin{equation}
+ q=\pi/22,\qquad y=qx,\qquad s=q^2t,\qquad v=u/q,
+ \qquad \nu=q^2.
+\end{equation}
+Then $v_s+vv_y+v_{yy}+\nu v_{yyyy}=0$ on $0\leq y\leq\pi$. With temporal phase $\theta=\omega t$ and scaled frequency $f=\omega/q^2$, the periodic equation is
+\begin{equation}
+ E(f,v)=f v_\theta+\nu v_{yyyy}+v_{yy}+\tfrac12\partial_y(v^2)=0.
+ \label{eq:ksfourier}
+\end{equation}
+The unknowns are $f$ and the space--time Fourier coefficients of $v$. A real basis uses a constant temporal term and cosine/sine temporal amplitudes multiplying spatial sine modes. Only the temporal phase is fixed: a generic spatial translate violates the endpoint conditions. The candidate satisfies
+\begin{equation}
+ v(\theta+\pi,y)=-v(\theta,\pi-y),
+\end{equation}
+so the proof is carried out in the closed invariant coefficient subspace with $n+k$ even, where $n$ and $k$ index temporal and spatial modes.
+
+If $a_{0k},a^c_{nk},a^s_{nk}$ are the real amplitudes, the correction norm is
+\begin{equation}
+ \|(\delta f,\delta v)\|_X=|\delta f|
+ +\sum_k|\delta a_{0k}|
+ +\sum_{n\geq1,k\geq1}(|\delta a^c_{nk}|+|\delta a^s_{nk}|),
+ \label{eq:ksnorm}
+\end{equation}
+restricted to the allowed parity. This is an unweighted real trigonometric coefficient $\ell^1$ norm, not a coefficient supremum norm and not the weighted complex norm of \eqref{eq:mgnorm}. Product-to-sum identities bound products in the corresponding trigonometric coefficient algebra, since the absolute coefficients of each elementary product sum to at most one. The spatial and temporal derivative operators are handled after smoothing.
+
+At the candidate $(\bar f,\bar v)$ define
+\begin{equation}
+ L_0=\bar f\partial_\theta+\nu\partial_y^4+\partial_y^2,
+ \quad c=1/\nu,\quad S_c=L_0+c.
+\end{equation}
+Define the zero-finding operator explicitly by
+\begin{equation}
+ F_{\rm KS}(f,v)=\begin{pmatrix}
+ \varphi(v-\bar v)\\ S_c^{-1}E(f,v)
+ \end{pmatrix},
+ \qquad T=\frac{2\pi}{q^2f}.
+ \label{eq:kszero}
+\end{equation}
+The finite linear functional $\varphi$ uses the candidate's temporal tangent.
+The smoothing operator $S_c$ is fixed at the candidate. Thus
+$F_{\rm KS}=0$ enforces both the PDE and the chosen time origin. The frequency
+unknown balances this added scalar phase equation. Reality, odd spatial
+extension, and parity are enforced in the coefficient space.
+
+Following \citet{figueras2017}, the derivative at the candidate is
+\begin{equation}
+ DF_{\rm KS}(\bar f,\bar v)=
+ \begin{pmatrix}
+ 0&\varphi\\
+ S_c^{-1}\bar v_\theta&I-cS_c^{-1}+S_c^{-1}\partial_y(\bar v\,\cdot)
+ \end{pmatrix}.
+ \label{eq:kslinearization}
+\end{equation}
+Project this operator onto the frequency/phase variables and modes
+$0\leq n\leq160$, $1\leq k\leq40$, and numerically invert the resulting
+6,421-dimensional matrix to obtain $B$. Extend $B$ to an approximate inverse
+$A$ by using $L_0^{-1}S_c$ on the complementary state modes. Equivalently,
+the tail acts on the unsmoothed PDE residual with $L_0^{-1}$, whose complex
+Fourier symbol is $(in\bar f+\nu k^4-k^2)^{-1}$. This explains how a finite
+matrix inverse becomes a Newton-like inverse for the infinite equation.
+The inverse core has 40 spatial modes, although the frozen candidate has 60.
+
+The map $(f,v)\mapsto(f,v)-AF_{\rm KS}(f,v)$ is used to prove contraction
+near the frozen candidate, without applying a true-equation Newton update to
+that candidate. The retained nonlinear correction is exactly
+$\delta f\,\partial_\theta\delta v+\tfrac12\partial_y(\delta v)^2$.
+Preconditioning and coefficient-algebra estimates give the certified bounds
+\begin{equation}
+ Y\leq4.119405\times10^{-7},\qquad
+ \alpha\leq0.890809345,\qquad Z_2\leq165.085084.
+ \label{eq:ks-method-bounds}
+\end{equation}
+These are candidate-specific computed estimates, not constants taken from
+the reference paper.
+
+\paragraph{Coverage and arithmetic.}
+The quadratic residual is enclosed using 641 temporal nodes and 120 spatial
+output modes. The linear bound includes the finite frequency column and every
+finite/tail coupling: the complete halo through $n=320$, $k=100$, the remaining
+temporal gap through $n=359$, and analytic symbol bounds for all larger
+indices. Thus the estimate includes infinitely many modes, not just a larger
+Galerkin truncation. The derivative bounds likewise include their infinite
+tails. The stored finite inverse is checked through its defect, and the
+preconditioner is injective on the phase-fixed space.
+
+INTLAB encloses the residual and final scalar inequalities \cite{rump1999}.
+The large finite matrices and coupling scans use binary64 arithmetic with
+explicit forward-error majorants \cite{higham2002}, as detailed in
+\path{CAP/Kuramoto_PO/PROOF_AUDIT.md}. Those guards depend on the audited
+truncations and arithmetic assumptions. The driver checks that saved scan data
+match the frozen candidate. General Fourier and smoothing estimates are
+referenced to \citet{figueras2017,validatedDFT2026}; the implementation and audit
+supply the adaptations to this boundary condition, symmetry space, norm, and
+candidate. No claim is made that a citation alone validates those adaptations.
+
+\section{Certified periodic-orbit results}
+\label{sec:cap-results}
+The following results apply the validation procedure of
+Section~\ref{sec:assessment}, using the operators and bounds in
+Section~\ref{sec:cap}. They quantify the accuracy of two frozen,
+surrogate-generated periodic candidates at fixed physical parameters.
+The stated phase and symmetry restrictions specify the local uniqueness
+claims. Together with the forecasting and qualitative results, these
+certificates provide complementary evidence about the learned models.
+Figure~\ref{fig:certified-candidates} displays both candidates.
+
+\subsection{Fixed-parameter Mackey--Glass periodic orbit}
+\begin{samepage}
+\begin{theorem}[Computer-assisted Mackey--Glass periodic orbit]
+\label{thm:mgorbit}
+The fixed-parameter equation \eqref{eq:mgphysical} has a nonstationary periodic solution. Relative to the uncorrected surrogate candidate and the phase condition above, its scaled frequency and Fourier coefficients satisfy
+\begin{equation}
+ |\omega_*-\bar\omega|+\|u_*-\bar u\|_{1.01}
+ \leq6.00\times10^{-4}.
+ \label{eq:mgcertifiedradius}
+\end{equation}
+It is the unique solution in this ball and phase slice. Its physical period satisfies
+\begin{equation}
+ T\in[46.7101634894597,\;46.7518707590022].
+ \label{eq:mgperiodinterval}
+\end{equation}
+\end{theorem}
+\end{samepage}
+\begin{proof}
+INTLAB evaluation gives the bounds in Table~\ref{tab:mgcap}. At $r=0.0006$, the largest pole-neighborhood factor $B_jr$ is below $0.003484$, so all nonlinear estimates hold on the full ball. The preconditioned residual and derivative estimates satisfy
+\begin{align}
+ Y+(Z_0-1)r+\tfrac12Cr^2&\leq-4.957786349\times10^{-5},\\
+ Z_0+Cr&\leq0.366506043<1.
+\end{align}
+Proposition~\ref{prop:radii} applies with $\alpha=Z_0$ and $Z_2=C/2$. The validated finite inverse and identity tail make $A$ injective, hence the fixed point solves \eqref{eq:mgproof}. Conjugate symmetry gives a real solution. A nonconstant Fourier coefficient has modulus greater than $0.14895$ throughout the ball, excluding an equilibrium. Finally, $\bar\omega-r>0$ and outward-rounded evaluation of $20\pi/[\bar\omega-r,\bar\omega+r]$ gives \eqref{eq:mgperiodinterval}.
+\end{proof}
+
+\begin{table}[htb]
+\centering
+\caption{Fixed-parameter Mackey--Glass certificate. Upper bounds are rounded outward. The radius uses the augmented norm \eqref{eq:mgnorm}; its state component bounds the distance from the uncorrected surrogate waveform.}
+\label{tab:mgcap}
+\begin{tabular}{lr}
+\toprule
+Quantity & Value or upper bound\\
+\midrule
+True-system Newton corrections &0\\
+Candidate physical period &$46.7310078183329$\\
+Preconditioned residual $Y$ &$4.194761221\times10^{-4}$\\
+Linear defect $Z_0$ &$0.069980673$\\
+Derivative-variation constant $C$ &$494.208949$\\
+Maximum reciprocal defect &$3.90224\times10^{-14}$\\
+Maximum pole-neighborhood factor $B_jr$ &$0.003483453$\\
+Certified augmented radius &$6.00\times10^{-4}$\\
+Contraction constant &$0.366506043$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The proof uses direct outward-rounded convolution, matrix products, weighted norms, and scalar inequalities in MATLAB with INTLAB \cite{rump1999}. Floating-point Fourier calculations supply only approximate reciprocals and the finite inverse, each verified by its interval defect. The certificate therefore establishes fixed-parameter existence directly from the surrogate export with zero true-equation Newton updates. The enclosed period need not be minimal, and the theorem makes no assertion about orbital stability or chaotic dynamics.
+
+
+\subsection{KS certificate and interpretation}
+The main validation result concerns the candidate $(\bar f,\bar v)$ constructed by fitted-model continuation in Table~\ref{tab:continuation}.
+
+\begin{samepage}
+\begin{theorem}[Computer-assisted existence of a Neumann KS periodic solution]
+\label{thm:ksorbit}
+For $\ell=22$, the KS velocity equation with endpoint conditions $u=u_{xx}=0$ has a nonstationary time-periodic solution. In the scaled coordinates of section~\ref{sec:kscap}, a representative $(f_*,v_*)$ satisfies
+\begin{equation}
+ \|(f_*-\bar f,v_*-\bar v)\|_X\leq10^{-5},
+\end{equation}
+where the norm is defined in \eqref{eq:ksnorm}. This solution is locally unique in that ball within the phase-fixed, half-period reflection-symmetric space. Its physical period belongs to the interval in \eqref{eq:ksperiodinterval}.
+\end{theorem}
+\end{samepage}
+\begin{proof}
+The computer-assisted estimates give the conservative upper bounds
+\begin{equation}
+ Y\leq4.119405\times10^{-7},\qquad
+ \alpha\leq0.890809345,\qquad
+ Z_2\leq165.085084.
+ \label{eq:ksbounds}
+\end{equation}
+At $r=10^{-5}$, the outward-rounded computation records
+\begin{equation}
+ p(r)\leq-6.634575\times10^{-7},\qquad
+ \alpha+2Z_2r\leq0.894111046<1.
+\end{equation}
+The chosen radius lies strictly between the recorded polynomial roots, approximately $3.79444\times10^{-6}$ and $6.57626\times10^{-4}$. Together with the finite and infinite estimates, these bounds satisfy Proposition~\ref{prop:radii} for the phase-fixed symmetry subspace. A nonzero time-dependent coefficient, bounded below by more than $4.16$, excludes an equilibrium within the radius. The frequency enclosure is positive and yields the outward-rounded physical-period interval
+\begin{equation}
+ T\in[72.7053334243950,\;72.7056765389189].
+ \label{eq:ksperiodinterval}
+\end{equation}
+\end{proof}
+The coefficient correction is bounded by $10^{-5}$ in \eqref{eq:ksnorm}; this also bounds the state part of that norm. Restoring physical velocity multiplies a uniform state bound by $q$, but the period is also enclosed, so this should not be interpreted as an indefinitely synchronized physical-time trajectory error.
+
+The certificate reports complete tail validation, zero true-system optimizer calls during candidate construction, and zero true-system Newton corrections. It proves a nearby ordinary periodic solution of the Neumann boundary-value problem in the specified symmetry class. It does not certify orbital stability, a Floquet spectrum, chaotic dynamics, or a global equivalence of the fitted flow and the PDE. 
+
+\begin{figure}[htb]
+\centering
+\OverleafFigure{certified_orbit_candidates.png}
+\caption{Frozen surrogate-generated candidates used in the certificates.
+Left: the Mackey--Glass scalar waveform over one candidate period.
+Right: physical Neumann KS velocity $u(x,t)$ over one candidate period.
+These are plots of the exported approximations, not exact solution curves;
+Theorems~\ref{thm:mgorbit} and \ref{thm:ksorbit} enclose nearby exact solutions
+in their respective augmented coefficient norms.}
+\label{fig:certified-candidates}
+\end{figure}
+\FloatBarrier
+\paragraph{Certification implementation.}
+Candidate exports, certificate data, and proof drivers are provided in
+\path{CAP/Mackey-Glass_PO/} and \path{CAP/Kuramoto_PO/} in the
+\href{https://github.com/Aloh5/learned-dynamics-cap}{project's GitHub repository}.
+The accompanying documentation specifies the MATLAB/INTLAB requirements
+and the arithmetic assumptions used for validation.
+
+\section{Discussion and conclusions}
+\label{sec:discussion}
+The proposed validation method uses certified invariant objects to assess a
+learned model's ability to reproduce selected structures of its reference
+system. Its mathematical and computational ingredients are established; the
+methodological contribution is to use their combination as a model-validation
+procedure with an explicit candidate origin, error enclosure, and scope of
+interpretation. The two applications demonstrate that this test can succeed
+for models of delay and partial differential equations. All physical
+parameters remain fixed, all omitted modes are included, and neither exported
+waveform receives a true-equation Newton correction.
+
+The forecasting and qualitative results remain essential to the assessment.
+The cubic Mackey--Glass model supports useful forecasts, long irregular
+integrations, and a close approximation to the leading equilibrium
+instability, while also possessing additional equilibria. Its attractor
+projections and empirical distributions supply numerical evidence beyond
+pointwise trajectory agreement. The degree-five refinement model gives a
+different outcome: its global rollouts fail, yet it supplies a certifiable
+periodic candidate. The structural validation detects a particular success
+without erasing the observed failures.
+
+For periodic KS, the forecasting, equilibrium, and attractor comparisons
+concern a 14-node spectral semidiscretization. The rigorous orbit result
+concerns a separate Neumann problem and cannot certify the periodic-domain
+forecasts. Near-machine-precision derivative recovery in the Neumann fit
+reflects the matching quadratic library and exact derivative supervision.
+Candidate construction and certification test additional properties of that
+fit. These distinctions allow the numerical and rigorous results to contribute
+to model assessment without treating any single diagnostic as sufficient.
+
+\subsection{Limitations and extensions}
+These examples establish feasibility of the validation method. They do not
+establish superiority over other validation approaches or learned models, or a
+population certification rate. A candidate ensemble with specified search
+and proof budgets would be needed to measure success fractions. Proof radii
+also depend on norms, scaling, conditioning, and the sharpness of estimates;
+they cannot be compared directly across these two systems.
+
+Reference-integrator and spatial-resolution studies remain necessary for
+stronger forecasting conclusions. Exact-derivative operator recovery does not
+address noisy or incomplete observations; Section~\ref{sec:future-work}
+outlines a proposed robustness study. Dense libraries grow as $\binom{d+p}{p}$,
+and numerical survival supplies no global trapping guarantee. Structural
+constraints could improve long-time behavior, while validated continuation
+and Floquet analysis could establish parameter dependence and orbital
+stability, neither proved here.
+
+A connection to inertial-manifold reduction is also worth investigating
+\cite{foias1988,zelik2014}, but a Galerkin fit does not reconstruct unresolved
+modes as functions of retained coordinates. Such a reduction would require a
+reconstruction map, uniform invariance-defect estimates, and appropriate
+attraction or spectral hypotheses. The present certificates establish none
+of those global properties.
+
+\subsection{Future work}
+\label{sec:future-work}
+Future experiments should train surrogates on real-world data, including
+partially observed and irregularly sampled time series. The present experiments
+use synthetic data without added measurement noise and do not establish noise
+robustness. A systematic study should add noise to observations before
+constructing delay vectors and derivative targets, vary noise levels and
+sampling rates, and repeat each experiment with independent noise realizations.
+Noise affects both derivative estimates and nonlinear features; ridge
+regularization alone does not resolve this errors-in-variables problem.
+
+Weak or integral formulations and ensemble methods provide approaches to
+investigate \cite{messengerWeak2021,messenger2021,fasel2022}. Dense ridge,
+sparse, and weak-form fits could be compared using separate training and
+validation data, clean held-out forecast targets, long-time diagnostics,
+and candidate-certification success under equal search and proof budgets.
+Repeated experiments across initial conditions, missing-data patterns, and
+datasets would quantify variability. Certifying a particular candidate in a
+specified equation would not itself establish robustness to observation noise
+or uncertainty in physical parameters.
+
+Additional directions include imposing appropriate physical constraints or
+symmetries, testing spatial-resolution and reference-integrator convergence,
+and measuring certification rates for candidate ensembles. Validated
+continuation and Floquet analysis could extend the proofs to parameter
+dependence and orbital stability. Applications to measured data would also
+require distinguishing observation uncertainty and model error from rigorous
+validation of a specified source equation.
+
+\subsection{Computational reproducibility}
+The repository's \path{CAP/Mackey-Glass_PO/} and \path{CAP/Kuramoto_PO/}
+directories contain candidate data, validation drivers, certificates, and proof
+audits; the KS materials also contain fitted-model continuation and finite/tail
+scans. The certificates record the norms, radii, periods, and correction counts
+reported here. Numerical tests check derivatives, Fourier conversions, source
+identity, and certificate consistency, but do not replace rigorous validation.
+Reproduction requires the documented MATLAB/INTLAB environment and arithmetic
+assumptions.
+
+\paragraph{Implementation and code availability.}
+For the implementations in this paper, we used the code in the GitHub
+repository \url{https://github.com/Aloh5/learned-dynamics-cap}.
+The regression and numerical assessment workflows are provided in
+\path{notebooks/}, and the candidate data and proof drivers are provided in
+\path{CAP/Mackey-Glass_PO/} and \path{CAP/Kuramoto_PO/}. The proof computations
+require the documented MATLAB/INTLAB environment and arithmetic assumptions.
+
+\enlargethispage{\baselineskip}
+\paragraph{Conclusion.}
+Learned polynomial models can be evaluated through forecasts, numerical
+dynamical diagnostics, and rigorous comparison of selected invariant
+structures. The proposed candidate-based validation method supplies the third
+assessment by certifying a nearby exact solution around a frozen surrogate
+export. The Mackey--Glass and KS results demonstrate its use alongside the
+other diagnostics, yielding a more specific account of what each model
+reproduces and where its limitations remain.
+
+\begin{samepage}
+\paragraph{Acknowledgment of AI assistance.}
+AI tools were used to assist with code and repository organization and with a
+brief literature review, including locating relevant references and summarizing
+related approaches. This assistance supported the research workflow; the authors
+remain responsible for the scientific claims, numerical results, mathematical
+proofs, and final presentation.
+
+\end{samepage}
+
+\FloatBarrier
+\renewcommand{\bibfont}{\small}
+\begin{thebibliography}{25}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Brunton et~al.(2016)Brunton, Proctor, and Kutz]{brunton2016}
+Steven~L. Brunton, Joshua~L. Proctor, and J.~Nathan Kutz.
+\newblock Discovering governing equations from data by sparse identification of
+  nonlinear dynamical systems.
+\newblock \emph{Proc. Natl. Acad. Sci. USA}, 113:\penalty0 3932--3937, 2016.
+\newblock \url{https://doi.org/10.1073/pnas.1517384113}.
+
+\bibitem[Figueras and de~la Llave(2017)]{figueras2017}
+Jordi-Llu\'{i}s Figueras and Rafael de~la Llave.
+\newblock Numerical computations and computer assisted proofs of periodic
+  orbits of the {Kuramoto--Sivashinsky} equation.
+\newblock \emph{SIAM J. Appl. Dyn. Syst.}, 16:\penalty0 834--852, 2017.
+\newblock \url{https://doi.org/10.1137/16M1073790}.
+
+\bibitem[Figueras et~al.(2017)Figueras, Gameiro, Lessard, and de~la
+  Llave]{framework2017}
+Jordi-Llu\'{i}s Figueras, Marcio Gameiro, Jean-Philippe Lessard, and Rafael
+  de~la Llave.
+\newblock A framework for the numerical computation and a posteriori
+  verification of invariant objects of evolution equations.
+\newblock \emph{SIAM J. Appl. Dyn. Syst.}, 16:\penalty0 1070--1088, 2017.
+\newblock \url{https://doi.org/10.1137/16M1073777}.
+
+\bibitem[Foias et~al.(1988)Foias, Nicolaenko, Sell, and Temam]{foias1988}
+Ciprian Foias, Basil Nicolaenko, George~R. Sell, and Roger Temam.
+\newblock Inertial manifolds for the {Kuramoto--Sivashinsky} equation and an
+  estimate of their lowest dimension.
+\newblock \emph{Journal de Math\'ematiques Pures et Appliqu\'ees}, 67:\penalty0
+  197--226, 1988.
+
+\bibitem[Higham(2002)]{higham2002}
+Nicholas~J. Higham.
+\newblock \emph{Accuracy and Stability of Numerical Algorithms}.
+\newblock SIAM, Philadelphia, 2 edition, 2002.
+\newblock \url{https://doi.org/10.1137/1.9780898718027}.
+
+\bibitem[Hoerl and Kennard(1970)]{hoerl1970}
+Arthur~E. Hoerl and Robert~W. Kennard.
+\newblock Ridge regression: Biased estimation for nonorthogonal problems.
+\newblock \emph{Technometrics}, 12:\penalty0 55--67, 1970.
+\newblock \url{https://doi.org/10.1080/00401706.1970.10488634}.
+
+\bibitem[Kassam and Trefethen(2005)]{kassam2005}
+Aly-Khan Kassam and Lloyd~N. Trefethen.
+\newblock Fourth-order time-stepping for stiff {PDEs}.
+\newblock \emph{SIAM J. Sci. Comput.}, 26:\penalty0 1214--1233, 2005.
+\newblock \url{https://doi.org/10.1137/S1064827502410633}.
+
+\bibitem[Mackey and Glass(1977)]{mackey1977}
+Michael~C. Mackey and Leon Glass.
+\newblock Oscillation and chaos in physiological control systems.
+\newblock \emph{Science}, 197:\penalty0 287--289, 1977.
+\newblock \url{https://doi.org/10.1126/science.267326}.
+
+\bibitem[Messenger and Bortz(2021)]{messenger2021}
+Daniel~A. Messenger and David~M. Bortz.
+\newblock Weak {SINDy} for partial differential equations.
+\newblock \emph{J. Comput. Phys.}, 443:\penalty0 110525, 2021.
+\newblock \url{https://doi.org/10.1016/j.jcp.2021.110525}.
+
+\bibitem[Page et~al.(2021)Page, Brenner, and Kerswell]{page2021}
+Jacob Page, Michael~P. Brenner, and Rich~R. Kerswell.
+\newblock Revealing the state space of turbulence using machine learning.
+\newblock \emph{Phys. Rev. Fluids}, 6:\penalty0 034402, 2021.
+\newblock \url{https://doi.org/10.1103/PhysRevFluids.6.034402}.
+
+\bibitem[Rump(1999)]{rump1999}
+Siegfried~M. Rump.
+\newblock {INTLAB}---{INTerval LABoratory}.
+\newblock In Tibor Csendes, editor, \emph{Developments in Reliable Computing},
+  pages 77--104. Kluwer Academic Publishers, Dordrecht, 1999.
+\newblock \url{https://www.tuhh.de/ti3/intlab/}.
+
+\bibitem[Sauer et~al.(1991)Sauer, Yorke, and Casdagli]{sauer1991}
+Tim Sauer, James~A. Yorke, and Martin Casdagli.
+\newblock Embedology.
+\newblock \emph{J. Stat. Phys.}, 65:\penalty0 579--616, 1991.
+\newblock \url{https://doi.org/10.1007/BF01053745}.
+
+\bibitem[Takens(1981)]{takens1981}
+Floris Takens.
+\newblock Detecting strange attractors in turbulence.
+\newblock In David Rand and Lai-Sang Young, editors, \emph{Dynamical Systems
+  and Turbulence, Warwick 1980}, volume 898 of \emph{Lecture Notes in
+  Mathematics}, pages 366--381. Springer, 1981.
+\newblock \url{https://doi.org/10.1007/BFb0091924}.
+
+\bibitem[van~den Berg et~al.(2022)van~den Berg, Groothedde, and
+  Lessard]{berg2022}
+Jan~Bouwe van~den Berg, Chris Groothedde, and Jean-Philippe Lessard.
+\newblock A general method for computer-assisted proofs of periodic solutions
+  in delay differential problems.
+\newblock \emph{J. Dynam. Differential Equations}, 34:\penalty0 853--896, 2022.
+\newblock \url{https://doi.org/10.1007/s10884-020-09908-6}.
+
+\bibitem[Zelik(2014)]{zelik2014}
+Sergey Zelik.
+\newblock Inertial manifolds and finite-dimensional reduction for dissipative
+  {PDEs}.
+\newblock \emph{Proceedings of the Royal Society of Edinburgh Section A:
+  Mathematics}, 144\penalty0 (6):\penalty0 1245--1327, 2014.
+\newblock \doi{10.1017/S0308210513000075}.
+\newblock URL \url{https://arxiv.org/abs/1303.4457}.
+
+
+\bibitem[van den Berg et~al.(2026)]{validatedDFT2026}
+Jan Bouwe van den Berg, Maxime Breden, Jean-Philippe Lessard, and J. D. Mireles James.
+\newblock Computer-assisted proofs in nonlinear differential equations:
+a spectral approach based on Fourier analysis.
+\newblock Unpublished manuscript, draft dated August 12, 2026.
+\newblock Theorem 2.4, Sections 2.3--2.5, and Section 4.4.
+
+\bibitem[Lessard et~al.(2016)]{lessard2016}
+Jean-Philippe Lessard, J. D. Mireles James, and Julian Ransford.
+\newblock Automatic differentiation for Fourier series and the radii polynomial approach.
+\newblock \emph{Physica D}, 334:174--186, 2016.
+\newblock \url{https://doi.org/10.1016/j.physd.2016.02.007}.
+
+\bibitem[Messenger and Bortz(2021)]{messengerWeak2021}
+Daniel A. Messenger and David M. Bortz.
+\newblock Weak SINDy: Galerkin-based data-driven model selection.
+\newblock \emph{Multiscale Modeling \& Simulation}, 19:1474--1497, 2021.
+\newblock \url{https://doi.org/10.1137/20M1343166}.
+
+\bibitem[Fasel et~al.(2022)]{fasel2022}
+Urban Fasel, J. Nathan Kutz, Bingni W. Brunton, and Steven L. Brunton.
+\newblock Ensemble-SINDy: Robust sparse model discovery in the low-data,
+high-noise limit, with active learning and control.
+\newblock \emph{Proceedings of the Royal Society A}, 478:20210904, 2022.
+\newblock \url{https://doi.org/10.1098/rspa.2021.0904}.
+
+\end{thebibliography}
+\end{document}
