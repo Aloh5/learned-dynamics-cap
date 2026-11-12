@@ -13,7 +13,7 @@ python -m pip install -e ".[notebooks]"
 jupyter lab
 ```
 
-No PySINDy dependency is required. Open notebooks from the repository root or
+Open notebooks from the repository root or
 their own directory. Each forecasting notebook fits and evaluates its baseline
 by default; sweeps, pruning, long diagnostics, equilibrium searches and orbit
 construction are explicitly enabled in its configuration cell.
