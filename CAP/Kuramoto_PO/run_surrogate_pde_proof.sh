@@ -10,6 +10,6 @@ export KS_REQUIRE_SURROGATE=1
   --candidate "$KS_CAP_OUTPUT_DIR/ks_neumann_cap_candidate.mat" \
   --output "$KS_CAP_OUTPUT_DIR/ks_neumann_fourier_proof_data.mat"
 matlab_binary="${MATLAB_BINARY:-matlab}"
-intlab_dir="${INTLAB_DIR:?Set INTLAB_DIR to your INTLAB installation directory}"
+intlab_dir="${INTLAB_PATH:?set INTLAB_PATH to your INTLAB installation}"
 "$matlab_binary" -batch "addpath('$intlab_dir'); startintlab; run('$script_dir/proof_KS_neumann.m')"
 "${PYTHON_BINARY:-python3}" -m unittest discover -s "$script_dir" -p 'test_*.py' -v

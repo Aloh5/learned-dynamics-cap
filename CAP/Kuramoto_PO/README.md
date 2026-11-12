@@ -175,7 +175,7 @@ candidate run, use a new output directory:
 python CAP/Kuramoto_PO/generate_surrogate_candidate.py --output-dir /tmp/ks_clean
 ```
 
-`MATLAB_BINARY` and `INTLAB_DIR` can override the installed paths. The finite
+`MATLAB_BINARY` and `INTLAB_PATH` can override the installed paths. The finite
 inverse MAT file is about 307 MB and is generated, not source code. CSV/JSON
 certificates, stage summaries and fit metrics are small inspectable artifacts.
 A candidate diagnostic file intentionally says the generator has not evaluated
