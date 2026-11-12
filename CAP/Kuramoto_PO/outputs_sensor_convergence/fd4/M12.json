@@ -1,0 +1,112 @@
+{
+  "sensors": 12,
+  "fd_order": 4,
+  "surrogate_dt": 0.005,
+  "heldout_error_by_ridge": {
+    "0.0": 0.06263806506001672,
+    "1e-10": 0.0626380650560678,
+    "1e-08": 0.06263806466506439,
+    "1e-06": 0.06263802556642029
+  },
+  "best_heldout_error": 0.06263802556642029,
+  "ridge_trials": [
+    {
+      "ridge": 1e-06,
+      "heldout_error": 0.06263802556642029,
+      "bounded": true,
+      "rollout_time": 2300.0
+    }
+  ],
+  "ridge": 1e-06,
+  "heldout_error": 0.06263802556642029,
+  "rollout_std_ratio": 1.008142772011831,
+  "orbits": [
+    {
+      "orbit": 0,
+      "surrogate_period": 73.64332321333383,
+      "harmonic_balance_rms": 5.246084327490741e-16,
+      "initial_defect_max": 0.8362571443023188,
+      "initial_defect_oversampled_rms": 0.11550976755614543,
+      "first_newton_correction": 11.42751344849042,
+      "newton_converged": true,
+      "newton_corrections": 5,
+      "true_period": 72.70561448422313,
+      "distance_to_true_orbit": 12.599932291150875,
+      "newton_history": [
+        {
+          "iteration": 0,
+          "residual_max": 0.8362571443023188,
+          "correction_cap_norm": 11.42751344849042
+        },
+        {
+          "iteration": 1,
+          "residual_max": 0.016986347730032325,
+          "correction_cap_norm": 8.58474294242652
+        },
+        {
+          "iteration": 2,
+          "residual_max": 0.009865009539311353,
+          "correction_cap_norm": 1.4792262431035883
+        },
+        {
+          "iteration": 3,
+          "residual_max": 0.00021046312923800325,
+          "correction_cap_norm": 0.052221437749037224
+        },
+        {
+          "iteration": 4,
+          "residual_max": 3.773045361560312e-07,
+          "correction_cap_norm": 2.935681739457159e-05
+        },
+        {
+          "iteration": 5,
+          "residual_max": 1.0602629885170245e-13
+        }
+      ]
+    },
+    {
+      "orbit": 1,
+      "surrogate_period": 73.82898591844035,
+      "harmonic_balance_rms": 5.807789374530684e-16,
+      "initial_defect_max": 1.0712793073245888,
+      "initial_defect_oversampled_rms": 0.13261177978609706,
+      "first_newton_correction": 17.383648615334394,
+      "newton_converged": true,
+      "newton_corrections": 5,
+      "true_period": 73.11864820190479,
+      "distance_to_true_orbit": 15.704840925657267,
+      "newton_history": [
+        {
+          "iteration": 0,
+          "residual_max": 1.0712793073245888,
+          "correction_cap_norm": 17.383648615334394
+        },
+        {
+          "iteration": 1,
+          "residual_max": 0.032717060313007654,
+          "correction_cap_norm": 7.9935851572536665
+        },
+        {
+          "iteration": 2,
+          "residual_max": 0.008536552706559952,
+          "correction_cap_norm": 1.0535652863188918
+        },
+        {
+          "iteration": 3,
+          "residual_max": 0.00013606676005178953,
+          "correction_cap_norm": 0.013190510523830648
+        },
+        {
+          "iteration": 4,
+          "residual_max": 1.7345274105906583e-08,
+          "correction_cap_norm": 5.793781152879994e-06
+        },
+        {
+          "iteration": 5,
+          "residual_max": 3.219646771412954e-15
+        }
+      ]
+    }
+  ],
+  "status": "ok"
+}

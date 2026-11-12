@@ -1,0 +1,37 @@
+{
+  "output_dir": "CAP/Kuramoto_PO/outputs_sensor",
+  "sensors": [
+    12,
+    16,
+    20,
+    24
+  ],
+  "layouts": [
+    "regular",
+    "irregular"
+  ],
+  "truth_modes": 48,
+  "true_modes": 32,
+  "dt": 0.1,
+  "burn": 300.0,
+  "duration": 3000.0,
+  "ridge": [
+    0.0,
+    1e-10,
+    1e-08,
+    1e-06
+  ],
+  "surrogate_dt": 0.005,
+  "rollout": 2300.0,
+  "rollout_burn": 300.0,
+  "harmonics": [
+    16,
+    32
+  ],
+  "spline_modes": [
+    16,
+    32
+  ],
+  "tries": 6,
+  "site_seed": 0
+}

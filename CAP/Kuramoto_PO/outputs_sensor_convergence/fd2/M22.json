@@ -1,0 +1,87 @@
+{
+  "sensors": 22,
+  "fd_order": 2,
+  "surrogate_dt": 0.005,
+  "heldout_error_by_ridge": {
+    "0.0": 0.0011500233435353272,
+    "1e-10": 0.0010562389876934372,
+    "1e-08": 0.0008999094545556594,
+    "1e-06": 0.000991633019600194
+  },
+  "best_heldout_error": 0.0008999094545556594,
+  "ridge_trials": [
+    {
+      "ridge": 1e-08,
+      "heldout_error": 0.0008999094545556594,
+      "bounded": true,
+      "rollout_time": 2300.0
+    }
+  ],
+  "ridge": 1e-08,
+  "heldout_error": 0.0008999094545556594,
+  "rollout_std_ratio": 0.993496490476804,
+  "orbits": [
+    {
+      "orbit": 0,
+      "surrogate_period": 73.13100600468479,
+      "harmonic_balance_rms": 2.2437343875727056e-15,
+      "initial_defect_max": 0.14722120941689637,
+      "initial_defect_oversampled_rms": 0.013096284769190093,
+      "first_newton_correction": 0.27228787284817635,
+      "newton_converged": true,
+      "newton_corrections": 3,
+      "true_period": 73.11864824837915,
+      "distance_to_true_orbit": 0.2714917581985311,
+      "newton_history": [
+        {
+          "iteration": 0,
+          "residual_max": 0.14722120941689637,
+          "correction_cap_norm": 0.27228787284817635
+        },
+        {
+          "iteration": 1,
+          "residual_max": 6.577834530063775e-06,
+          "correction_cap_norm": 0.001377870375519889
+        },
+        {
+          "iteration": 2,
+          "residual_max": 2.72088573893825e-10,
+          "correction_cap_norm": 3.2844162406234194e-08
+        },
+        {
+          "iteration": 3,
+          "residual_max": 1.3322676295501878e-15
+        }
+      ]
+    },
+    {
+      "orbit": 1,
+      "surrogate_period": 87.10532604342924,
+      "harmonic_balance_rms": 1.8462952969260517e-15,
+      "initial_defect_max": 0.17554371991560874,
+      "initial_defect_oversampled_rms": 0.011867096895487166,
+      "first_newton_correction": 0.23964430290168987,
+      "newton_converged": true,
+      "newton_corrections": 2,
+      "true_period": 87.09434502225159,
+      "distance_to_true_orbit": 0.2393843156716872,
+      "newton_history": [
+        {
+          "iteration": 0,
+          "residual_max": 0.17554371991560874,
+          "correction_cap_norm": 0.23964430290168987
+        },
+        {
+          "iteration": 1,
+          "residual_max": 9.065024956264264e-06,
+          "correction_cap_norm": 0.0005962716382815968
+        },
+        {
+          "iteration": 2,
+          "residual_max": 3.936839743090559e-11
+        }
+      ]
+    }
+  ],
+  "status": "ok"
+}

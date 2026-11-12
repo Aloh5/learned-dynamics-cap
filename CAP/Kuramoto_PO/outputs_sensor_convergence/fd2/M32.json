@@ -1,0 +1,39 @@
+{
+  "sensors": 32,
+  "fd_order": 2,
+  "surrogate_dt": 0.005,
+  "heldout_error_by_ridge": {
+    "0.0": 0.0023183256618494077,
+    "1e-10": 0.0013180370748004492,
+    "1e-08": 0.0008081626138529699,
+    "1e-06": 0.0009553457228916684
+  },
+  "best_heldout_error": 0.0008081626138529699,
+  "ridge_trials": [
+    {
+      "ridge": 1e-08,
+      "heldout_error": 0.0008081626138529699,
+      "bounded": false,
+      "rollout_time": 7.7
+    },
+    {
+      "ridge": 1e-06,
+      "heldout_error": 0.0009553457228916684,
+      "bounded": false,
+      "rollout_time": 11.700000000000001
+    },
+    {
+      "ridge": 1e-10,
+      "heldout_error": 0.0013180370748004492,
+      "bounded": false,
+      "rollout_time": 4.9
+    },
+    {
+      "ridge": 0.0,
+      "heldout_error": 0.0023183256618494077,
+      "bounded": false,
+      "rollout_time": 0.0
+    }
+  ],
+  "status": "every rollout diverged"
+}

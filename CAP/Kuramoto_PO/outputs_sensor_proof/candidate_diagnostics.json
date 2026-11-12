@@ -1,0 +1,71 @@
+{
+  "sensors": 24,
+  "ridge": 1e-10,
+  "frozen_surrogate_period": 75.75584363844284,
+  "frozen_symmetry_defect": 0.00040356722701876335,
+  "refined_period": 75.72391869545345,
+  "true_oversampled_residual_rms": 9.034284066024855e-14,
+  "true_oversampled_residual_max": 7.466544743595094e-13,
+  "cap_norm_distance_frozen_to_refined": 0.3154623951475267,
+  "continuation": [
+    {
+      "temporal_modes": 32,
+      "spatial_modes": 32,
+      "period": 75.72492407965913,
+      "residual_rms": 1.183255966221707e-16,
+      "residual_max": 9.992007221626409e-16,
+      "nfev": 5,
+      "success": true
+    },
+    {
+      "temporal_modes": 48,
+      "spatial_modes": 36,
+      "period": 75.72392039837811,
+      "residual_rms": 8.331767603203934e-17,
+      "residual_max": 6.661338147750939e-16,
+      "nfev": 5,
+      "success": true
+    },
+    {
+      "temporal_modes": 64,
+      "spatial_modes": 40,
+      "period": 75.72391869831448,
+      "residual_rms": 8.832933131899271e-17,
+      "residual_max": 8.049116928532385e-16,
+      "nfev": 4,
+      "success": true
+    },
+    {
+      "temporal_modes": 96,
+      "spatial_modes": 44,
+      "period": 75.72391869648862,
+      "residual_rms": 1.89139767084939e-12,
+      "residual_max": 2.3264834503322618e-11,
+      "nfev": 2,
+      "success": true
+    },
+    {
+      "temporal_modes": 128,
+      "spatial_modes": 52,
+      "period": 75.72391869644774,
+      "residual_rms": 1.0034409055733904e-10,
+      "residual_max": 1.606338042531248e-09,
+      "nfev": 1,
+      "success": true
+    },
+    {
+      "temporal_modes": 160,
+      "spatial_modes": 60,
+      "period": 75.72391869545345,
+      "residual_rms": 2.082771635458567e-15,
+      "residual_max": 2.3829166247092866e-14,
+      "nfev": 4,
+      "success": true
+    }
+  ],
+  "independent_closure_l2": 3.72108187495464e-11,
+  "independent_closure_linf": 2.3185037223427685e-11,
+  "independent_relative_closure": 2.6615259089849257e-11,
+  "validation_spatial_modes": 72,
+  "validation_steps_per_period": 40000
+}
