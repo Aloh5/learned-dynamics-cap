@@ -71,3 +71,63 @@ opt-in. Default notebook runs inspect certificates without regenerating them.
 MG construction writes new experiments under `outputs/`; the fixed-parameter
 proof continues to use its documented frozen candidate in
 `notebooks/mackey_glass/outputs_zero_correction/`.
+
+## Paper
+
+"Data-Driven Discovery and Rigorous Certification of Periodic Solutions in
+Infinite-Dimensional Dynamical Systems", Aaron Loh and J. D. Mireles James.
+arXiv link: TBA.
+
+## Reproducing the theorems
+
+Paths below are relative to the repository root. Run shell entry points with `bash`.
+
+| Paper result | Entry point |
+|---|---|
+| Theorem 6.1 | `CAP/Mackey-Glass_PO/run_fixed_parameter_proof.sh` |
+| Theorem 6.2 | `CAP/Mackey-Glass_PO/run_newton_refined_proof.sh` |
+| Theorem 6.3 | `CAP/Kuramoto_PO/run_surrogate_pde_proof.sh` |
+| Theorem 6.4 | `CAP/Kuramoto_PO/run_newton_refined_proof.sh` |
+| Theorem 6.5 | `CAP/Kuramoto_PO/run_sensor_refined_proof.sh` |
+| Table 7 / Figure 6 | `CAP/Kuramoto_PO/sensor_convergence.py` and `CAP/Kuramoto_PO/summarize_sensor_convergence.py` |
+
+### INTLAB configuration
+
+Set `INTLAB_PATH` to your installed INTLAB directory before running a proof or
+an opt-in certification notebook. For example:
+
+```sh
+export INTLAB_PATH="/path/to/INTLAB"
+export MATLAB_BINARY="/path/to/matlab"
+bash CAP/Mackey-Glass_PO/run_newton_refined_proof.sh
+```
+
+MATLAB and INTLAB are separately installed dependencies. Python tests do not
+replace interval validation. See `CAP/Kuramoto_PO/NEWTON_REFINEMENT.md` for
+the transfer of the original full-space operator bounds.
+
+### Station/sensor evidence
+
+| Path | Contents |
+|---|---|
+| `CAP/Kuramoto_PO/sensor_experiment.py` | Station observations, surrogate fitting, reconstruction and diagnostics |
+| `CAP/Kuramoto_PO/outputs_sensor/` | Initial station experiment CSV/JSON |
+| `CAP/Kuramoto_PO/outputs_sensor_convergence/` | Table 7 summary, per-count evidence and Figure 6 (`ks_sensor_convergence.png`) |
+| `CAP/Kuramoto_PO/outputs_sensor_proof/` | Frozen station candidate, continuation history and certificate |
+
+Run `python CAP/Kuramoto_PO/summarize_sensor_convergence.py` to rebuild the
+summary and figure from the included small artifacts. `python CAP/Kuramoto_PO/sensor_convergence.py --help` describes the per-count simulation options. Its `truth.npz` cache is
+regenerated automatically and is intentionally excluded.
+
+Large `*fourier_proof_data.mat` matrices are intentionally excluded. Before
+KS refinement or its matrix-dependent numerical tests, regenerate the original
+matrix with:
+
+```sh
+python CAP/Kuramoto_PO/scan_block_proof.py --candidate CAP/Kuramoto_PO/outputs_surrogate/ks_neumann_cap_candidate.mat --output CAP/Kuramoto_PO/outputs_surrogate/ks_neumann_fourier_proof_data.mat
+```
+
+The sensor proof shell script regenerates its own matrix. Historical refinement
+manifests preserve the hashes of the executed proof dependencies; packaging
+changes to paths and documentation are recorded separately and do not assert
+that MATLAB/INTLAB was rerun.

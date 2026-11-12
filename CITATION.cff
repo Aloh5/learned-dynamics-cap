@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated preprint."
+title: "Data-Driven Discovery and Rigorous Certification of Periodic Solutions in Infinite-Dimensional Dynamical Systems"
+authors:
+  - family-names: Loh
+    given-names: Aaron
+  - family-names: Mireles James
+    given-names: J. D.
+repository-code: "https://github.com/Aloh5/learned-dynamics-cap"
+license: MIT
+# arXiv identifier: TBA

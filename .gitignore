@@ -72,3 +72,6 @@ dist/
 /docs/refactor_verification.md
 /docs/regression_comparison.json
 /docs/ifore_abstract.md
+
+# Regenerable sensor simulation cache
+CAP/Kuramoto_PO/outputs_sensor_convergence/truth.npz
