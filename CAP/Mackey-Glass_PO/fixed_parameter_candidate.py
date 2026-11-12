@@ -37,11 +37,20 @@ def system(omega,u,reference,phase):
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--newton-steps',type=int,default=0);ap.add_argument('--order',type=int,default=80)
-    args=ap.parse_args();OUT.mkdir(exist_ok=True)
+    ap.add_argument('--output-dir',type=Path,default=OUT)
+    args=ap.parse_args();out=args.output_dir
+    if args.newton_steps and out.resolve()==OUT.resolve():
+        ap.error('Newton refinement requires a separate --output-dir to preserve the original certificate.')
+    out.mkdir(parents=True,exist_ok=True)
+    if args.newton_steps<0 or not 1<=args.order<=2047:
+        ap.error('Require nonnegative Newton steps and order between 1 and 2047 (8192-point nonlinear grid).')
     raw=loadmat(SOURCE);a=raw['candidate_real_fourier'].ravel();src_n=(len(a)-1)//2
     positive=(a[1::2]-1j*a[2::2])/2
     src=np.r_[positive.conj()[::-1],a[0],positive]
-    n=args.order;u=src[src_n-n:src_n+n+1].copy();initial=u.copy()
+    n=args.order
+    if n<=src_n:u=src[src_n-n:src_n+n+1].copy()
+    else:u=np.pad(src,(n-src_n,n-src_n))
+    initial=u.copy()
     omega=float(2*np.pi/(.1*raw['period_candidate_physical'].item()));reference=omega
     k=np.arange(-n,n+1);tangent=1j*k*u
     phase=tangent.conj()/np.vdot(tangent,tangent).real
@@ -63,9 +72,12 @@ def main():
     recip=(recip+recip[::-1].conj())/2
     poles=np.exp(1j*np.pi*(2*np.arange(10)+1)/10)
     pole_reciprocals=np.stack([coefficients(1/(v-z),q) for z in poles],axis=1)
-    (OUT/'mg_fixed_parameter_certificate.json').unlink(missing_ok=True)
-    savemat(OUT/'mg_fixed_parameter_candidate.mat',dict(u=u[:,None],omega=omega,reference_omega=reference,phase=phase[None,:],phase_target=target,A=inv,reciprocal=recip[:,None],pole_reciprocals=pole_reciprocals,newton_steps=args.newton_steps,initial_u=initial[:,None],initial_omega=reference))
-    record={'source_sha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),'true_system_newton_steps':args.newton_steps,'order':n,'source_order':src_n,'history':history,'source_truncation_weighted_l1':float(sum(abs(src[:src_n-n])*1.01**abs(np.arange(-src_n,-n)))+sum(abs(src[src_n+n+1:])*1.01**np.arange(n+1,src_n+1))),'frequency_change':float(abs(omega-reference)),'state_change_weighted_l1':float(np.sum(abs(u-initial)*1.01**abs(k)))}
-    (OUT/'candidate_diagnostics.json').write_text(json.dumps(record,indent=2)+'\n')
+    (out/'mg_fixed_parameter_certificate.json').unlink(missing_ok=True)
+    (out/'newton_refinement_summary.json').unlink(missing_ok=True)
+    (out/'newton_refinement_manifest.json').unlink(missing_ok=True)
+    savemat(out/'mg_fixed_parameter_candidate.mat',dict(u=u[:,None],omega=omega,reference_omega=reference,phase=phase[None,:],phase_target=target,A=inv,reciprocal=recip[:,None],pole_reciprocals=pole_reciprocals,newton_steps=args.newton_steps,initial_u=initial[:,None],initial_omega=reference))
+    truncation=0.0 if n>=src_n else float(sum(abs(src[:src_n-n])*1.01**abs(np.arange(-src_n,-n)))+sum(abs(src[src_n+n+1:])*1.01**np.arange(n+1,src_n+1)))
+    record={'source_sha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),'true_system_newton_steps':args.newton_steps,'order':n,'source_order':src_n,'history':history,'source_truncation_weighted_l1':truncation,'frequency_change':float(abs(omega-reference)),'state_change_weighted_l1':float(np.sum(abs(u-initial)*1.01**abs(k)))}
+    (out/'candidate_diagnostics.json').write_text(json.dumps(record,indent=2)+'\n')
     print(json.dumps(record,indent=2))
 if __name__=='__main__':main()

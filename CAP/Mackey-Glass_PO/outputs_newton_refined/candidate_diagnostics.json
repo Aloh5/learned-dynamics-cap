@@ -1,0 +1,47 @@
+{
+  "source_sha256": "87d5e3db5ae0c5b084c73808153e9c991f284014e598936200d334685355842b",
+  "true_system_newton_steps": 5,
+  "order": 80,
+  "source_order": 200,
+  "history": [
+    {
+      "step": 0,
+      "residual_l1": 0.0004713396703761787,
+      "omega": 1.3445430776082365,
+      "physical_period": 46.73100781833289
+    },
+    {
+      "step": 1,
+      "residual_l1": 1.0677398037675963e-07,
+      "omega": 1.344585292033298,
+      "physical_period": 46.729540657685455
+    },
+    {
+      "step": 2,
+      "residual_l1": 1.3231736064510136e-14,
+      "omega": 1.344585320772106,
+      "physical_period": 46.72953965890071
+    },
+    {
+      "step": 3,
+      "residual_l1": 4.037444536236961e-16,
+      "omega": 1.3445853207720944,
+      "physical_period": 46.72953965890111
+    },
+    {
+      "step": 4,
+      "residual_l1": 1.7969780095478162e-16,
+      "omega": 1.3445853207720946,
+      "physical_period": 46.72953965890111
+    },
+    {
+      "step": 5,
+      "residual_l1": 9.145974360733491e-17,
+      "omega": 1.3445853207720946,
+      "physical_period": 46.72953965890111
+    }
+  ],
+  "source_truncation_weighted_l1": 0.0,
+  "frequency_change": 4.2243163858035615e-05,
+  "state_change_weighted_l1": 0.0003772475456013983
+}

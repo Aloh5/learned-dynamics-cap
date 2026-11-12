@@ -1,0 +1,17 @@
+{
+  "CAP/Mackey-Glass_PO/run_newton_refined_proof.sh": {
+    "executed_sha256": "6b91d02fa1bb830fdd3200ca3b7cb99b522eaf49c5d75360ffc01e2a7f37f073",
+    "release_sha256": "a62f04b42b8889872374605326bc01814d4adb6d1e60ce2932218afab9b97072",
+    "reason": "Release portability/documentation or explicit packaging provenance checks; numerical proof not rerun."
+  },
+  "CAP/Mackey-Glass_PO/summarize_newton_refinement.py": {
+    "executed_sha256": "7a50e8d3fd3bb0751ed5474c0ff3d61fe1cc5ed7eb1f2d34f8a7c216fce0c15a",
+    "release_sha256": "480ac0a1090bb803c03151a41d24b4c24f15e4f54e42afd15d79cd281f229dc3",
+    "reason": "Release portability/documentation or explicit packaging provenance checks; numerical proof not rerun."
+  },
+  "CAP/Mackey-Glass_PO/test_newton_refinement.py": {
+    "executed_sha256": "39df74b958e9ebbcdb00e933e717053ca8d49611c24e645b606a819f1a48f656",
+    "release_sha256": "56ae18acbfc3df949b8771e681483e3cd7b7486f99672ab011ea7ea6c5138f9b",
+    "reason": "Release portability/documentation or explicit packaging provenance checks; numerical proof not rerun."
+  }
+}

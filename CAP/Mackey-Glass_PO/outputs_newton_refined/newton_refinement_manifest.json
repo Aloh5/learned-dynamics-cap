@@ -1,0 +1,24 @@
+{
+  "scope": "Fixed-parameter Mackey-Glass only; no claim of KS refinement",
+  "numerical_core_residual_l1": 9.145974360733491e-17,
+  "original_certified_radius": 0.0006000000000000001,
+  "refined_certified_radius": 1.2000000000000003e-12,
+  "certified_radius_improvement_factor": 499999999.9999999,
+  "files_sha256": {
+    "CAP/Mackey-Glass_PO/fixed_parameter_candidate.py": "109d3c0d84fb17d730982f7f6968618fa4e130ffeb7afd64d3386bb39d033857",
+    "CAP/Mackey-Glass_PO/proof_MG_fixed_parameter.m": "5cc558512df30479853956efbd8439b2fb7a50ee0276878c71c23092f9b6cd7b",
+    "CAP/Mackey-Glass_PO/proof_MG_newton_refined.m": "d7478fadd93e29d68a94569d47fbacca05b42efc4e313c04d15579570501a7e8",
+    "CAP/Mackey-Glass_PO/run_newton_refined_proof.sh": "6b91d02fa1bb830fdd3200ca3b7cb99b522eaf49c5d75360ffc01e2a7f37f073",
+    "CAP/Mackey-Glass_PO/summarize_newton_refinement.py": "7a50e8d3fd3bb0751ed5474c0ff3d61fe1cc5ed7eb1f2d34f8a7c216fce0c15a",
+    "CAP/Mackey-Glass_PO/test_newton_refinement.py": "39df74b958e9ebbcdb00e933e717053ca8d49611c24e645b606a819f1a48f656",
+    "CAP/Mackey-Glass_PO/outputs_fixed_parameter/mg_fixed_parameter_candidate.mat": "b73edc99b7ffa9e006df81783dfb735fee1cf9a08f33474dc96cbe6c03ca32ee",
+    "CAP/Mackey-Glass_PO/outputs_fixed_parameter/mg_fixed_parameter_certificate.json": "15bdd74cf081b88d9b8672bc17f1aef8dddf3d50bf8d6de559c6477cdf34000e",
+    "CAP/Mackey-Glass_PO/outputs_newton_refined/mg_fixed_parameter_candidate.mat": "824909b4b5846efc16e537c97cc4895569f9e4a4a8e1f3c8c0d2d953511816a8",
+    "CAP/Mackey-Glass_PO/outputs_newton_refined/mg_fixed_parameter_certificate.json": "222614ce7447029ac594ace5e3883d16dc327a18be637885f8e72074deb479a1",
+    "CAP/Mackey-Glass_PO/outputs_newton_refined/mg_fixed_parameter_bounds.mat": "b28511ede2d93fbee11f74f06555d917a65a87bd653f8e3674a60121fbc704ad",
+    "CAP/Mackey-Glass_PO/outputs_newton_refined/newton_refinement_containment.mat": "e593373e338a5898a9b6f6bb1a6f1e85c6b790816e43d1cd39402377640d84a1",
+    "CAP/Mackey-Glass_PO/outputs_newton_refined/newton_refinement_summary.json": "6d7a6bfc215d2e2f04fa07d053f4353babddd706579fde3a34cf86d7e12a65b2",
+    "CAP/Mackey-Glass_PO/outputs_newton_refined/candidate_diagnostics.json": "4d88d0ba58c81a507147e6ccb0b893a0888bfef92e578a707055caadbc2a6f2a",
+    "notebooks/mackey_glass/outputs_zero_correction/MG_zero_correction_candidate.mat": "87d5e3db5ae0c5b084c73808153e9c991f284014e598936200d334685355842b"
+  }
+}

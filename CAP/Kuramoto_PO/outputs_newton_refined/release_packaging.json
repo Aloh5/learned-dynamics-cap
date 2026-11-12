@@ -1,0 +1,17 @@
+{
+  "CAP/Kuramoto_PO/run_newton_refined_proof.sh": {
+    "executed_sha256": "9f832a5609e6b34a9fc3b4bb886d905dadffc52906e41f3491ab094edeb7676b",
+    "release_sha256": "963fed3a2b6cb7d9a2902fb2c0a6aefcd928b01ff9e907cf16105a04b75b8e31",
+    "reason": "Release portability/documentation or explicit packaging provenance checks; numerical proof not rerun."
+  },
+  "CAP/Kuramoto_PO/NEWTON_REFINEMENT.md": {
+    "executed_sha256": "cc0b5c924ef4b9743e52961bba065f89ef70ebe3b0f57a151f23bef966d9e505",
+    "release_sha256": "ee912abd37bdc1273ed0104ec582d4757f3a22f295cb7d665290935cb1be022a",
+    "reason": "Release portability/documentation or explicit packaging provenance checks; numerical proof not rerun."
+  },
+  "CAP/Kuramoto_PO/test_newton_refine.py": {
+    "executed_sha256": "fae73c7d551c6b3f8c63b81a1abe83a1ec3b2854e85e229a367530f5ef59a8bf",
+    "release_sha256": "346d660e52cef13bff25f9c9a2166f3a47316340752acd4032eb67cedb081e7d",
+    "reason": "Release portability/documentation or explicit packaging provenance checks; numerical proof not rerun."
+  }
+}

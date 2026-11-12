@@ -1,0 +1,25 @@
+{
+  "scope": "Neumann KS only; periodic-domain forecasting is a different problem",
+  "certificate_radius": 7.000000000000001e-09,
+  "original_radius": 1e-05,
+  "radius_improvement_factor": 1428.5714285714287,
+  "files_sha256": {
+    "CAP/Kuramoto_PO/newton_refine.py": "4d80fd15cb7a9ecf54123619ce95ef0c3fa4626f54195b4a498510c843db8c33",
+    "CAP/Kuramoto_PO/proof_KS_newton_refined.m": "c6dfe0f0aea4648214b351c5cebeb25c750bff8cd0e40fc07ccdc628e369674c",
+    "CAP/Kuramoto_PO/run_newton_refined_proof.sh": "9f832a5609e6b34a9fc3b4bb886d905dadffc52906e41f3491ab094edeb7676b",
+    "CAP/Kuramoto_PO/summarize_newton_refinement.py": "c3b1adb6de42d3816637aec14deef07eb321d0cc45fe278fa8eddaaf852b54c1",
+    "CAP/Kuramoto_PO/NEWTON_REFINEMENT.md": "cc0b5c924ef4b9743e52961bba065f89ef70ebe3b0f57a151f23bef966d9e505",
+    "CAP/Kuramoto_PO/test_newton_refine.py": "fae73c7d551c6b3f8c63b81a1abe83a1ec3b2854e85e229a367530f5ef59a8bf",
+    "CAP/Kuramoto_PO/proof_KS_neumann.m": "9a6ae6cf2d61c3a93c5c0d4ae19f01fb7d13a817b50ee679ead52d1512445fd0",
+    "CAP/Kuramoto_PO/scan_block_proof.py": "932b1908d06b43d73028287313a6d95361c93dd5abb59726432343a5ea2a65ba",
+    "CAP/Kuramoto_PO/diagnose_smooth_cap.py": "0ae9c9c7113e25101506ffc9c65569698f5918cd2b67760e9792cb6e8bd0bcd0",
+    "CAP/Kuramoto_PO/PROOF_AUDIT.md": "ac74d38486645ab092117a8f1697c78c3b41fa9f139b4ded815e6e24ae2be2e3",
+    "CAP/Kuramoto_PO/outputs_surrogate/ks_neumann_cap_candidate.mat": "f837d3e1a2825c5cf2bca243f3e30b7eb45381c1febab02d2d14edb5bcdac3e3",
+    "CAP/Kuramoto_PO/outputs_surrogate/ks_neumann_full_pde_certificate.json": "3320f010016df237f4f1c8f519c825f06286f78f4d9d7ef3c9baaa74fed14bbf",
+    "CAP/Kuramoto_PO/outputs_surrogate/ks_neumann_fourier_proof_data.mat": "e13e185eb0de961fe104d659b7135342b4bb1bf75c88e98df6b6048d6437272b",
+    "CAP/Kuramoto_PO/outputs_newton_refined/ks_newton_refined_candidate.mat": "1a1ffc6a2fb70f0764afc6d70e49319a744e3283597a269b0452054f02912e8d",
+    "CAP/Kuramoto_PO/outputs_newton_refined/ks_newton_refined_certificate.json": "72a4f7e5605509fcc99302130f5e0127ae86ee8762d99a923435b93c36d72987",
+    "CAP/Kuramoto_PO/outputs_newton_refined/ks_newton_refined_bounds.mat": "1906d7649212a8532e7d79c3a50ea2f4d671f23bc31dad4f4572cd33a70269f7",
+    "CAP/Kuramoto_PO/outputs_newton_refined/candidate_diagnostics.json": "d7024f05ea861bc654a3101c9fc69d1301dda5e28b578f50d6ef2e1adfe5e9df"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "true_system_newton_steps": 3,
+  "history": [
+    {
+      "step": 0,
+      "preconditioned_core_residual_l1": 4.883484296040383e-10,
+      "scaled_frequency": 4.237973038016342,
+      "physical_period": 72.70550498125212,
+      "newton_correction_l1": 4.911568556429425e-10
+    },
+    {
+      "step": 1,
+      "preconditioned_core_residual_l1": 6.829409679644905e-13,
+      "scaled_frequency": 4.237973038015894,
+      "physical_period": 72.7055049812598,
+      "newton_correction_l1": 6.829516332617935e-13
+    },
+    {
+      "step": 2,
+      "preconditioned_core_residual_l1": 2.0863378395937744e-13,
+      "scaled_frequency": 4.237973038015897,
+      "physical_period": 72.70550498125975,
+      "newton_correction_l1": 2.0864633808290097e-13
+    },
+    {
+      "step": 3,
+      "preconditioned_core_residual_l1": 1.873448914750623e-13,
+      "scaled_frequency": 4.237973038015897,
+      "physical_period": 72.70550498125975
+    }
+  ],
+  "temporal_modes": 220,
+  "spatial_modes": 100,
+  "scaled_center_displacement_l1": 4.914775066370793e-10,
+  "phase_defect": -9.924704231226247e-17,
+  "source_sha256": "f837d3e1a2825c5cf2bca243f3e30b7eb45381c1febab02d2d14edb5bcdac3e3",
+  "preconditioner_source": "Original certified 160-time/40-space core inverse and original-frequency tail symbols; no scan reused as a new-center scan."
+}
